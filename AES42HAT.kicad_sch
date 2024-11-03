@@ -21965,7 +21965,7 @@
 		)
 		(uuid "0bca2279-01ea-4d09-989c-f2b411d908da")
 	)
-	(label "BCLK"
+	(label "BCK"
 		(at 544.83 55.88 180)
 		(fields_autoplaced yes)
 		(effects
@@ -22076,7 +22076,7 @@
 		(uuid "114a87ab-de65-4e27-9b2d-273db0c5dc91")
 	)
 	(label "UCKD"
-		(at 544.83 68.58 180)
+		(at 544.83 71.12 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -22483,7 +22483,7 @@
 		(uuid "30195dc9-a4cd-4f7b-ac00-574e8d7275a6")
 	)
 	(label "UBTD"
-		(at 544.83 73.66 180)
+		(at 544.83 83.82 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -22615,7 +22615,7 @@
 		(uuid "3aa274b3-133a-4814-9c08-2584f52d520e")
 	)
 	(label "~{CSC}"
-		(at 544.83 83.82 180)
+		(at 544.83 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -22758,7 +22758,7 @@
 		(uuid "482c4a94-0b1e-47c8-92ff-bfa360c861c9")
 	)
 	(label "~{CSD}"
-		(at 544.83 86.36 180)
+		(at 544.83 66.04 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -22846,7 +22846,7 @@
 		(uuid "4e2dc108-55a0-40b3-b29a-05ccea5974d6")
 	)
 	(label "UCKB"
-		(at 490.22 96.52 0)
+		(at 490.22 93.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -22945,13 +22945,13 @@
 		(uuid "575e6850-ccf8-4199-ab9b-6dbe172f8456")
 	)
 	(label "MISO"
-		(at 544.83 45.72 180)
+		(at 490.22 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "57b83443-8099-427e-87cf-ffebfe2ea93a")
 	)
@@ -23264,13 +23264,13 @@
 		(uuid "710d281f-0991-437b-bf04-d2dd95ada186")
 	)
 	(label "BLS"
-		(at 544.83 48.26 180)
+		(at 490.22 83.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "72f1337f-651d-41ec-bcb8-34080582aa72")
 	)
@@ -23329,7 +23329,7 @@
 		)
 		(uuid "76abf035-8711-48d3-8e25-65f0beef0c08")
 	)
-	(label "INTD"
+	(label "~{INTD}"
 		(at 544.83 78.74 180)
 		(fields_autoplaced yes)
 		(effects
@@ -23340,7 +23340,7 @@
 		)
 		(uuid "7a35bf56-0ba0-4aa7-a60e-a5e9638b23e2")
 	)
-	(label "INTC"
+	(label "~{INTC}"
 		(at 544.83 76.2 180)
 		(fields_autoplaced yes)
 		(effects
@@ -23418,7 +23418,7 @@
 		(uuid "7f1d7f61-59e5-4cfb-a859-e6009a5b08cb")
 	)
 	(label "UCKC"
-		(at 544.83 66.04 180)
+		(at 544.83 73.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -23495,7 +23495,7 @@
 		(uuid "8b07d18f-1e44-4871-b4a9-4748ee6e6cda")
 	)
 	(label "~{INTA}"
-		(at 490.22 83.82 0)
+		(at 490.22 88.9 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -23528,13 +23528,13 @@
 		(uuid "8c8385fc-dadd-4faa-ac6b-2284718bbb92")
 	)
 	(label "UBTA"
-		(at 490.22 88.9 0)
+		(at 544.83 48.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "8d691359-5f5f-4b69-8f31-3a79c942283b")
 	)
@@ -24199,7 +24199,7 @@
 		(uuid "ca658bc6-5feb-4fe3-bceb-7da7e6597955")
 	)
 	(label "UCKA"
-		(at 490.22 93.98 0)
+		(at 490.22 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -24496,7 +24496,7 @@
 		(uuid "e6aa7ce1-4a8a-4bb4-b03c-c1964dc630c3")
 	)
 	(label "~{INTB}"
-		(at 490.22 86.36 0)
+		(at 490.22 91.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -24606,13 +24606,13 @@
 		(uuid "f049da72-efe6-4534-8514-028b02cf4eb5")
 	)
 	(label "UBTB"
-		(at 490.22 91.44 0)
+		(at 544.83 45.72 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "f23317ab-68a1-4b09-89cb-ef8689bb1270")
 	)
@@ -24760,7 +24760,7 @@
 		(uuid "f9b8c6ce-cc8f-4d14-9996-8db518c9fbe3")
 	)
 	(label "UBTC"
-		(at 544.83 71.12 180)
+		(at 544.83 86.36 180)
 		(fields_autoplaced yes)
 		(effects
 			(font

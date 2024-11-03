@@ -327,3 +327,210 @@ characters before overrunning.
 
 The control processor forwards console data it receives from the microphone to
 the host processor.
+
+## Control processor pin functions
+
+The LPC865 has great flexibility in assigning peripheral functions to pins. We
+try to make the best use of this in order to allow some different options for
+firmware to take advantage of. However, some functions assignments are
+predefined by the chip's architecture, and those restrict the overall pin
+function assignments. Other pin assignments not described here are completely
+flexible through the switch matrix.
+
+The pin assignments are done such that a 2-channel hardware design can easily be
+derived as a spinoff design, with the 32-pin package of the LPC865 being
+sufficient. This means that pins `PIO0_29` and onwards are used for channels C
+and D only.
+
+Here's the rationale behind the pin assignment:
+
+### Reset, boot and firmware update
+
+The controller runs from an internal boot ROM after reset, and depending on the
+state of the `PIO0_12` pin it starts the user program in flash, or it waits for
+a firmware image to be provided to UART0 for in-system programming of the flash.
+Pulling the pin high, or leaving it getting pulled up by a resistor, results in
+the user program to be invoked, which is the normal operating case. Pulling it
+low upon reset invokes the ISP handler that sets up UART0 on `PIO0_24` and
+`PIO0_25` for receiving commands from the host computer, using a protocol
+described in the user manual of the LPC865.
+
+Of course, this requires external control of the reset pin `PIO0_5`. This fixes
+the function of the four pins mentioned.
+
+### Clocking
+
+Besides the crystal oscillator on `PIO0_8` and `PIO0_9`, the `CLKIN` function is
+also fixed to a single pin, `PIO0_1`. So we use the pins for those functions.
+
+We only need the `XTALIN` function, leaving the `XTALOUT` function free, but we
+play it safe and use the latter only as a test point.
+
+The `ACLK` signal on `CLKIN` comes from the clock synthesizer chip, which allows
+some flexibility regarding what's fed to the `ACLK` signal. It can be the 10 MHz
+reference, or the `RCLK` signal that's routed through, or even the PLL lock
+status. Note that it is the host processor that has control over the clock
+synthesizer chip, so the controller works with whatever is being presented to
+it.
+
+### Debug
+
+Two signals are required for SWD debugging, using pins `PIO0_2` and `PIO0_3`. 
+
+### I2C communication
+
+Two pins, `PIO_10` and `PIO_11`, are specially equipped for I2C usage in their
+driving capability, so we use them for that purpose.
+
+### UART communication with the host
+
+We already have assigned UART0 on pins `PIO0_24` and `PIO0_25` for firmware
+download, so we keep that for host communication.
+
+### Analog input
+
+The four analog signals `PVA` .. `PVD` need to be connected to one of the inputs
+of the controller's ADC. It makes most sense to use `ADC_0` .. `ADC_3`, and thus
+pins `PIO0_7`, `PIO0_6`, `PIO0_14` and `PIO0_23`.
+
+The ADC measurement is based on the external reference on pins `VDDA` and
+`VSSA`, whose accuracy depends on the switchmode regulator, i.e. it is not very
+accurate. It is only suitable for determining whether the phantom voltages are
+approximately within the desired range. This is adequate for diagnosing faults.
+
+### FTM0 operation
+
+Pin connectivity of FTM0 is somewhat limited, with only 2 or 3 choices for each
+function. We try to allow as much flexibility as possible for firmware to use
+FTM0 in controlling the clocking and making phase measurements.
+
+Five of the six available timer channels are needed to measure the wordclock
+phases of the 4 inputs against the output wordclock. This is needed for the
+implementation of mode 2 synchronization of AES42 sources, but can also be used
+in other modes for phase measurements. This functionality is based on the block
+synchronization signals that occur once every 192 sample periods. It uses the
+input capture mode of the timer channels.
+
+There are two different methods that can be employed for this emasurement. The
+synchronous mode and the asynchronous mode. The distinction is whether the
+counter is clocked with a clock source that is synchronous with the phase
+reference, or whether the clock is independent and asynchrous. There is
+something to be said in favor of the asynchronous mode, because the
+asynchronicity provides a form of dithering that can help avoiding systematic
+effects due to quantization on the time axis. But either mode should be usable
+for the task.
+
+The synchronous mode requires the counter to be clocked by a source that is
+associated with the local wordclock, i.e. it must ultimately be derived from
+`MCLK`. There are two alternatives for arranging this:
+
+- The `MCLK` signal can be used as the "external_clk" signal that can be used
+  either directly as the main_clk, or as the reference for the Main PLL inside
+  the controller. Either way the resulting clock for the FTM0 will be shared
+  with the CPU, which makes the CPU run synchronously with the audio clock, too.
+  This may or may not be what is desired for the firmware. Furthermore, it makes
+  the `ACLK` signal almost unusable, because it can't feed the "external_clk"
+  signal.
+- The `BCK` signal can be used to clock the FTM0 counter through `PIO0_30`.
+  This is the bit clock at 64* the wordclock frequency. It supports phase
+  measurements with the resolution of one bit position in the serial data
+  stream. Note that this is not supported with the 32-pin package.
+
+The asynchronous mode clocks the FTM0 counter from an internal clock source,
+most likely the FRO, which would also clock the CPU. The asynchronicity will add
+a randomness to the sampling point with respect to the wordclock, so that
+greater accuracy can be achieved by averaging successive measurements. The PLL
+action inherent in the AES42 mode 2 does this anyway.
+
+The block synchronization signal for the transmitting side is `BLS`, which is
+generated by channel A and used by the other channels to align their transmitter
+phase. It is obtained in U10 by dividing down MCLK. It serves as the reference
+against which the phase of the 4 input channels can be measured.
+
+The block synchronization signals for the 4 receivers are independent. Each
+channels has two alternatives:
+
+- The `INTx` signal, which must be programmed in each transceiver chip to
+  produce an impulse for each received block start. (preferred)
+- The `GPO3` output of each transceiver, i.e. the `UCKx` signals. This pin must
+  be programmed to produce a pulse for each received block ("Receiver Block
+  Start Clock"). This precludes using the pin to clock a UART for doing console
+  mode with the help of a UART, i.e. console mode support must be implemented in
+  firmware only. On the positive side, the `INTx` signal is free for other use.
+
+The controller is wired up to support either of those alternatives, given the
+pin assignment restrictions for FTM0. The `BLS` signal uses `PIO0_17` of timer
+channel 0. The four transceivers' interrupt outputs `INTx` use timer channels
+2..5 on pins `PIO0_19`, `PIO0_20`, `PIO1_5` and `PIO1_6`. Alternatively, the
+`UCKx` signals can be used on pins `PIO0_22`, `PIO0_21`, `PIO1_4` and `PIO1_3`.
+
+Channel 1 of FTM0 can be used in conjunction with the generation of the
+`WCLK` signal, which is described in a later section.
+
+### FTM1 operation
+
+Pin connectivity of FTM1 only supports two pin alternatives for each function,
+so pin assignments must try to make good use of that. To make matters worse,
+some alternatives overlap with FTM0. We try to support the role of FTM1 in
+generating the remote control modulation signals in AES42 mode 2 as flexibly as
+possible.
+
+The 4 modulation signals are controlled by one of the FTM1 channels each, thus
+making full use of the FTM1 capabilities.
+
+The remote control pulses used in mode 2 may or may not be synchronized with the
+wordclock. AES42 is not specific about that, however the pulse timing is
+described with reference to the "basic sampling frequencies". This suggests that
+it would be prudent to be able to synchronize the pulses to the wordclock signal
+`WCLK`. Clocking the FTM1 counter from `WCLK` achieves this, which happens
+through `PIO0_29`. Again, this is not supported with the 32-pin package.
+
+Alternatively, the counter can be clocked from an internal, asynchronous clock
+signal, which results in the remote control pulses running asynchronously from
+the wordclock.
+
+The counter channels are operated in output compare mode, with each `MODx` pin
+being controlled by one of the FTM1 channels. The pins are assigned accordingly,
+to `PIO0_15`, `PIO0_16`, `PIO0_31` and `PIO0_1`.
+
+Note that the `UBTx` signals, which come from the transceivers, use the FTM1
+alternative pin assignments `PIO0_27`, `PIO0_26`, `PIO1_9` and `PIO1_8`. This
+can be used to support other kinds of measurement functions in conjunction with
+whatever signals can be routed to the `GPO4` transceiver outputs.
+
+### WCLK generation
+
+The `WCLK` signal must operate at the basic sampling frequency, hence it can't
+be the same as the `LR` signal that can also be at double or quadruple this
+frequency, depending on the sampling rate chosen for the transmit side. It is
+also desirable for the `WCLK` signal to be controllable in phase. Unfortunately,
+no hardware is available inside the controller that fulfills all those demands
+directly and simply. There are workarounds, however.
+
+A relatively simple way is to use the `CLKOUT` function on `PIO0_29`, which
+requires the Main PLL to be employed. It is not easy to control the phase of the
+signal with this method, however.
+
+Better flexibility, including control of the phase, is achievable by employing
+SPI1. It works like this:
+
+- Operate SPI1 in slave mode, with the clock coming from `BCK` on pin `PIO0_30`.
+- Keep the slave selected continuously, so that a steady data stream results.
+- Use the MISO1 output as the `WCLK` signal on `PIO0_29`.
+- Use a DMA channel to read cyclically from a pattern buffer in memory.
+
+This permits the SPI1 to output a freely definable serial pattern to be used as
+the `WCLK` signal. The firmware controls its shape, including its phase, by
+setting the content of the circular buffer, with a resolution defined by the bit
+clock.
+
+To measure the phase of the signal, it is possible to employ the help of FTM0
+and FTM1 in the following way:
+
+- Clock FTM1 from the `WCLK` signal via `PIO0_29`.
+- Program a PWM on `PIO0_16` using FTM1 channel 1.
+- Measure it using FTM0 channel 1, taking advantage of the shared pin `PIO0_16`.
+
+This can be done once during startup, as the phase would be stable as a result
+of setting up the dividers correctly. The timer ressources can be used for their
+normal functions thereafter.

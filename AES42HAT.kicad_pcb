@@ -385,9 +385,6 @@
 	(net 264 "/PHOD")
 	(net 265 "Net-(U1-PIO0_9)")
 	(net 266 "Net-(U1-PIO0_8)")
-	(net 267 "/INTC")
-	(net 268 "/BCLK")
-	(net 269 "/INTD")
 	(footprint "Resistor_SMD:R_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "00d62409-9102-4742-9ce9-1b7f81a078ff")
@@ -425,6 +422,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -437,6 +435,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -449,12 +448,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/d0a605b9-d58f-4474-a6c0-85c8977289fc")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -635,6 +635,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -647,6 +648,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -659,11 +661,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/e22b2ee0-d540-49e2-b17d-be91d25d46c0")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -946,6 +949,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -958,6 +962,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -970,12 +975,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/8557a9cd-6ce8-4788-8b91-4c92b2760f94")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1156,6 +1162,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1168,6 +1175,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1180,12 +1188,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/017aba5d-ced6-43cd-ae96-7970a2815068")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1366,6 +1375,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -1379,6 +1389,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -1392,13 +1403,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/5b6a9f61-c952-4005-98b8-50e20330b998")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1579,6 +1591,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1591,6 +1604,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1603,12 +1617,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/f8a7bdad-3d36-4971-b116-3c440675689a")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1789,6 +1804,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -1802,6 +1818,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -1815,13 +1832,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/15f53377-2d68-458b-9eeb-650609db473f")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2002,6 +2020,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2014,6 +2033,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2026,12 +2046,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/3ffff450-c7a6-490d-825c-971cecc7da3e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2212,6 +2233,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2224,6 +2246,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2236,12 +2259,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/ce6eaccf-9dca-4332-8149-fbfae987035e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -2324,6 +2348,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2336,6 +2361,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2348,12 +2374,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/ea12f2c0-7383-4e41-b12d-4d7ffb057af8")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2534,6 +2561,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2546,6 +2574,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2558,12 +2587,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/ea5ee83e-4db8-4889-9c6c-ca475268f558")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2744,6 +2774,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2756,6 +2787,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2768,12 +2800,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/166397e4-22cb-4d28-acf5-503fbed70994")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -2967,6 +3000,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2979,6 +3013,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2991,12 +3026,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/336e5c7c-708e-4e03-966b-248945f18588")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3177,6 +3213,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3189,6 +3226,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3201,12 +3239,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/adbbbd33-646b-43e8-abc3-ded3ea4e5521")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3387,6 +3426,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3399,6 +3439,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3411,12 +3452,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/ac7f93b6-b39c-4abf-a889-229056616b78")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3597,6 +3639,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3609,6 +3652,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3621,12 +3665,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/5e1f96c6-1eb1-42a8-a432-bde1641e8be8")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3807,6 +3852,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3819,6 +3865,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3831,12 +3878,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/f2642f79-ee2d-4eb1-a010-854faa251f4a")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -4506,6 +4554,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4518,6 +4567,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4530,12 +4580,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/9b5f14fc-c9d0-4602-9518-705067f2202b")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4716,6 +4767,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4728,6 +4780,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4740,12 +4793,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/e2072f36-4ea8-408d-94f0-7ea1d3fa1c27")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4926,6 +4980,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4938,6 +4993,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4950,12 +5006,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/4a5d7ea7-daff-401b-8c69-d09109109f68")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5136,6 +5193,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5148,6 +5206,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5160,12 +5219,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/eaf9e02d-0742-4f17-b9eb-b69926408dd9")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5346,6 +5406,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5358,6 +5419,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5370,12 +5432,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "DIP?16*")
 		(path "/3185ec9a-9c9f-4aed-8c4d-74b4b7db5486")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5740,6 +5803,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5752,6 +5816,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5764,12 +5829,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/e9271ffd-53bd-428c-b474-714d58775571")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5950,6 +6016,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5962,6 +6029,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5974,12 +6042,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/cc22ad71-2180-4da3-826b-96e60e74b806")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6160,6 +6229,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6172,6 +6242,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6184,12 +6255,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "DFN*3x3mm*P0.5mm*")
-		(path "/a12cdc4d-b70f-4e6f-8c4b-c81975746f3c")
-		(sheetname "Stammblatt")
+		(path "/a10f27fd-fe34-4aaa-bdf5-8c3ca4988691")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6492,6 +6564,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6504,6 +6577,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6516,12 +6590,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/de832d0d-5b3e-4490-b50f-5afbb69980a1")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6702,6 +6777,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6714,6 +6790,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6726,12 +6803,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/c36a5448-c2c3-498f-b232-a668eb655566")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6912,6 +6990,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6924,6 +7003,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6936,12 +7016,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/840cb6f6-55d9-4917-8952-2d741bee425e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7122,6 +7203,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7134,6 +7216,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7146,12 +7229,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/c5d0d748-0f46-4572-8c58-1a6b76b79e37")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7332,6 +7416,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7344,6 +7429,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7356,12 +7442,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/3aa80a8c-6984-4afe-99ee-a7381989cefe")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7542,6 +7629,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7554,6 +7642,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7566,12 +7655,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/b3f56ffd-3214-4bae-b4bd-2bf387a77e93")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7752,6 +7842,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7764,6 +7855,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7776,12 +7868,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "DIP?16*")
 		(path "/8799dcf8-2b19-4815-9662-16a2259da370")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8146,6 +8239,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8158,6 +8252,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8170,11 +8265,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/392db98d-9b5e-4163-92e1-320ffdd7b01b")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8457,6 +8553,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8469,6 +8566,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8481,12 +8579,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/2c62b13c-e649-48e3-81c2-c0bd48abf47c")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8667,6 +8766,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8679,6 +8779,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8691,12 +8792,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/1ef979fe-c81b-409c-a991-fcabdbd6cba8")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8877,6 +8979,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8889,6 +8992,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8901,12 +9005,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/d0c92bf1-5b62-4464-912e-2c60a532c1d7")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9087,6 +9192,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9099,6 +9205,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9111,12 +9218,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/84285299-ae0b-4a4b-8be7-06e6e7ba1198")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9297,6 +9405,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9309,6 +9418,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9321,11 +9431,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/21ae69a1-be28-4393-b1c5-8ba11258f487")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9539,6 +9650,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9551,6 +9663,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9563,12 +9676,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/af836a34-5efe-41d9-b0ed-156d995decc8")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9749,6 +9863,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -9762,6 +9877,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -9775,13 +9891,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/418624c9-d226-4c70-84d4-1e74ffb926b6")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9962,6 +10079,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9974,6 +10092,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9986,12 +10105,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/fa73e4cf-e3ff-440e-9f54-58dab0b18f17")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10172,6 +10292,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10184,6 +10305,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10196,12 +10318,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/428c3ed1-387a-4340-afe9-1fa46be8a6ed")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10382,6 +10505,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10394,6 +10518,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10406,12 +10531,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/0087c904-359c-401a-af82-ed9aada0d8ac")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -10605,6 +10731,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10617,6 +10744,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10629,12 +10757,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/a7117373-fc39-4ee1-9aa1-ff1db5f26ba3")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -10717,6 +10846,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10729,6 +10859,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10741,12 +10872,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/9b10e611-f64d-4f21-b4ea-257e97735659")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10927,6 +11059,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10939,6 +11072,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10951,12 +11085,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/11e8f28d-bd04-45f0-a99d-a33e35f53a13")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11137,6 +11272,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -11149,6 +11285,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -11161,11 +11298,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/6d192010-8f61-4e99-a467-e785d5428cd8")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11448,6 +11586,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -11460,6 +11599,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -11472,11 +11612,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/26e0af1f-9f6b-4461-90ff-4ddfb1fffebb")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11759,6 +11900,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -11771,6 +11913,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -11783,11 +11926,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/ac6dffcf-e962-4259-b966-2cbf35ac49d3")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12070,6 +12214,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12082,6 +12227,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12094,12 +12240,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/3a8468ab-887c-472c-b165-075fdffdf556")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12282,6 +12429,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12294,6 +12442,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12306,6 +12455,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12510,7 +12660,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C97"
-			(at 0 -1.16 270)
+			(at 0 -1.16 -90)
 			(layer "F.SilkS")
 			(uuid "874c213c-2a14-4fb4-95c7-e631dc9a056b")
 			(effects
@@ -12521,7 +12671,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 0 1.16 270)
+			(at 0 1.16 -90)
 			(layer "F.Fab")
 			(uuid "e6c00c29-110d-48f8-aefc-810bbb79b322")
 			(effects
@@ -12540,6 +12690,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12552,6 +12703,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12564,12 +12716,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/025a4b75-c9b4-4386-84f2-a7b9e9e6ae1c")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12673,7 +12826,7 @@
 			(uuid "d08075e9-b6fd-4e12-897e-9f2b3917babf")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "04d12973-bee6-450f-bdc9-b397e5035dfe")
 			(effects
@@ -12750,6 +12903,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12762,6 +12916,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12774,12 +12929,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/e313a9ff-02d5-49af-b279-db56c0dab9d4")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12960,6 +13116,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -12973,6 +13130,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -12986,13 +13144,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/d007a1ec-8d22-44b3-a250-8c65c883cfc2")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13173,6 +13332,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -13185,6 +13345,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -13197,12 +13358,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/625fba61-f7fb-4833-befa-1dd357e4c828")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13383,6 +13545,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -13395,6 +13558,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -13407,12 +13571,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*")
 		(path "/207831df-cb01-41f7-b1eb-405c07b57e49")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13914,6 +14079,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -13926,6 +14092,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -13938,12 +14105,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/5a624a46-a033-422f-b268-36bff8a67174")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14124,6 +14292,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14136,6 +14305,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14148,12 +14318,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/dcd91ac9-3ccc-479a-86a1-c53cf5884d78")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14334,6 +14505,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14346,6 +14518,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14358,12 +14531,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/6bced6e6-48a2-466d-8da5-d438cdf9b844")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14544,6 +14718,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14556,6 +14731,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14568,12 +14744,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/746520ed-2bdc-48ca-91a1-3b03c4691c28")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14754,6 +14931,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -14767,6 +14945,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -14780,13 +14959,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/33dc4dd4-9071-4959-8f62-d7ef67cb9720")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14967,6 +15147,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14979,6 +15160,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14991,12 +15173,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/192c3758-ca6c-4722-914c-590151d72cef")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15177,6 +15360,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -15189,6 +15373,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -15201,12 +15386,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/02156195-ba9b-4a81-b259-cc7180ed3145")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15389,6 +15575,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -15401,6 +15588,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -15413,6 +15601,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -15647,6 +15836,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -15659,6 +15849,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -15671,12 +15862,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/1b237631-7846-4139-a15c-c99771aa5875")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15857,6 +16049,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -15869,6 +16062,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -15881,12 +16075,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/df652780-d168-42db-ae3c-48545214cc46")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -16080,6 +16275,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16092,6 +16288,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16104,12 +16301,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/9cba7dc1-60a8-4d46-8f03-12985250a2d0")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -16290,6 +16488,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16302,6 +16501,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16314,12 +16514,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/1c54d9cb-d876-46e1-9d3c-f09d1205b6ba")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -16402,6 +16603,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16414,6 +16616,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16426,12 +16629,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/259700f9-8d65-4e14-9b0e-64e70815b1d6")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -16625,6 +16829,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16637,6 +16842,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16649,12 +16855,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/51197ea0-0187-4910-b383-0572c4cf9707")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -16835,6 +17042,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16847,6 +17055,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -16859,11 +17068,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/c5ed1052-7e13-4dc2-ac23-79acebcda1e1")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17146,6 +17356,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -17158,6 +17369,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -17170,12 +17382,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/ecfb6b38-191d-4ba4-b7c0-60b175aac9f7")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17356,6 +17569,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -17368,6 +17582,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -17380,12 +17595,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "DIP?16*")
 		(path "/4b6904f8-68a3-4af0-a33a-67378142171b")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17750,6 +17966,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -17762,6 +17979,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -17774,12 +17992,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/7bab198e-913a-404c-8e67-ddfea607a427")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17960,6 +18179,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -17972,6 +18192,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -17984,12 +18205,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/2ff9162f-19cb-4677-a9bb-7941a62cc3ed")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18170,6 +18392,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18182,6 +18405,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18194,12 +18418,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "D*SMF*")
 		(path "/8415cccc-ae8a-4764-a649-ec983c894d1f")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18452,6 +18677,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18464,6 +18690,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18476,12 +18703,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/c24d43f7-a46e-48f3-972a-0d9cc4fad357")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18662,6 +18890,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18674,6 +18903,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18686,12 +18916,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/550dfa2e-54f0-4487-b236-b696f8c22555")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18872,6 +19103,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18884,6 +19116,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18896,12 +19129,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/127ab13e-cfc0-4959-94c8-e4b6b669b256")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19082,6 +19316,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -19095,6 +19330,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -19108,13 +19344,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/ba968119-3f72-410d-8f30-91ab13fcd387")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19297,6 +19534,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -19309,6 +19547,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -19321,6 +19560,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -19555,6 +19795,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -19567,6 +19808,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -19579,12 +19821,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/c20ebe07-41f7-453e-840e-23985c7a620e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19765,6 +20008,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -19778,6 +20022,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -19791,13 +20036,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "WDFN*3x3mm?P0.45mm*")
 		(path "/b7bb2a9b-2eaf-425a-b46f-02e1560f0edd")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20141,6 +20387,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20153,6 +20400,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20165,12 +20413,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/e9894e9f-acc3-4ebd-94a1-2b40293d149b")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20351,6 +20600,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20363,6 +20613,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20375,12 +20626,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/e9d8eb56-c082-40d4-9e2d-10d2837038e2")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20645,6 +20897,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20657,6 +20910,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20669,12 +20923,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/2b6b6519-6ead-42c5-b687-9a919898e853")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20855,6 +21110,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20867,6 +21123,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20879,12 +21136,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/70e2a201-1445-4b73-9539-fe05b8610c58")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21065,6 +21323,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -21077,6 +21336,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -21089,12 +21349,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/bb193f20-2388-4ee4-9891-5e2e653c6434")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21275,6 +21536,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -21287,6 +21549,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -21299,12 +21562,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/60094da6-ddcf-45ab-b840-87234929b72d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21485,6 +21749,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -21498,6 +21763,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -21511,13 +21777,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "D*SMF*")
 		(path "/24bf93da-0979-4ac5-a2d9-828b93237ed1")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21770,6 +22037,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -21782,6 +22050,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -21794,12 +22063,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/26cc9dae-85af-45af-83de-36d3b7cbc287")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21980,6 +22250,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -21992,6 +22263,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -22004,12 +22276,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/46d03a63-41bf-4ba0-aec7-3c7fca8da920")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22190,6 +22463,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -22202,6 +22476,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -22214,12 +22489,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/cd691f3c-3151-4ab4-a357-d3b2a0cb5bea")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22400,6 +22676,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -22412,6 +22689,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -22424,12 +22702,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/73986957-6fa4-48db-b6d4-f2d5aba8c46c")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22610,6 +22889,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -22622,6 +22902,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -22634,12 +22915,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/8c7720e5-9d58-4c16-8e22-b1dba1c8f64d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -22833,6 +23115,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -22845,6 +23128,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -22857,12 +23141,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/9c886cbd-339b-4727-b66a-afb4fe5756a8")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23087,6 +23372,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -23099,6 +23385,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -23111,12 +23398,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/60b7562d-bb5b-4c3c-80b5-d77cfe678829")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23297,6 +23585,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -23309,6 +23598,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -23321,12 +23611,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "TQFP*7x7mm*P0.5mm*")
 		(path "/28cb48d2-a071-47b0-9222-74e34a990b8d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24251,6 +24542,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -24263,6 +24555,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -24275,12 +24568,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/cf6e9913-42a8-4fb7-a1fb-e1fd6e8a6fe0")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24461,6 +24755,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -24473,6 +24768,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -24485,12 +24781,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/c54b4173-1688-4f0c-bc65-46ec1e34c44e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24671,6 +24968,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -24683,6 +24981,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -24695,12 +24994,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/96d4e2fd-8e24-40dd-b08b-3d6c85d2ddb5")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24881,6 +25181,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -24893,6 +25194,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -24905,12 +25207,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/c3fe7d36-9880-4c6e-838d-6c8e41524c73")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25091,6 +25394,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -25103,6 +25407,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -25115,12 +25420,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/53f4e205-651c-4c90-a8b2-6f90943d635b")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25301,6 +25607,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -25313,6 +25620,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -25325,12 +25633,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "DFN*3x3mm*P0.5mm*")
-		(path "/af54dd89-aa32-4709-837e-8cd1bcb18459")
-		(sheetname "Stammblatt")
+		(path "/75e37f3e-bf70-40a1-a41d-d90454a33b00")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25633,6 +25942,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -25645,6 +25955,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -25657,12 +25968,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/6e470d66-fea7-4939-83ba-322b215f91de")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25843,6 +26155,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -25855,6 +26168,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -25867,12 +26181,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/27cdba8c-6366-49af-ae2b-f6af5f7f6206")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -26053,6 +26368,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26065,6 +26381,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26077,12 +26394,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/6941a529-3095-44e5-95b6-094fb2bbc775")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -26276,6 +26594,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26288,6 +26607,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26300,12 +26620,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/5fd19828-0eb7-4389-ab9b-c7fd141c2914")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -26388,6 +26709,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26400,6 +26722,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26412,12 +26735,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/d285fc63-b28a-4fc3-9e2c-9d4f3f23dd65")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -26598,6 +26922,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26610,6 +26935,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26622,12 +26948,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/571f9179-7eb9-4cd8-a7b9-d9e185a463d6")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -26808,6 +27135,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26820,6 +27148,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -26832,12 +27161,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/9e95e1bb-e2f7-4d03-9a9f-cb1ed33ce175")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27018,6 +27348,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -27031,6 +27362,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -27044,13 +27376,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/7ce73ae2-3afd-407b-bc94-dfd825a5d3d8")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27231,6 +27564,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -27243,6 +27577,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -27255,12 +27590,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/09017afc-a4c8-47e6-af6c-34a883e92db3")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -27343,6 +27679,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -27355,6 +27692,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -27367,12 +27705,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/91360f5f-26c3-4bc0-b497-18748ffb0e42")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27553,6 +27892,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -27565,6 +27905,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -27577,12 +27918,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/c999ba10-eb48-43bb-b876-0fe7d4ef432a")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -27776,6 +28118,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -27789,6 +28132,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -27802,13 +28146,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/8e6662f9-bb7b-46e1-a6a7-618c04d0f7e7")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27989,6 +28334,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28001,6 +28347,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28013,12 +28360,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/5c44b783-1e5a-4312-82f0-f8837fee7e22")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28199,6 +28547,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28211,6 +28560,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28223,12 +28573,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/0c3e1f02-d6e0-4497-8a9a-f450dbf8a369")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28409,6 +28760,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28421,6 +28773,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28433,12 +28786,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/f071878e-f0ae-465c-9974-4aea3de57173")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28619,6 +28973,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28631,6 +28986,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28643,12 +28999,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/2e318a56-7047-49ed-8746-0de800c33552")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -28842,6 +29199,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28854,6 +29212,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28866,12 +29225,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/31413e01-fec7-4da5-ad55-386ebef03d6e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -29052,6 +29412,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -29064,6 +29425,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -29076,12 +29438,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/a7614f22-bad4-4cbc-a303-7883f1b1bac5")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -29262,6 +29625,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -29274,6 +29638,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -29286,12 +29651,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "TQFP*7x7mm*P0.5mm*")
 		(path "/345c481e-75ab-4aca-bd61-8f28b2d590b0")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -30216,6 +30582,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -30228,6 +30595,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -30240,12 +30608,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/3bf2f079-691f-4395-811b-f2933098d65e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -30426,6 +30795,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -30438,6 +30808,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -30450,12 +30821,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/0fa7651d-9b84-48a3-840d-1dffe8cb844e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -30636,6 +31008,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -30648,6 +31021,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -30660,12 +31034,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/e12c371a-0a50-4a95-b0eb-2e39b1261f4d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -30846,6 +31221,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -30858,6 +31234,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -30870,12 +31247,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/4f92deb7-5890-41f6-a49a-58eabb5cb686")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -31056,6 +31434,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -31068,6 +31447,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -31080,12 +31460,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/2e550102-d3f1-4df4-8bc3-08186c22baf3")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -31266,6 +31647,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -31279,6 +31661,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -31292,13 +31675,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/0fbf8382-0563-46d6-9969-aefc8ff9c444")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -31460,7 +31844,7 @@
 			)
 		)
 		(property "Value" "SN74LVC1T45DRL"
-			(at 0 1.75 270)
+			(at 0 1.75 -90)
 			(layer "F.Fab")
 			(uuid "9be7c761-69dc-4297-bd01-087df8415ea7")
 			(effects
@@ -31479,6 +31863,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -31491,6 +31876,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -31503,12 +31889,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "*SOT?563*")
 		(path "/cbe21780-d53f-49bc-8994-fbeda31b6a36")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -31634,7 +32021,7 @@
 			(uuid "03fbe2f6-3492-46a1-8d3b-0ff885ad684d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "f50f5267-3421-4cfe-9503-bc8a8d768dbc")
 			(effects
@@ -31753,6 +32140,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -31765,6 +32153,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -31777,12 +32166,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/0f25c5ab-8f73-40a5-a4d6-2deb29f60db8")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -31963,6 +32353,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -31975,6 +32366,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -31987,12 +32379,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/7a300d9c-9135-4f57-907a-8e72c23c4d79")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -32217,6 +32610,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32229,6 +32623,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32241,12 +32636,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/5b8df217-4c75-4137-9033-3a5b750b7a13")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -32501,6 +32897,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32513,6 +32910,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32525,12 +32923,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/a7c39bb9-3243-47a6-8a1a-006f8d08d5b2")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -32711,6 +33110,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32723,6 +33123,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32735,12 +33136,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/2e0312a7-560d-4769-8097-161ec3c7ea6e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -32921,6 +33323,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32933,6 +33336,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32945,12 +33349,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "D*SMF*")
 		(path "/a9df14d8-e1df-4014-9678-42be08424585")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -33203,6 +33608,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33215,6 +33621,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33227,12 +33634,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/e16cbafa-cb33-4d5c-a8b4-03e25a014e79")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -33426,6 +33834,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33438,6 +33847,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33450,12 +33860,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/ad19c3eb-a20d-4abd-a38c-43eebb3beb5f")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -33636,6 +34047,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33648,6 +34060,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33660,12 +34073,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/4fbfb0bd-5c4d-43d1-a8b2-46d1b0b1dd87")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -33846,6 +34260,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33858,6 +34273,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33870,12 +34286,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/006112ad-4c77-4842-8928-d8378bd4e0e6")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -33958,6 +34375,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33970,6 +34388,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -33982,12 +34401,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/2046b791-9863-469d-8fb1-bfbb32fccf89")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -34168,6 +34588,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -34180,6 +34601,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -34192,12 +34614,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/3256207e-c1ec-4847-95ca-4a2aeac408df")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -34378,6 +34801,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -34390,6 +34814,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -34402,12 +34827,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/5532344f-fdb5-4a51-b94b-0dd137008ead")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -34588,6 +35014,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -34600,6 +35027,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -34612,12 +35040,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/71a4a29c-4b7e-45e8-9685-a0c94f77d410")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -34842,6 +35271,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -34854,6 +35284,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -34866,12 +35297,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/e0530f85-be39-44a1-b3ad-a540579ba003")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -35052,6 +35484,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35064,6 +35497,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35076,12 +35510,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/8bbcc725-7c51-4f83-a8ae-ea75bba620e5")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -35262,6 +35697,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35274,6 +35710,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35286,12 +35723,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/ec13b98b-d817-44e5-9d86-ece71a1127e9")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -35472,6 +35910,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35484,6 +35923,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35496,12 +35936,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/6383f95a-bc0b-4b29-8e51-cb8cb6d7950e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -35682,6 +36123,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35694,6 +36136,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35706,12 +36149,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/99b7105d-83ed-43aa-9056-db6dbb7ea8f9")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -35794,6 +36238,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35806,6 +36251,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35818,12 +36264,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/db9276d8-07fe-4669-82d1-07b629b2a197")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -36004,6 +36451,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -36016,6 +36464,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -36028,12 +36477,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "DFN*3x3mm*P0.5mm*")
 		(path "/c62309e7-1e5e-4cd0-9e58-f05fbbfe5a4d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -36336,6 +36786,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -36348,6 +36799,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -36360,12 +36812,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/b407da52-9cab-499e-a1de-501b990f8bd1")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -36546,6 +36999,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -36558,6 +37012,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -36570,12 +37025,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/115b8d56-4a32-4707-a547-2163060b3589")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -36758,6 +37214,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -36770,6 +37227,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -36782,6 +37240,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37016,6 +37475,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37028,6 +37488,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37040,12 +37501,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/f379cc07-1386-4e4c-8408-bfde7abd716d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -37226,6 +37688,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37238,6 +37701,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37250,12 +37714,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/f9d0c522-c7d0-4c4b-bf22-9d6520e26f1f")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -37436,6 +37901,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37448,6 +37914,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37460,12 +37927,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/7e1c2ef3-540c-4c67-8f84-c6074eff8529")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -37646,6 +38114,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37658,6 +38127,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37670,11 +38140,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/b8609a51-dd28-45e4-ab89-acc963b31527")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -37957,6 +38428,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37969,6 +38441,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -37981,12 +38454,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/ae71b80f-cb26-43d3-9176-e726a6e161c6")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -38167,6 +38641,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38179,6 +38654,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38191,12 +38667,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Crystal*")
 		(path "/50009383-dfe6-47ae-b2a0-a26437d44040")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -38405,6 +38882,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38417,6 +38895,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38429,12 +38908,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/0b6d64d8-ffbc-4352-aa46-86eb695a31cd")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -38615,6 +39095,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38627,6 +39108,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38639,12 +39121,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/cd523cb8-e0ee-467a-9488-5aa298abae32")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -38727,6 +39210,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38739,6 +39223,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38751,12 +39236,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/001c6b86-a139-4a52-9771-d3b83f09e418")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -38937,6 +39423,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38949,6 +39436,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -38961,12 +39449,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/91e03ac8-0ff5-4542-8124-953f8d73c52d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -39147,6 +39636,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -39159,6 +39649,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -39171,12 +39662,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/548c6dea-7cd1-4431-9c62-316cb21f07ed")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -39357,6 +39849,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -39369,6 +39862,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -39381,12 +39875,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/c3759b88-f04d-4a77-9de3-c303569c39de")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -39567,6 +40062,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -39579,6 +40075,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -39591,12 +40088,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "PinHeader*2x20*P2.54mm*Vertical* PinSocket*2x20*P2.54mm*Vertical*")
 		(path "/7c089b8d-18f6-4338-accc-d8eece5d730d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -40659,6 +41157,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -40671,6 +41170,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -40683,12 +41183,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/163be398-6c0c-45bb-af33-5e8ed4e02a68")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -40913,6 +41414,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -40925,6 +41427,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -40937,12 +41440,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/bfdac0e1-542c-40fe-86ad-71a5388dbd8f")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -41123,6 +41627,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -41135,6 +41640,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -41147,12 +41653,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/bec79dee-26ba-4c5a-8220-b6b3307cd8b1")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -41333,6 +41840,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -41345,6 +41853,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -41357,12 +41866,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/c61acead-7b83-48ea-87c1-993bb9f44308")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -41543,6 +42053,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -41555,6 +42066,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -41567,12 +42079,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/0ffdf442-031b-46eb-b7a1-5912591ae045")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -41753,6 +42266,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -41765,6 +42279,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -41777,12 +42292,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "TQFP*7x7mm*P0.5mm*")
 		(path "/e8be19f7-7f95-419f-a609-bdbcb990076a")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -42707,6 +43223,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -42719,6 +43236,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -42731,12 +43249,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/f8770290-ee24-49b4-93d2-75e008c8ecb5")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -42917,6 +43436,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -42929,6 +43449,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -42941,12 +43462,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/e4060b59-c85d-4f86-829c-cdf79de2634e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -43140,6 +43662,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -43152,6 +43675,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -43164,12 +43688,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/b2807448-b252-4c58-8475-a88ba73b45af")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -43252,6 +43777,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -43264,6 +43790,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -43276,12 +43803,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/200b3e28-4ad3-4d65-a1c9-a0ecb3d77cf1")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -43462,6 +43990,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -43474,6 +44003,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -43486,12 +44016,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/e12ae25e-407a-4e06-8aa5-fe432d7ee933")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -43672,6 +44203,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -43684,6 +44216,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -43696,11 +44229,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/e90e5c83-48f6-413a-a269-c0303a1cd7df")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -43983,6 +44517,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -43995,6 +44530,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -44007,12 +44543,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/b6e87073-a09b-4a12-8e67-dd6fed005fc5")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -44277,6 +44814,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -44289,6 +44827,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -44301,12 +44840,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/a120d75c-617a-4085-a38c-587c168749ae")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -44571,6 +45111,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -44583,6 +45124,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -44595,12 +45137,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/713e60fb-8a90-4c53-942a-ea69fe4d9a1a")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -44683,6 +45226,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -44695,6 +45239,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -44707,12 +45252,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/153f1cd0-3e1d-4f3a-9282-55a17ad98e6e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -44893,6 +45439,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -44905,6 +45452,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -44917,12 +45465,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*")
 		(path "/ffa964da-84af-4228-a5e2-698ea8c80331")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -45424,6 +45973,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -45436,6 +45986,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -45448,12 +45999,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/92290452-d4ba-4513-811f-b2fd39085ce5")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -45634,6 +46186,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -45646,6 +46199,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -45658,12 +46212,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/e98dc344-2158-425d-9dfd-84827e17c227")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -45844,6 +46399,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -45856,6 +46412,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -45868,11 +46425,12 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(path "/30edd033-8a49-41fa-87c0-a06b8683b70c")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -46086,6 +46644,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -46098,6 +46657,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -46110,12 +46670,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/39c3e74c-2eac-4994-bad4-7b065b2dc80d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -46296,6 +46857,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -46308,6 +46870,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -46320,12 +46883,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/897d7a4c-64a8-4b6e-a838-c9f0db90f98e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -46506,6 +47070,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -46518,6 +47083,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -46530,12 +47096,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/6156ac92-c4d2-47ca-961d-5fde0cc5e60e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -46716,6 +47283,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -46728,6 +47296,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -46740,12 +47309,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/a908773d-bbc1-4c17-a8d1-36550faba32b")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -47010,6 +47580,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47022,6 +47593,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47034,12 +47606,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/029cf829-6ca9-485f-9a36-13761e400ea5")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -47220,6 +47793,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47232,6 +47806,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47244,12 +47819,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/7b919428-2d14-46a5-8fc8-ca0a991ffc6e")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -47430,6 +48006,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47442,6 +48019,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47454,12 +48032,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/892fb322-0380-4b0d-b2e3-6a96c3a7ffff")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -47640,6 +48219,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47652,6 +48232,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47664,12 +48245,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/c645bb16-6636-4a9e-b178-ce7ee4105ab1")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -47850,6 +48432,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47862,6 +48445,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -47874,12 +48458,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/31192b3e-bda3-46bf-8923-b160f409ef08")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -48060,6 +48645,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -48072,6 +48658,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -48084,12 +48671,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/840f0154-1710-4768-bc75-90f0a42ff961")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -48270,6 +48858,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -48282,6 +48871,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -48294,12 +48884,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/80a4d8cf-1553-4804-afe6-53f5484dcf76")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -48480,6 +49071,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -48492,6 +49084,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -48504,12 +49097,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "D*SMF*")
 		(path "/b8b9962f-cdb6-4478-91b0-095303dced2f")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -48762,6 +49356,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -48774,6 +49369,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -48786,12 +49382,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/7c779770-5d2a-4bc8-a625-e41b42aae60c")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -48985,6 +49582,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -48997,6 +49595,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -49009,12 +49608,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/78dee7a8-c818-4b6e-82de-664d759e2424")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -49195,6 +49795,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -49207,6 +49808,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -49219,12 +49821,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/1a43d6f3-ba58-40ee-94d2-2672ccf4835d")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -49405,6 +50008,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -49417,6 +50021,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -49429,12 +50034,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/b9881630-2d37-4d19-a358-677b3e048057")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -49615,6 +50221,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -49628,6 +50235,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -49641,13 +50249,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/3317c115-5900-4e02-9d3f-ff6938eb10a7")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -49828,6 +50437,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -49840,6 +50450,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -49852,12 +50463,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/5bb20f97-128f-4b30-a652-ce78eae09fcc")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -50038,6 +50650,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50050,6 +50663,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50062,12 +50676,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/23245186-26b1-44e9-9ca6-8c2b316682ce")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -50248,6 +50863,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50260,6 +50876,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50272,12 +50889,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/85994713-6adf-4755-ace2-20e0c658e48b")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -50458,6 +51076,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50470,6 +51089,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50482,12 +51102,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/50fc817d-72db-484c-ba12-97764af5cf7b")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -50668,6 +51289,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50680,6 +51302,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50692,12 +51315,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/f1f07dcf-6a5c-437d-8542-3677d29f83a4")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -50878,6 +51502,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50890,6 +51515,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -50902,12 +51528,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/dae7d194-cfc9-44d0-ac6f-ddb4c0698bd2")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -51101,6 +51728,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -51114,6 +51742,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -51127,13 +51756,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/150ad7ad-cc43-43f7-9191-238757ebedb0")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -51314,6 +51944,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -51326,6 +51957,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -51338,12 +51970,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/0e10bb4c-0a98-463d-8b8a-bb274e6155da")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -51524,6 +52157,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -51536,6 +52170,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -51548,12 +52183,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/fafa6d05-40df-4c6c-9395-ca565f30d528")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -51734,6 +52370,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -51746,6 +52383,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -51758,12 +52396,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "*QFP*7x7mm*P0.5mm*")
 		(path "/6896ea38-f25f-4aec-ac0f-ed83938aebc4")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -52076,7 +52715,7 @@
 			(size 0.8 0.25)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 35 "/~{CSC}")
+			(net 48 "/UBTD")
 			(pinfunction "PIO1_8")
 			(pintype "bidirectional")
 			(uuid "6189a82c-13e9-44c2-befa-b3c16fae65a3")
@@ -52096,7 +52735,7 @@
 			(size 0.8 0.25)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 36 "/~{CSD}")
+			(net 46 "/UBTC")
 			(pinfunction "PIO1_9")
 			(pintype "bidirectional")
 			(uuid "8afd6606-822a-4c69-80a1-03a2179efb45")
@@ -52206,7 +52845,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 41 "/UCKC")
+			(net 36 "/~{CSD}")
 			(pinfunction "PIO1_1")
 			(pintype "bidirectional")
 			(uuid "5ce5ca5b-0d80-4d9f-b016-cc5ed53f9567")
@@ -52226,7 +52865,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 43 "/UCKD")
+			(net 35 "/~{CSC}")
 			(pinfunction "PIO1_2")
 			(pintype "bidirectional")
 			(uuid "58216429-e8d9-456d-9f08-0491fb2be13e")
@@ -52236,7 +52875,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 7 "/BLS")
+			(net 23 "/UBTA")
 			(pinfunction "PIO0_27")
 			(pintype "bidirectional")
 			(uuid "28e9db98-45e4-452f-80f1-5991d13cc140")
@@ -52246,7 +52885,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 13 "/MISO")
+			(net 25 "/UBTB")
 			(pinfunction "PIO0_26")
 			(pintype "bidirectional")
 			(uuid "a75b1c13-8938-4358-8b29-0c094550ac0c")
@@ -52276,7 +52915,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 46 "/UBTC")
+			(net 43 "/UCKD")
 			(pinfunction "PIO1_3")
 			(pintype "bidirectional")
 			(uuid "3fc40ea6-a18d-4a9a-bdad-2862ceed536e")
@@ -52296,7 +52935,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 48 "/UBTD")
+			(net 41 "/UCKC")
 			(pinfunction "PIO1_4")
 			(pintype "bidirectional")
 			(uuid "f3ad9249-5a55-46af-9053-b5b2b3b60f44")
@@ -52336,7 +52975,7 @@
 			(size 0.8 0.25)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 267 "/INTC")
+			(net 244 "/~{INTC}")
 			(pinfunction "PIO1_5")
 			(pintype "bidirectional")
 			(uuid "e679820c-3f1b-41b7-91f6-7ca3870bcb41")
@@ -52346,7 +52985,7 @@
 			(size 0.8 0.25)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 269 "/INTD")
+			(net 246 "/~{INTD}")
 			(pinfunction "PIO1_6")
 			(pintype "bidirectional")
 			(uuid "052a3221-4898-47d5-956b-5b4b056fffe1")
@@ -52486,7 +53125,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 268 "/BCLK")
+			(net 84 "/BCK")
 			(pinfunction "PIO0_30")
 			(pintype "bidirectional")
 			(uuid "8c69ddd1-5dcb-4487-934b-a6a9ad3e4661")
@@ -52496,7 +53135,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 24 "/UCKB")
+			(net 22 "/UCKA")
 			(pinfunction "PIO0_22")
 			(pintype "bidirectional")
 			(uuid "ca0d939c-b921-4aa9-b03a-48e1c6897d0e")
@@ -52506,7 +53145,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 22 "/UCKA")
+			(net 24 "/UCKB")
 			(pinfunction "PIO0_21")
 			(pintype "bidirectional")
 			(uuid "8c2da0f7-dd76-441f-8a53-dac9b34d31e1")
@@ -52516,7 +53155,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 25 "/UBTB")
+			(net 18 "/~{INTB}")
 			(pinfunction "PIO0_20")
 			(pintype "bidirectional")
 			(uuid "f1c44013-b44c-44a2-aac0-ec7470fcc28c")
@@ -52526,7 +53165,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 23 "/UBTA")
+			(net 14 "/~{INTA}")
 			(pinfunction "PIO0_19")
 			(pintype "bidirectional")
 			(uuid "a272e7e4-dd34-4c3e-bfb4-b61d4e72d21c")
@@ -52536,7 +53175,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 18 "/~{INTB}")
+			(net 13 "/MISO")
 			(pinfunction "PIO0_18")
 			(pintype "bidirectional")
 			(uuid "9eaf6144-05e3-4aa6-9cc5-b3bd8064c51f")
@@ -52546,7 +53185,7 @@
 			(size 0.25 0.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 14 "/~{INTA}")
+			(net 7 "/BLS")
 			(pinfunction "PIO0_17")
 			(pintype "bidirectional")
 			(uuid "d6772e77-82cb-442c-b536-0fae4dc1216d")
@@ -52608,6 +53247,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -52620,6 +53260,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -52632,12 +53273,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "DIP?16*")
 		(path "/e1c7481a-060f-411e-8591-1f4b9839f70a")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -53002,6 +53644,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -53014,6 +53657,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -53026,12 +53670,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "DFN*3x3mm*P0.5mm*")
-		(path "/86a7904a-36e8-4295-a5b9-7750aed999cc")
-		(sheetname "Stammblatt")
+		(path "/68062f96-cb38-4590-8b52-13c84914a4d2")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -53334,6 +53979,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -53346,6 +53992,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -53358,12 +54005,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "SOT?353*")
 		(path "/2206d345-f929-4529-8357-3d7682c3c933")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -53489,7 +54137,7 @@
 			(uuid "530fc6e0-40d2-43c5-a221-70ef45436447")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "400e68f2-7190-4157-9e38-8b4c8f2049c1")
 			(effects
@@ -53598,6 +54246,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -53610,6 +54259,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -53622,12 +54272,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/7a0c086b-ce95-4ece-acb8-565de765e85b")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -53808,6 +54459,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -53821,6 +54473,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -53834,13 +54487,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/2f67ae12-a6ed-46b5-b9aa-63fc83b07cd5")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -54021,6 +54675,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -54033,6 +54688,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -54045,12 +54701,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/309504f1-cc29-4c99-81b0-5ea60025ae98")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -54231,6 +54888,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -54243,6 +54901,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -54255,12 +54914,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/9da72e9d-f5a7-4cc4-9326-ff6729b887e3")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -54441,6 +55101,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -54453,6 +55114,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -54465,12 +55127,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/0af6750d-ae05-48c9-89fc-d812e1a4121c")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -54664,6 +55327,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -54676,6 +55340,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -54688,12 +55353,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "TQFP*7x7mm*P0.5mm*")
 		(path "/655a8278-b9b4-469b-a9d6-32c4486a45be")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -55618,6 +56284,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -55631,6 +56298,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -55644,13 +56312,14 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/e6f87c70-daea-4f7d-9689-efaec3d29a73")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -55896,6 +56565,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -55908,6 +56578,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -55920,12 +56591,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/89c3aa6e-5125-423d-b838-7ecc12b3bf96")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -56106,6 +56778,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -56118,6 +56791,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -56130,12 +56804,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "MSOP*3x3mm*P0.5mm*")
 		(path "/af04ce27-63db-4888-b06e-3c24ab2256dc")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -56440,6 +57115,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -56452,6 +57128,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -56464,12 +57141,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*")
 		(path "/acdab338-0e6e-430e-8ee0-e601c5b3717c")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -56971,6 +57649,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -56983,6 +57662,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -56995,12 +57675,13 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
 		(property ki_fp_filters "R_*")
 		(path "/47ef03b5-140a-40d6-9c3e-ff7c3f44bec7")
-		(sheetname "Stammblatt")
+		(sheetname "Root")
 		(sheetfile "AES42HAT.kicad_sch")
 		(attr smd)
 		(fp_line
