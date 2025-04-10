@@ -4271,322 +4271,6 @@
 				)
 			)
 		)
-		(symbol "Device:D_Zener_Small"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.254) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D_Zener_Small"
-				(at 0 -2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Zener diode, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_Zener_Small_0_1"
-				(polyline
-					(pts
-						(xy 0.762 0) (xy -0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 1.016) (xy -0.762 1.016) (xy -0.762 -1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.016) (xy -0.762 0) (xy 0.762 -1.016) (xy 0.762 1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_Zener_Small_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 1.778)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 1.778)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Device:LED_Small_Filled"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.254) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at -1.27 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "LED_Small_Filled"
-				(at -4.445 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Light emitting diode, small symbol, filled shape"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "LED diode light-emitting-diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LED_Small_Filled_0_1"
-				(polyline
-					(pts
-						(xy -0.762 -1.016) (xy -0.762 1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy -0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.016) (xy -0.762 0) (xy 0.762 1.016) (xy 0.762 -1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.762) (xy -0.508 1.27) (xy -0.254 1.27) (xy -0.508 1.27) (xy -0.508 1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.508 1.27) (xy 0 1.778) (xy 0.254 1.778) (xy 0 1.778) (xy 0 1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LED_Small_Filled_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 1.778)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 1.778)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:L_Ferrite"
 			(pin_numbers hide)
 			(pin_names
@@ -5940,6 +5624,322 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Library-IMM:D_Zener_Small_Filled"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener_Small_Filled"
+				(at 0 -2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Zener diode, small symbol, filled shape"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Zener_Small_Filled_0_1"
+				(polyline
+					(pts
+						(xy 0.762 0) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.762 1.016) (xy -0.762 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.016) (xy -0.762 0) (xy 0.762 -1.016) (xy 0.762 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "D_Zener_Small_Filled_1_1"
+				(pin passive line
+					(at 2.54 0 180)
+					(length 1.778)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 0 0)
+					(length 1.778)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Library-IMM:LED_Small_Filled"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at -1.27 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "LED_Small_Filled"
+				(at -4.445 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode, small symbol, filled shape"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode light-emitting-diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_Small_Filled_0_1"
+				(polyline
+					(pts
+						(xy -0.762 -1.016) (xy -0.762 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.016) (xy -0.762 0) (xy 0.762 1.016) (xy 0.762 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy -0.508 1.27) (xy -0.254 1.27) (xy -0.508 1.27) (xy -0.508 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 0 1.778) (xy 0.254 1.778) (xy 0 1.778) (xy 0 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_Small_Filled_1_1"
+				(pin passive line
+					(at 2.54 0 180)
+					(length 1.778)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 0 0)
+					(length 1.778)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "K"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -21846,7 +21846,6 @@
 	)
 	(label "FBA"
 		(at 105.41 359.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21857,7 +21856,6 @@
 	)
 	(label "SRC"
 		(at 68.58 161.29 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21868,7 +21866,6 @@
 	)
 	(label "~{RESET}"
 		(at 490.22 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21879,7 +21876,6 @@
 	)
 	(label "~{CSB}"
 		(at 490.22 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21890,7 +21886,6 @@
 	)
 	(label "OUT1"
 		(at 247.65 234.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21901,7 +21896,6 @@
 	)
 	(label "SCLK"
 		(at 300.99 273.05 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21912,7 +21906,6 @@
 	)
 	(label "SRC"
 		(at 138.43 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21923,7 +21916,6 @@
 	)
 	(label "WCLK"
 		(at 516.89 209.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21934,7 +21926,6 @@
 	)
 	(label "~{RESET}"
 		(at 299.72 347.98 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21945,7 +21936,6 @@
 	)
 	(label "M3A"
 		(at 299.72 337.82 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21956,7 +21946,6 @@
 	)
 	(label "SLC"
 		(at 134.62 139.7 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21967,7 +21956,6 @@
 	)
 	(label "BCK"
 		(at 544.83 55.88 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21978,7 +21966,6 @@
 	)
 	(label "RCLK"
 		(at 247.65 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21989,7 +21976,6 @@
 	)
 	(label "R2+"
 		(at 421.64 354.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22000,7 +21986,6 @@
 	)
 	(label "X3-"
 		(at 367.03 153.67 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22011,7 +21996,6 @@
 	)
 	(label "BCK"
 		(at 247.65 152.4 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22022,7 +22006,6 @@
 	)
 	(label "~{CSD}"
 		(at 300.99 93.98 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22033,7 +22016,6 @@
 	)
 	(label "OUT3"
 		(at 247.65 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22044,7 +22026,6 @@
 	)
 	(label "BLS"
 		(at 300.99 50.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22055,7 +22036,6 @@
 	)
 	(label "R4+"
 		(at 199.39 69.85 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22066,7 +22046,6 @@
 	)
 	(label "IN3"
 		(at 234.95 58.42 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22077,7 +22056,6 @@
 	)
 	(label "UCKD"
 		(at 544.83 71.12 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22088,7 +22066,6 @@
 	)
 	(label "UBTA"
 		(at 299.72 342.9 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22099,7 +22076,6 @@
 	)
 	(label "RCLK"
 		(at 247.65 193.04 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22110,7 +22086,6 @@
 	)
 	(label "~{WIEN}"
 		(at 523.24 280.67 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22121,7 +22096,6 @@
 	)
 	(label "FBC"
 		(at 106.68 179.07 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22132,7 +22106,6 @@
 	)
 	(label "IN2"
 		(at 247.65 147.32 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22143,7 +22116,6 @@
 	)
 	(label "R2+"
 		(at 199.39 251.46 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22154,7 +22126,6 @@
 	)
 	(label "SYNCD"
 		(at 300.99 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22165,7 +22136,6 @@
 	)
 	(label "SRD"
 		(at 138.43 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22176,7 +22146,6 @@
 	)
 	(label "R1-"
 		(at 421.64 359.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22187,7 +22156,6 @@
 	)
 	(label "~{INTC}"
 		(at 300.99 170.18 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22198,7 +22166,6 @@
 	)
 	(label "LR"
 		(at 246.38 322.58 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22209,7 +22176,6 @@
 	)
 	(label "ACLK"
 		(at 567.69 153.67 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22220,7 +22186,6 @@
 	)
 	(label "PVA"
 		(at 184.15 356.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22231,7 +22196,6 @@
 	)
 	(label "M3D"
 		(at 300.99 66.04 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22242,7 +22206,6 @@
 	)
 	(label "~{CSA}"
 		(at 299.72 365.76 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22253,7 +22216,6 @@
 	)
 	(label "MODB"
 		(at 490.22 81.28 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22264,7 +22226,6 @@
 	)
 	(label "SLD"
 		(at 134.62 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22275,7 +22236,6 @@
 	)
 	(label "MCLK"
 		(at 448.31 60.96 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22286,7 +22246,6 @@
 	)
 	(label "UBTD"
 		(at 300.99 71.12 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22297,7 +22256,6 @@
 	)
 	(label "IN4"
 		(at 247.65 160.02 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22308,7 +22266,6 @@
 	)
 	(label "SDA"
 		(at 490.22 68.58 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22319,7 +22276,6 @@
 	)
 	(label "ACLK"
 		(at 247.65 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22330,7 +22286,6 @@
 	)
 	(label "BCK"
 		(at 246.38 332.74 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22341,7 +22296,6 @@
 	)
 	(label "BCK"
 		(at 247.65 242.57 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22352,7 +22306,6 @@
 	)
 	(label "PHOD"
 		(at 199.39 74.93 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22363,7 +22316,6 @@
 	)
 	(label "~{CSB}"
 		(at 300.99 275.59 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22374,7 +22326,6 @@
 	)
 	(label "LED"
 		(at 544.83 81.28 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22385,7 +22336,6 @@
 	)
 	(label "SWDIO"
 		(at 458.47 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22396,7 +22346,6 @@
 	)
 	(label "MID"
 		(at 97.79 227.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22407,7 +22356,6 @@
 	)
 	(label "BCK"
 		(at 247.65 139.7 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22418,7 +22366,6 @@
 	)
 	(label "IN0"
 		(at 462.28 283.21 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22429,7 +22376,6 @@
 	)
 	(label "M3C"
 		(at 24.13 191.77 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22440,7 +22386,6 @@
 	)
 	(label "X1-"
 		(at 365.76 334.01 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22451,7 +22396,6 @@
 	)
 	(label "SYNCC"
 		(at 300.99 139.7 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22462,7 +22406,6 @@
 	)
 	(label "UCKD"
 		(at 300.99 68.58 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22473,7 +22416,6 @@
 	)
 	(label "OUT2"
 		(at 247.65 144.78 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22484,7 +22426,6 @@
 	)
 	(label "UBTD"
 		(at 544.83 83.82 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22495,7 +22436,6 @@
 	)
 	(label "WCLK"
 		(at 63.5 232.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22506,7 +22446,6 @@
 	)
 	(label "MID"
 		(at 138.43 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22517,7 +22456,6 @@
 	)
 	(label "MISO"
 		(at 523.24 293.37 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22528,7 +22466,6 @@
 	)
 	(label "MOSI"
 		(at 300.99 187.96 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22539,7 +22476,6 @@
 	)
 	(label "M3B"
 		(at 300.99 247.65 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22550,7 +22486,6 @@
 	)
 	(label "LR"
 		(at 246.38 335.28 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22561,7 +22496,6 @@
 	)
 	(label "MCLK"
 		(at 247.65 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22572,7 +22506,6 @@
 	)
 	(label "LR"
 		(at 247.65 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22583,7 +22516,6 @@
 	)
 	(label "OUT0"
 		(at 462.28 285.75 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22594,7 +22526,6 @@
 	)
 	(label "OUT3"
 		(at 462.28 303.53 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22605,7 +22536,6 @@
 	)
 	(label "M3B"
 		(at 24.13 281.94 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22616,7 +22546,6 @@
 	)
 	(label "~{CSC}"
 		(at 544.83 68.58 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22627,7 +22556,6 @@
 	)
 	(label "LR"
 		(at 462.28 280.67 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22638,7 +22566,6 @@
 	)
 	(label "SDA"
 		(at 523.24 270.51 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22649,7 +22576,6 @@
 	)
 	(label "SWCLK"
 		(at 458.47 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22660,7 +22586,6 @@
 	)
 	(label "WCLK"
 		(at 62.23 322.58 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22671,7 +22596,6 @@
 	)
 	(label "CTLB"
 		(at 68.58 266.7 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22682,7 +22606,6 @@
 	)
 	(label "R2-"
 		(at 454.66 354.33 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22693,7 +22616,6 @@
 	)
 	(label "M3A"
 		(at 104.14 328.93 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22704,7 +22626,6 @@
 	)
 	(label "SLA"
 		(at 22.86 341.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22715,7 +22636,6 @@
 	)
 	(label "CTLC"
 		(at 125.73 193.04 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22726,7 +22646,6 @@
 	)
 	(label "R3-"
 		(at 421.64 351.79 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22737,7 +22656,6 @@
 	)
 	(label "PVB"
 		(at 490.22 55.88 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22748,7 +22666,6 @@
 	)
 	(label "SCLK"
 		(at 523.24 298.45 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22759,7 +22676,6 @@
 	)
 	(label "~{CSD}"
 		(at 544.83 66.04 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22770,7 +22686,6 @@
 	)
 	(label "R3+"
 		(at 199.39 161.29 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22781,7 +22696,6 @@
 	)
 	(label "CTLA"
 		(at 124.46 373.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22792,7 +22706,6 @@
 	)
 	(label "MISO"
 		(at 300.99 270.51 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22803,7 +22716,6 @@
 	)
 	(label "AESC"
 		(at 300.99 144.78 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22814,7 +22726,6 @@
 	)
 	(label "CTLC"
 		(at 68.58 176.53 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22825,7 +22736,6 @@
 	)
 	(label "OUT0"
 		(at 246.38 325.12 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22836,7 +22746,6 @@
 	)
 	(label "ACLK"
 		(at 247.65 190.5 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22847,7 +22756,6 @@
 	)
 	(label "UCKB"
 		(at 490.22 93.98 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22858,7 +22766,6 @@
 	)
 	(label "MID"
 		(at 138.43 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22869,7 +22776,6 @@
 	)
 	(label "MCLK"
 		(at 523.24 278.13 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22880,7 +22786,6 @@
 	)
 	(label "RCLK"
 		(at 510.54 153.67 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22891,7 +22796,6 @@
 	)
 	(label "MID"
 		(at 137.16 317.5 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22902,7 +22806,6 @@
 	)
 	(label "X1+"
 		(at 365.76 323.85 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22913,7 +22816,6 @@
 	)
 	(label "MCLK"
 		(at 246.38 368.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22924,7 +22826,6 @@
 	)
 	(label "ENC"
 		(at 73.66 179.07 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22935,7 +22836,6 @@
 	)
 	(label "~{RESET}"
 		(at 300.99 167.64 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22946,7 +22846,6 @@
 	)
 	(label "MISO"
 		(at 490.22 86.36 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22957,7 +22856,6 @@
 	)
 	(label "R3-"
 		(at 199.39 171.45 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22968,7 +22866,6 @@
 	)
 	(label "SRB"
 		(at 138.43 232.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22979,7 +22876,6 @@
 	)
 	(label "LR"
 		(at 247.65 232.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22990,7 +22886,6 @@
 	)
 	(label "ACLK"
 		(at 246.38 370.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23001,7 +22896,6 @@
 	)
 	(label "BCK"
 		(at 247.65 60.96 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23012,7 +22906,6 @@
 	)
 	(label "M3B"
 		(at 105.41 238.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23023,7 +22916,6 @@
 	)
 	(label "R4-"
 		(at 454.66 346.71 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23034,7 +22926,6 @@
 	)
 	(label "MISO"
 		(at 300.99 88.9 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23045,7 +22936,6 @@
 	)
 	(label "FBB"
 		(at 24.13 259.08 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23056,7 +22946,6 @@
 	)
 	(label "PHOC"
 		(at 199.39 166.37 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23067,7 +22956,6 @@
 	)
 	(label "SDO2"
 		(at 247.65 180.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23078,7 +22966,6 @@
 	)
 	(label "UBTB"
 		(at 300.99 252.73 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23089,7 +22976,6 @@
 	)
 	(label "M3C"
 		(at 300.99 157.48 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23100,7 +22986,6 @@
 	)
 	(label "PHOB"
 		(at 199.39 256.54 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23111,7 +22996,6 @@
 	)
 	(label "BLS"
 		(at 300.99 142.24 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23122,7 +23006,6 @@
 	)
 	(label "FBB"
 		(at 106.68 269.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23133,7 +23016,6 @@
 	)
 	(label "IN1"
 		(at 462.28 290.83 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23144,7 +23026,6 @@
 	)
 	(label "SLC"
 		(at 24.13 161.29 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23155,7 +23036,6 @@
 	)
 	(label "WCLK"
 		(at 63.5 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23166,7 +23046,6 @@
 	)
 	(label "SCL"
 		(at 523.24 273.05 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23177,7 +23056,6 @@
 	)
 	(label "~{INTD}"
 		(at 300.99 78.74 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23188,7 +23066,6 @@
 	)
 	(label "R2-"
 		(at 199.39 261.62 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23199,7 +23076,6 @@
 	)
 	(label "CTLD"
 		(at 125.73 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23210,7 +23086,6 @@
 	)
 	(label "H2P"
 		(at 462.28 262.89 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23221,7 +23096,6 @@
 	)
 	(label "RCLK"
 		(at 509.27 209.55 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23232,7 +23106,6 @@
 	)
 	(label "UBTC"
 		(at 300.99 162.56 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23243,7 +23116,6 @@
 	)
 	(label "BCK"
 		(at 246.38 320.04 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23254,7 +23126,6 @@
 	)
 	(label "X4-"
 		(at 454.66 331.47 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23265,7 +23136,6 @@
 	)
 	(label "BLS"
 		(at 490.22 83.82 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23276,7 +23146,6 @@
 	)
 	(label "SYNCB"
 		(at 300.99 229.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23287,7 +23156,6 @@
 	)
 	(label "WCLK"
 		(at 544.83 53.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23298,7 +23166,6 @@
 	)
 	(label "UCKB"
 		(at 300.99 250.19 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23309,7 +23176,6 @@
 	)
 	(label "FBD"
 		(at 106.68 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23320,7 +23186,6 @@
 	)
 	(label "MODC"
 		(at 24.13 176.53 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23331,7 +23196,6 @@
 	)
 	(label "~{INTD}"
 		(at 544.83 78.74 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23342,7 +23206,6 @@
 	)
 	(label "~{INTC}"
 		(at 544.83 76.2 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23353,7 +23216,6 @@
 	)
 	(label "MCLK"
 		(at 567.69 151.13 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23364,7 +23226,6 @@
 	)
 	(label "M3D"
 		(at 24.13 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23375,7 +23236,6 @@
 	)
 	(label "X1+"
 		(at 454.66 341.63 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23386,7 +23246,6 @@
 	)
 	(label "MID"
 		(at 138.43 227.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23397,7 +23256,6 @@
 	)
 	(label "MCLK"
 		(at 247.65 187.96 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23408,7 +23266,6 @@
 	)
 	(label "ENA"
 		(at 299.72 335.28 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23419,7 +23276,6 @@
 	)
 	(label "UCKC"
 		(at 544.83 73.66 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23430,7 +23286,6 @@
 	)
 	(label "SLB"
 		(at 134.62 229.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23441,7 +23296,6 @@
 	)
 	(label "ENA"
 		(at 72.39 359.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23452,7 +23306,6 @@
 	)
 	(label "IN3"
 		(at 462.28 300.99 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23463,7 +23316,6 @@
 	)
 	(label "X3-"
 		(at 421.64 336.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23474,7 +23326,6 @@
 	)
 	(label "ENB"
 		(at 300.99 245.11 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23485,7 +23336,6 @@
 	)
 	(label "UCKA"
 		(at 299.72 340.36 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23496,7 +23346,6 @@
 	)
 	(label "~{INTA}"
 		(at 490.22 88.9 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23507,7 +23356,6 @@
 	)
 	(label "PVB"
 		(at 185.42 266.7 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23518,7 +23366,6 @@
 	)
 	(label "MOSI"
 		(at 490.22 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23529,7 +23376,6 @@
 	)
 	(label "UBTA"
 		(at 544.83 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23540,7 +23386,6 @@
 	)
 	(label "MODD"
 		(at 544.83 63.5 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23551,7 +23396,6 @@
 	)
 	(label "SRA"
 		(at 67.31 341.63 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23562,7 +23406,6 @@
 	)
 	(label "P2H"
 		(at 544.83 43.18 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23573,7 +23416,6 @@
 	)
 	(label "OUT3"
 		(at 247.65 88.9 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23584,7 +23426,6 @@
 	)
 	(label "M3A"
 		(at 22.86 372.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23595,7 +23436,6 @@
 	)
 	(label "LR"
 		(at 247.65 154.94 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23606,7 +23446,6 @@
 	)
 	(label "RCLK"
 		(at 523.24 283.21 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23617,7 +23456,6 @@
 	)
 	(label "MOSI"
 		(at 523.24 295.91 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23628,7 +23466,6 @@
 	)
 	(label "SCLK"
 		(at 300.99 182.88 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23639,7 +23476,6 @@
 	)
 	(label "H2P"
 		(at 544.83 40.64 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23650,7 +23486,6 @@
 	)
 	(label "~{RESET}"
 		(at 300.99 257.81 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23661,7 +23496,6 @@
 	)
 	(label "IN2"
 		(at 462.28 295.91 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23672,7 +23506,6 @@
 	)
 	(label "SCLK"
 		(at 490.22 73.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23683,7 +23516,6 @@
 	)
 	(label "OUT1"
 		(at 462.28 293.37 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23694,7 +23526,6 @@
 	)
 	(label "RCLK"
 		(at 246.38 373.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23705,7 +23536,6 @@
 	)
 	(label "WCLK"
 		(at 320.04 320.04 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23716,7 +23546,6 @@
 	)
 	(label "~{REQ}{slash}~{ISP}"
 		(at 490.22 71.12 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23727,7 +23556,6 @@
 	)
 	(label "LR"
 		(at 247.65 245.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23738,7 +23566,6 @@
 	)
 	(label "SCL"
 		(at 490.22 66.04 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23749,7 +23576,6 @@
 	)
 	(label "SCLK"
 		(at 299.72 363.22 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23760,7 +23586,6 @@
 	)
 	(label "LR"
 		(at 247.65 63.5 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23771,7 +23596,6 @@
 	)
 	(label "SLB"
 		(at 24.13 251.46 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23782,7 +23606,6 @@
 	)
 	(label "BCK"
 		(at 247.65 48.26 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23793,7 +23616,6 @@
 	)
 	(label "IN3"
 		(at 246.38 360.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23804,7 +23626,6 @@
 	)
 	(label "FBA"
 		(at 22.86 349.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23815,7 +23636,6 @@
 	)
 	(label "SYNCA"
 		(at 299.72 320.04 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23826,7 +23646,6 @@
 	)
 	(label "~{RESET}"
 		(at 300.99 76.2 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23837,7 +23656,6 @@
 	)
 	(label "~{INTA}"
 		(at 299.72 350.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23848,7 +23666,6 @@
 	)
 	(label "BLS"
 		(at 523.24 306.07 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23859,7 +23676,6 @@
 	)
 	(label "AESD"
 		(at 300.99 53.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23870,7 +23686,6 @@
 	)
 	(label "END"
 		(at 300.99 63.5 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23881,7 +23696,6 @@
 	)
 	(label "~{INTB}"
 		(at 300.99 260.35 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23892,7 +23706,6 @@
 	)
 	(label "MID"
 		(at 97.79 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23903,7 +23716,6 @@
 	)
 	(label "M3C"
 		(at 105.41 148.59 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23914,7 +23726,6 @@
 	)
 	(label "WCLK"
 		(at 63.5 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23925,7 +23736,6 @@
 	)
 	(label "ACLK"
 		(at 490.22 43.18 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23936,7 +23746,6 @@
 	)
 	(label "BLS"
 		(at 300.99 232.41 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23947,7 +23756,6 @@
 	)
 	(label "R3+"
 		(at 454.66 349.25 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23958,7 +23766,6 @@
 	)
 	(label "R1+"
 		(at 199.39 341.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23969,7 +23776,6 @@
 	)
 	(label "FBD"
 		(at 24.13 77.47 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23980,7 +23786,6 @@
 	)
 	(label "M3D"
 		(at 105.41 57.15 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23991,7 +23796,6 @@
 	)
 	(label "MID"
 		(at 482.6 354.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24002,7 +23806,6 @@
 	)
 	(label "PVD"
 		(at 185.42 85.09 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24013,7 +23816,6 @@
 	)
 	(label "CTLD"
 		(at 68.58 85.09 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24024,7 +23826,6 @@
 	)
 	(label "X2-"
 		(at 454.66 339.09 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24035,7 +23836,6 @@
 	)
 	(label "BCK"
 		(at 247.65 229.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24046,7 +23846,6 @@
 	)
 	(label "MODB"
 		(at 24.13 266.7 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24057,7 +23856,6 @@
 	)
 	(label "R1-"
 		(at 199.39 351.79 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24068,7 +23866,6 @@
 	)
 	(label "~{CSA}"
 		(at 523.24 290.83 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24079,7 +23876,6 @@
 	)
 	(label "~{REQ}{slash}~{ISP}"
 		(at 523.24 288.29 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24090,7 +23886,6 @@
 	)
 	(label "SCLK"
 		(at 300.99 91.44 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24101,7 +23896,6 @@
 	)
 	(label "MODA"
 		(at 490.22 78.74 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24112,7 +23906,6 @@
 	)
 	(label "BLS"
 		(at 299.72 322.58 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24123,7 +23916,6 @@
 	)
 	(label "MOSI"
 		(at 299.72 368.3 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24134,7 +23926,6 @@
 	)
 	(label "MISO"
 		(at 300.99 180.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24145,7 +23936,6 @@
 	)
 	(label "~{CSC}"
 		(at 300.99 185.42 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24156,7 +23946,6 @@
 	)
 	(label "OUT2"
 		(at 462.28 298.45 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24167,7 +23956,6 @@
 	)
 	(label "CTLB"
 		(at 125.73 283.21 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24178,7 +23966,6 @@
 	)
 	(label "X4+"
 		(at 421.64 331.47 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24189,7 +23976,6 @@
 	)
 	(label "SWDIO"
 		(at 490.22 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24200,7 +23986,6 @@
 	)
 	(label "UCKA"
 		(at 490.22 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24211,7 +23996,6 @@
 	)
 	(label "FBC"
 		(at 24.13 168.91 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24222,7 +24006,6 @@
 	)
 	(label "MID"
 		(at 96.52 317.5 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24233,7 +24016,6 @@
 	)
 	(label "IN5"
 		(at 247.65 68.58 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24244,7 +24026,6 @@
 	)
 	(label "X2+"
 		(at 367.03 233.68 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24255,7 +24036,6 @@
 	)
 	(label "~{CSA}"
 		(at 544.83 50.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24266,7 +24046,6 @@
 	)
 	(label "CTLA"
 		(at 67.31 356.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24277,7 +24056,6 @@
 	)
 	(label "LR"
 		(at 247.65 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24288,7 +24066,6 @@
 	)
 	(label "~{WIEN}"
 		(at 480.06 207.01 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24299,7 +24076,6 @@
 	)
 	(label "SRA"
 		(at 137.16 322.58 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24310,7 +24086,6 @@
 	)
 	(label "SRD"
 		(at 68.58 69.85 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24321,7 +24096,6 @@
 	)
 	(label "~{RESET}"
 		(at 523.24 303.53 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24332,7 +24106,6 @@
 	)
 	(label "SCL"
 		(at 510.54 146.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24343,7 +24116,6 @@
 	)
 	(label "MODD"
 		(at 24.13 85.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24354,7 +24126,6 @@
 	)
 	(label "SRB"
 		(at 68.58 251.46 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24365,7 +24136,6 @@
 	)
 	(label "MID"
 		(at 97.79 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24376,7 +24146,6 @@
 	)
 	(label "R4+"
 		(at 421.64 346.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24387,7 +24156,6 @@
 	)
 	(label "ACLK"
 		(at 247.65 280.67 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24398,7 +24166,6 @@
 	)
 	(label "END"
 		(at 73.66 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24409,7 +24176,6 @@
 	)
 	(label "MISO"
 		(at 299.72 360.68 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24420,7 +24186,6 @@
 	)
 	(label "IN4"
 		(at 462.28 273.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24431,7 +24196,6 @@
 	)
 	(label "MODA"
 		(at 22.86 356.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24442,7 +24206,6 @@
 	)
 	(label "IN1"
 		(at 247.65 270.51 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24453,7 +24216,6 @@
 	)
 	(label "IN0"
 		(at 246.38 327.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24464,7 +24226,6 @@
 	)
 	(label "X3+"
 		(at 454.66 334.01 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24475,7 +24236,6 @@
 	)
 	(label "X3+"
 		(at 367.03 143.51 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24486,7 +24246,6 @@
 	)
 	(label "ENC"
 		(at 300.99 154.94 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24497,7 +24256,6 @@
 	)
 	(label "~{INTB}"
 		(at 490.22 91.44 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24508,7 +24266,6 @@
 	)
 	(label "R1+"
 		(at 454.66 356.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24519,7 +24276,6 @@
 	)
 	(label "SLA"
 		(at 133.35 320.04 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24530,7 +24286,6 @@
 	)
 	(label "BCK"
 		(at 462.28 275.59 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24541,7 +24296,6 @@
 	)
 	(label "PVD"
 		(at 490.22 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24552,7 +24306,6 @@
 	)
 	(label "PVC"
 		(at 185.42 176.53 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24563,7 +24316,6 @@
 	)
 	(label "MOSI"
 		(at 300.99 278.13 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24574,7 +24326,6 @@
 	)
 	(label "X4-"
 		(at 367.03 62.23 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24585,7 +24336,6 @@
 	)
 	(label "IN1"
 		(at 237.49 241.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24596,7 +24346,6 @@
 	)
 	(label "PHOA"
 		(at 199.39 346.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24607,7 +24356,6 @@
 	)
 	(label "UBTB"
 		(at 544.83 45.72 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24618,7 +24366,6 @@
 	)
 	(label "SDA"
 		(at 510.54 143.51 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24629,7 +24376,6 @@
 	)
 	(label "MCLK"
 		(at 247.65 278.13 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24640,7 +24386,6 @@
 	)
 	(label "X2+"
 		(at 421.64 339.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24651,7 +24396,6 @@
 	)
 	(label "X2-"
 		(at 367.03 243.84 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24662,7 +24406,6 @@
 	)
 	(label "X1-"
 		(at 421.64 344.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24673,7 +24416,6 @@
 	)
 	(label "PVA"
 		(at 490.22 58.42 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24684,7 +24426,6 @@
 	)
 	(label "IN5"
 		(at 462.28 270.51 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24695,7 +24436,6 @@
 	)
 	(label "P2H"
 		(at 462.28 265.43 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24706,7 +24446,6 @@
 	)
 	(label "PVC"
 		(at 490.22 76.2 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24717,7 +24456,6 @@
 	)
 	(label "MODC"
 		(at 544.83 58.42 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24728,7 +24466,6 @@
 	)
 	(label "~{REQ}{slash}~{ISP}"
 		(at 331.47 350.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24739,7 +24476,6 @@
 	)
 	(label "UCKC"
 		(at 300.99 160.02 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24750,7 +24486,6 @@
 	)
 	(label "SLD"
 		(at 24.13 69.85 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24761,7 +24496,6 @@
 	)
 	(label "UBTC"
 		(at 544.83 86.36 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24772,7 +24506,6 @@
 	)
 	(label "MOSI"
 		(at 300.99 96.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24783,7 +24516,6 @@
 	)
 	(label "SWCLK"
 		(at 490.22 48.26 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24794,7 +24526,6 @@
 	)
 	(label "RCLK"
 		(at 247.65 283.21 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24805,7 +24536,6 @@
 	)
 	(label "AESB"
 		(at 300.99 234.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24816,7 +24546,6 @@
 	)
 	(label "ENB"
 		(at 73.66 269.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24827,7 +24556,6 @@
 	)
 	(label "R4-"
 		(at 199.39 80.01 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24838,7 +24566,6 @@
 	)
 	(label "X4+"
 		(at 367.03 52.07 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -24873,7 +24600,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 466.09 59.9948 0)
 			(effects
 				(font
@@ -24980,7 +24707,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small_Filled")
+		(lib_id "Library-IMM:LED_Small_Filled")
 		(at 316.23 87.63 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -25006,7 +24733,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "Library-IMM:LED_0402_red"
 			(at 316.23 87.63 90)
 			(effects
 				(font
@@ -25024,18 +24751,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unlocked"
-			(at 316.23 97.536 90)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 316.23 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "K"
 			(uuid "5bd87ead-1a23-40ed-9cf4-1bb8285e6143")
 		)
-		(pin "2"
+		(pin "A"
 			(uuid "48bb4f17-de7f-47de-8d5d-a273bedbfe36")
 		)
 		(instances
@@ -25073,7 +24801,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 330.2 150.1648 0)
 			(effects
 				(font
@@ -25142,7 +24870,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 99.06 49.8348 0)
 			(effects
 				(font
@@ -25211,7 +24939,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 544.83 197.1548 0)
 			(effects
 				(font
@@ -25282,7 +25010,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 496.062 166.37 90)
 			(effects
 				(font
@@ -25715,7 +25443,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small_Filled")
+		(lib_id "Library-IMM:LED_Small_Filled")
 		(at 316.23 179.07 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -25741,7 +25469,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "Library-IMM:LED_0402_red"
 			(at 316.23 179.07 90)
 			(effects
 				(font
@@ -25759,18 +25487,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unlocked"
-			(at 316.23 188.976 90)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 316.23 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "K"
 			(uuid "be1e99e2-46a9-4ebd-8834-26d5a0d01db1")
 		)
-		(pin "2"
+		(pin "A"
 			(uuid "9601ca2c-422d-4ed9-937a-4752d6946b37")
 		)
 		(instances
@@ -25808,7 +25537,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 178.308 367.03 90)
 			(effects
 				(font
@@ -25877,7 +25606,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 556.26 136.1948 0)
 			(effects
 				(font
@@ -26012,7 +25741,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 162.052 234.95 90)
 			(effects
 				(font
@@ -26081,7 +25810,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 332.74 328.168 90)
 			(effects
 				(font
@@ -26149,7 +25878,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 163.068 276.86 90)
 			(effects
 				(font
@@ -26219,7 +25948,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 80.3148 368.3 0)
 			(effects
 				(font
@@ -26288,7 +26017,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 464.058 217.17 90)
 			(effects
 				(font
@@ -26357,7 +26086,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 293.37 39.6748 0)
 			(effects
 				(font
@@ -26427,7 +26156,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 241.6048 107.95 0)
 			(effects
 				(font
@@ -26562,7 +26291,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 89.2048 241.3 0)
 			(effects
 				(font
@@ -26757,7 +26486,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 174.752 351.79 90)
 			(effects
 				(font
@@ -26827,7 +26556,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 536.702 256.54 90)
 			(effects
 				(font
@@ -26895,7 +26624,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 161.798 367.03 90)
 			(effects
 				(font
@@ -27012,7 +26741,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener_Small")
+		(lib_id "Library-IMM:D_Zener_Small_Filled")
 		(at 160.02 359.41 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -27022,7 +26751,7 @@
 		(fields_autoplaced yes)
 		(uuid "166397e4-22cb-4d28-acf5-503fbed70994")
 		(property "Reference" "D53"
-			(at 161.798 358.1978 90)
+			(at 162.56 358.1399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27031,7 +26760,7 @@
 			)
 		)
 		(property "Value" "BZX884B5V1L"
-			(at 161.798 360.6221 90)
+			(at 162.56 360.6799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27039,7 +26768,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Library-IMM:D_DFN1006-2A"
 			(at 160.02 359.41 90)
 			(effects
 				(font
@@ -27057,7 +26786,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode, small symbol"
+		(property "Description" "Zener diode, small symbol, filled shape"
 			(at 160.02 359.41 0)
 			(effects
 				(font
@@ -27066,10 +26795,10 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
+		(pin "A"
 			(uuid "130fc308-b638-46e9-a6fc-cb601b6cd9b2")
 		)
-		(pin "1"
+		(pin "K"
 			(uuid "10b8d620-f910-4f38-9cb1-3a0584e00f92")
 		)
 		(instances
@@ -27301,7 +27030,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 74.93 324.358 90)
 			(effects
 				(font
@@ -27502,7 +27231,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 162.052 144.78 90)
 			(effects
 				(font
@@ -27572,7 +27301,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 182.88 50.8 0)
 			(effects
 				(font
@@ -27669,7 +27398,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 173.482 246.38 90)
 			(effects
 				(font
@@ -27867,7 +27596,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 154.94 48.26 0)
 			(effects
 				(font
@@ -27961,7 +27690,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 176.022 80.01 90)
 			(effects
 				(font
@@ -28030,7 +27759,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 97.79 321.6148 0)
 			(effects
 				(font
@@ -28101,7 +27830,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 79.502 237.49 90)
 			(effects
 				(font
@@ -28519,7 +28248,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 228.2952 170.18 0)
 			(effects
 				(font
@@ -28632,7 +28361,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small_Filled")
+		(lib_id "Library-IMM:LED_Small_Filled")
 		(at 314.96 359.41 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -28658,7 +28387,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "Library-IMM:LED_0402_red"
 			(at 314.96 359.41 90)
 			(effects
 				(font
@@ -28676,18 +28405,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unlocked"
-			(at 314.96 369.316 90)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 314.96 359.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "K"
 			(uuid "e1260eae-74e5-465a-8649-75bdf6d9e829")
 		)
-		(pin "2"
+		(pin "A"
 			(uuid "3c2505c3-d26d-4ea5-8cf8-c6b8ed8c4f86")
 		)
 		(instances
@@ -28726,7 +28456,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 227.0252 321.31 0)
 			(effects
 				(font
@@ -28944,7 +28674,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 521.462 256.54 90)
 			(effects
 				(font
@@ -29288,7 +29018,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 81.5848 278.13 0)
 			(effects
 				(font
@@ -29358,7 +29088,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 173.482 64.77 90)
 			(effects
 				(font
@@ -29428,7 +29158,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 89.2048 59.69 0)
 			(effects
 				(font
@@ -29471,7 +29201,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small_Filled")
+		(lib_id "Library-IMM:LED_Small_Filled")
 		(at 161.29 195.58 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -29497,7 +29227,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "Library-IMM:LED_0402_yellow"
 			(at 161.29 195.58 90)
 			(effects
 				(font
@@ -29515,18 +29245,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Phantom Power"
-			(at 161.29 208.026 90)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 161.29 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "A"
 			(uuid "74815c35-7baa-4fa0-bc3c-1fd72a25f7e0")
 		)
-		(pin "2"
+		(pin "K"
 			(uuid "f954b116-e5a9-4a5c-bbd9-47e5acce1645")
 		)
 		(instances
@@ -29567,7 +29298,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 79.502 147.32 90)
 			(effects
 				(font
@@ -29700,7 +29431,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 553.4152 363.22 0)
 			(effects
 				(font
@@ -29835,7 +29566,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 78.232 327.66 90)
 			(effects
 				(font
@@ -29904,7 +29635,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 551.18 206.502 90)
 			(effects
 				(font
@@ -30045,7 +29776,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 228.2952 350.52 0)
 			(effects
 				(font
@@ -30112,7 +29843,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 176.022 261.62 90)
 			(effects
 				(font
@@ -30292,7 +30023,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 179.578 276.86 90)
 			(effects
 				(font
@@ -30361,7 +30092,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 129.2352 355.6 0)
 			(effects
 				(font
@@ -30430,7 +30161,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 167.3352 328.93 0)
 			(effects
 				(font
@@ -30563,7 +30294,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 511.5052 363.22 0)
 			(effects
 				(font
@@ -31116,7 +30847,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 509.27 29.5148 0)
 			(effects
 				(font
@@ -31248,7 +30979,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 179.578 186.69 90)
 			(effects
 				(font
@@ -31318,7 +31049,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 87.9348 331.47 0)
 			(effects
 				(font
@@ -31388,7 +31119,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 241.6048 199.39 0)
 			(effects
 				(font
@@ -31650,7 +31381,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 527.812 283.21 90)
 			(effects
 				(font
@@ -31849,7 +31580,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 153.9748 355.6 0)
 			(effects
 				(font
@@ -31918,7 +31649,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 130.5052 175.26 0)
 			(effects
 				(font
@@ -32181,7 +31912,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Wuerth_MAPI-2512"
+		(property "Footprint" "Library-IMM:L_WE-MAPI-2512"
 			(at 92.71 166.37 0)
 			(effects
 				(font
@@ -32250,7 +31981,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 76.2 234.188 90)
 			(effects
 				(font
@@ -32382,7 +32113,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 154.94 229.87 0)
 			(effects
 				(font
@@ -32479,7 +32210,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 89.2048 151.13 0)
 			(effects
 				(font
@@ -32918,7 +32649,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 123.19 321.818 90)
 			(effects
 				(font
@@ -33054,7 +32785,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 155.2448 83.82 0)
 			(effects
 				(font
@@ -33390,7 +33121,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 309.372 165.1 90)
 			(effects
 				(font
@@ -33459,7 +33190,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 232.1052 321.31 0)
 			(effects
 				(font
@@ -33528,7 +33259,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 228.2952 78.74 0)
 			(effects
 				(font
@@ -33664,7 +33395,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 155.2448 175.26 0)
 			(effects
 				(font
@@ -33798,7 +33529,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 466.598 66.04 90)
 			(effects
 				(font
@@ -33867,7 +33598,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 76.2 52.578 90)
 			(effects
 				(font
@@ -33935,7 +33666,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 328.93 330.5048 0)
 			(effects
 				(font
@@ -34263,7 +33994,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 311.658 345.44 90)
 			(effects
 				(font
@@ -34398,7 +34129,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 120.142 365.76 90)
 			(effects
 				(font
@@ -34547,7 +34278,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 238.4552 140.97 0)
 			(effects
 				(font
@@ -34616,7 +34347,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 124.46 141.478 90)
 			(effects
 				(font
@@ -34815,7 +34546,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 160.782 325.12 90)
 			(effects
 				(font
@@ -34951,7 +34682,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 182.88 142.24 0)
 			(effects
 				(font
@@ -35114,7 +34845,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 468.63 211.328 90)
 			(effects
 				(font
@@ -35183,7 +34914,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 130.5052 265.43 0)
 			(effects
 				(font
@@ -35316,7 +35047,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 130.5052 83.82 0)
 			(effects
 				(font
@@ -35451,7 +35182,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 309.372 73.66 90)
 			(effects
 				(font
@@ -35520,7 +35251,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 124.46 50.038 90)
 			(effects
 				(font
@@ -35924,7 +35655,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 182.88 232.41 0)
 			(effects
 				(font
@@ -36394,7 +36125,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small_Filled")
+		(lib_id "Library-IMM:LED_Small_Filled")
 		(at 316.23 269.24 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -36420,7 +36151,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "Library-IMM:LED_0402_red"
 			(at 316.23 269.24 90)
 			(effects
 				(font
@@ -36438,18 +36169,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unlocked"
-			(at 316.23 279.146 90)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 316.23 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "A"
 			(uuid "8274b819-fda2-4738-b7c0-c7a3b4724be2")
 		)
-		(pin "2"
+		(pin "K"
 			(uuid "f20b296f-1edd-4f68-8697-c76827988c3e")
 		)
 		(instances
@@ -36616,7 +36348,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 246.38 235.712 90)
 			(effects
 				(font
@@ -36899,7 +36631,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 121.412 275.59 90)
 			(effects
 				(font
@@ -36967,7 +36699,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 179.578 95.25 90)
 			(effects
 				(font
@@ -37177,7 +36909,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 76.2 144.018 90)
 			(effects
 				(font
@@ -37246,7 +36978,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 168.6052 57.15 0)
 			(effects
 				(font
@@ -37313,7 +37045,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 109.22 320.04 0)
 			(effects
 				(font
@@ -37407,7 +37139,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 110.49 139.7 0)
 			(effects
 				(font
@@ -37952,7 +37684,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 527.812 308.61 90)
 			(effects
 				(font
@@ -38021,7 +37753,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 99.06 141.2748 0)
 			(effects
 				(font
@@ -38422,7 +38154,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 163.068 95.25 90)
 			(effects
 				(font
@@ -38489,7 +38221,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 233.172 256.54 90)
 			(effects
 				(font
@@ -38780,7 +38512,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener_Small")
+		(lib_id "Library-IMM:D_Zener_Small_Filled")
 		(at 161.29 87.63 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -38790,7 +38522,7 @@
 		(fields_autoplaced yes)
 		(uuid "7c779770-5d2a-4bc8-a625-e41b42aae60c")
 		(property "Reference" "D83"
-			(at 163.068 86.4178 90)
+			(at 163.83 86.3599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -38799,7 +38531,7 @@
 			)
 		)
 		(property "Value" "BZX884B5V1L"
-			(at 163.068 88.8421 90)
+			(at 163.83 88.8999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -38807,7 +38539,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Library-IMM:D_DFN1006-2A"
 			(at 161.29 87.63 90)
 			(effects
 				(font
@@ -38825,7 +38557,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode, small symbol"
+		(property "Description" "Zener diode, small symbol, filled shape"
 			(at 161.29 87.63 0)
 			(effects
 				(font
@@ -38834,10 +38566,10 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
+		(pin "A"
 			(uuid "b886933e-3ad8-49a9-8d76-2a6c0cb9fa65")
 		)
-		(pin "1"
+		(pin "K"
 			(uuid "9320dd92-cf03-4cb3-b7c4-46c97f3ad7ab")
 		)
 		(instances
@@ -38875,7 +38607,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Wuerth_MAPI-2512"
+		(property "Footprint" "Library-IMM:L_WE-MAPI-2512"
 			(at 91.44 346.71 0)
 			(effects
 				(font
@@ -39010,7 +38742,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 489.712 359.41 90)
 			(effects
 				(font
@@ -39146,7 +38878,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 309.372 255.27 90)
 			(effects
 				(font
@@ -39343,7 +39075,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 508.9652 170.18 0)
 			(effects
 				(font
@@ -39413,7 +39145,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 160.3248 340.36 0)
 			(effects
 				(font
@@ -39552,7 +39284,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 233.3752 231.14 0)
 			(effects
 				(font
@@ -39686,7 +39418,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 459.74 62.738 90)
 			(effects
 				(font
@@ -39756,7 +39488,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 161.5948 68.58 0)
 			(effects
 				(font
@@ -39823,7 +39555,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 110.49 229.87 0)
 			(effects
 				(font
@@ -40357,7 +40089,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 121.412 81.28 90)
 			(effects
 				(font
@@ -40425,7 +40157,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 330.2 240.3348 0)
 			(effects
 				(font
@@ -40492,7 +40224,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Coupled_Choke_Wuerth_74488540250"
+		(property "Footprint" "Library-IMM:L_WE_5838"
 			(at 168.91 62.23 0)
 			(effects
 				(font
@@ -40694,7 +40426,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Wuerth_MAPI-2512"
+		(property "Footprint" "Library-IMM:L_WE-MAPI-2512"
 			(at 92.71 256.54 0)
 			(effects
 				(font
@@ -40737,7 +40469,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small_Filled")
+		(lib_id "Library-IMM:LED_Small_Filled")
 		(at 161.29 104.14 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -40763,7 +40495,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "Library-IMM:LED_0402_yellow"
 			(at 161.29 104.14 90)
 			(effects
 				(font
@@ -40781,18 +40513,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Phantom Power"
-			(at 161.29 116.586 90)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 161.29 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "A"
 			(uuid "70dc2a98-aeb7-432c-ab51-6e630d439fa0")
 		)
-		(pin "2"
+		(pin "K"
 			(uuid "20af74e9-527b-4cba-89fc-5f25b76e22ef")
 		)
 		(instances
@@ -40897,7 +40630,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 504.4948 363.22 0)
 			(effects
 				(font
@@ -41155,7 +40888,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 233.172 74.93 90)
 			(effects
 				(font
@@ -41286,7 +41019,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 309.88 321.818 90)
 			(effects
 				(font
@@ -41356,7 +41089,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 172.212 336.55 90)
 			(effects
 				(font
@@ -41558,7 +41291,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 98.552 55.88 90)
 			(effects
 				(font
@@ -41758,7 +41491,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 334.01 147.828 90)
 			(effects
 				(font
@@ -41828,7 +41561,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 81.5848 187.96 0)
 			(effects
 				(font
@@ -41971,7 +41704,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 228.2952 231.14 0)
 			(effects
 				(font
@@ -42040,7 +41773,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 238.4552 49.53 0)
 			(effects
 				(font
@@ -42172,7 +41905,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 314.96 352.298 90)
 			(effects
 				(font
@@ -42307,7 +42040,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 181.61 322.58 0)
 			(effects
 				(font
@@ -42483,7 +42216,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 153.67 320.04 0)
 			(effects
 				(font
@@ -42906,7 +42639,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 168.6052 148.59 0)
 			(effects
 				(font
@@ -42977,7 +42710,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 121.412 262.89 90)
 			(effects
 				(font
@@ -43196,7 +42929,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Coupled_Choke_Wuerth_74488540250"
+		(property "Footprint" "Library-IMM:L_WE_5838"
 			(at 168.91 243.84 0)
 			(effects
 				(font
@@ -43354,7 +43087,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 334.01 56.388 90)
 			(effects
 				(font
@@ -43558,7 +43291,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 81.5848 96.52 0)
 			(effects
 				(font
@@ -43693,7 +43426,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 238.4552 231.14 0)
 			(effects
 				(font
@@ -43762,7 +43495,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 228.2952 260.35 0)
 			(effects
 				(font
@@ -43922,7 +43655,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 154.94 139.7 0)
 			(effects
 				(font
@@ -44019,7 +43752,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 161.5948 160.02 0)
 			(effects
 				(font
@@ -44348,7 +44081,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 334.01 237.998 90)
 			(effects
 				(font
@@ -44419,7 +44152,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 98.552 147.32 90)
 			(effects
 				(font
@@ -44698,7 +44431,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Coupled_Choke_Wuerth_74488540250"
+		(property "Footprint" "Library-IMM:L_WE_5838"
 			(at 168.91 153.67 0)
 			(effects
 				(font
@@ -45024,7 +44757,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 233.172 166.37 90)
 			(effects
 				(font
@@ -45158,7 +44891,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 120.142 353.06 90)
 			(effects
 				(font
@@ -45226,7 +44959,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 525.78 166.6748 0)
 			(effects
 				(font
@@ -45421,7 +45154,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 499.11 159.7152 0)
 			(effects
 				(font
@@ -45621,7 +45354,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 457.962 217.17 90)
 			(effects
 				(font
@@ -45688,7 +45421,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Coupled_Choke_Wuerth_74488540250"
+		(property "Footprint" "Library-IMM:L_WE_5838"
 			(at 167.64 334.01 0)
 			(effects
 				(font
@@ -45826,7 +45559,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 99.06 231.4448 0)
 			(effects
 				(font
@@ -45894,7 +45627,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 311.15 85.598 90)
 			(effects
 				(font
@@ -45961,7 +45694,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 309.88 353.822 90)
 			(effects
 				(font
@@ -46029,7 +45762,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 311.15 267.208 90)
 			(effects
 				(font
@@ -46100,7 +45833,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 121.412 93.98 90)
 			(effects
 				(font
@@ -46299,7 +46032,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 241.6048 379.73 0)
 			(effects
 				(font
@@ -46369,7 +46102,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 173.482 156.21 90)
 			(effects
 				(font
@@ -46586,7 +46319,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 97.282 327.66 90)
 			(effects
 				(font
@@ -46653,7 +46386,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "Library-IMM:TSOP10Q30_L10_05_11"
 			(at 110.49 48.26 0)
 			(effects
 				(font
@@ -46748,7 +46481,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Wuerth_MAPI-2512"
+		(property "Footprint" "Library-IMM:L_WE-MAPI-2512"
 			(at 92.71 74.93 0)
 			(effects
 				(font
@@ -46921,7 +46654,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small_Filled")
+		(lib_id "Library-IMM:LED_Small_Filled")
 		(at 160.02 375.92 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -46947,7 +46680,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "Library-IMM:LED_0402_yellow"
 			(at 160.02 375.92 90)
 			(effects
 				(font
@@ -46965,18 +46698,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Phantom Power"
-			(at 160.02 388.366 90)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 160.02 375.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "A"
 			(uuid "9c04d411-9179-4bfd-a24d-70e8a1e1cb92")
 		)
-		(pin "2"
+		(pin "K"
 			(uuid "f7996589-19c7-4806-b329-2827fdeee29a")
 		)
 		(instances
@@ -47160,7 +46894,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 529.082 256.54 90)
 			(effects
 				(font
@@ -47294,7 +47028,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 233.172 346.71 90)
 			(effects
 				(font
@@ -47429,7 +47163,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 163.068 186.69 90)
 			(effects
 				(font
@@ -47564,7 +47298,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 546.4048 363.22 0)
 			(effects
 				(font
@@ -47635,7 +47369,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 162.052 53.34 90)
 			(effects
 				(font
@@ -47704,7 +47438,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 551.18 212.598 90)
 			(effects
 				(font
@@ -47837,7 +47571,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 233.3752 140.97 0)
 			(effects
 				(font
@@ -48074,7 +47808,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener_Small")
+		(lib_id "Library-IMM:D_Zener_Small_Filled")
 		(at 161.29 179.07 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -48084,7 +47818,7 @@
 		(fields_autoplaced yes)
 		(uuid "dae7d194-cfc9-44d0-ac6f-ddb4c0698bd2")
 		(property "Reference" "D73"
-			(at 163.068 177.8578 90)
+			(at 163.83 177.7999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48093,7 +47827,7 @@
 			)
 		)
 		(property "Value" "BZX884B5V1L"
-			(at 163.068 180.2821 90)
+			(at 163.83 180.3399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48101,7 +47835,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Library-IMM:D_DFN1006-2A"
 			(at 161.29 179.07 90)
 			(effects
 				(font
@@ -48119,7 +47853,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode, small symbol"
+		(property "Description" "Zener diode, small symbol, filled shape"
 			(at 161.29 179.07 0)
 			(effects
 				(font
@@ -48128,10 +47862,10 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
+		(pin "A"
 			(uuid "780a72c7-beae-4323-a521-af6a4a4c95c2")
 		)
-		(pin "1"
+		(pin "K"
 			(uuid "cec39d40-1a21-4660-ab86-704e9315d89b")
 		)
 		(instances
@@ -48170,7 +47904,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 228.2952 49.53 0)
 			(effects
 				(font
@@ -48303,7 +48037,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 124.46 231.648 90)
 			(effects
 				(font
@@ -48439,7 +48173,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 98.552 237.49 90)
 			(effects
 				(font
@@ -48546,7 +48280,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener_Small")
+		(lib_id "Library-IMM:D_Zener_Small_Filled")
 		(at 161.29 269.24 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -48556,7 +48290,7 @@
 		(fields_autoplaced yes)
 		(uuid "df652780-d168-42db-ae3c-48545214cc46")
 		(property "Reference" "D63"
-			(at 163.068 268.0278 90)
+			(at 163.83 267.9699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48565,7 +48299,7 @@
 			)
 		)
 		(property "Value" "BZX884B5V1L"
-			(at 163.068 270.4521 90)
+			(at 163.83 270.5099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48573,7 +48307,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Library-IMM:D_DFN1006-2A"
 			(at 161.29 269.24 90)
 			(effects
 				(font
@@ -48591,7 +48325,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode, small symbol"
+		(property "Description" "Zener diode, small symbol, filled shape"
 			(at 161.29 269.24 0)
 			(effects
 				(font
@@ -48600,10 +48334,10 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
+		(pin "A"
 			(uuid "892c98af-45dc-4d45-ac01-2be10379602a")
 		)
-		(pin "1"
+		(pin "K"
 			(uuid "da1fd405-0d31-498c-aa9e-f6ad62f74775")
 		)
 		(instances
@@ -48770,7 +48504,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Library-IMM:C_0603"
 			(at 155.2448 265.43 0)
 			(effects
 				(font
@@ -48838,7 +48572,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 311.15 177.038 90)
 			(effects
 				(font
@@ -48909,7 +48643,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 121.412 172.72 90)
 			(effects
 				(font
@@ -48952,7 +48686,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small_Filled")
+		(lib_id "Library-IMM:LED_Small_Filled")
 		(at 161.29 285.75 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -48978,7 +48712,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "Library-IMM:LED_0402_yellow"
 			(at 161.29 285.75 90)
 			(effects
 				(font
@@ -48996,18 +48730,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Phantom Power"
-			(at 161.29 298.196 90)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 161.29 285.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "K"
 			(uuid "551a3c22-b0aa-45fc-b14a-fa98d553e9fb")
 		)
-		(pin "2"
+		(pin "A"
 			(uuid "380269be-17f1-46d3-8ff5-c24a4385aedd")
 		)
 		(instances
@@ -49221,7 +48956,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 476.25 159.7152 0)
 			(effects
 				(font
@@ -49435,7 +49170,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 176.022 171.45 90)
 			(effects
 				(font
@@ -49543,7 +49278,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small_Filled")
+		(lib_id "Library-IMM:LED_Small_Filled")
 		(at 561.34 85.09 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -49569,7 +49304,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "Library-IMM:LED_0402_green"
 			(at 561.34 85.09 90)
 			(effects
 				(font
@@ -49587,18 +49322,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "User"
-			(at 561.34 94.996 90)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 561.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "A"
 			(uuid "255bf7ff-7af0-406f-b5ac-03feb532f05b")
 		)
-		(pin "2"
+		(pin "K"
 			(uuid "81396f37-e1d4-4206-a2b8-77046a976a1c")
 		)
 		(instances
@@ -50066,7 +49802,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 121.412 185.42 90)
 			(effects
 				(font
@@ -50135,7 +49871,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 292.1 311.4548 0)
 			(effects
 				(font
@@ -50202,7 +49938,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 246.38 54.102 90)
 			(effects
 				(font
@@ -50417,7 +50153,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 556.26 83.058 90)
 			(effects
 				(font
@@ -50486,7 +50222,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 293.37 221.2848 0)
 			(effects
 				(font
@@ -50557,7 +50293,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 489.712 349.25 90)
 			(effects
 				(font
@@ -50819,7 +50555,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 168.6052 238.76 0)
 			(effects
 				(font
@@ -50890,7 +50626,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Library-IMM:R_0402"
 			(at 79.502 55.88 90)
 			(effects
 				(font
@@ -50959,7 +50695,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 293.37 131.1148 0)
 			(effects
 				(font
@@ -51091,7 +50827,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 237.1852 321.31 0)
 			(effects
 				(font
@@ -51301,7 +51037,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 241.6048 289.56 0)
 			(effects
 				(font
@@ -51695,7 +51431,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 161.5948 250.19 0)
 			(effects
 				(font
@@ -51830,7 +51566,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 330.2 58.7248 0)
 			(effects
 				(font
@@ -51899,7 +51635,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 233.3752 49.53 0)
 			(effects
 				(font
@@ -51968,7 +51704,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Library-IMM:C_0402"
 			(at 228.2952 140.97 0)
 			(effects
 				(font
