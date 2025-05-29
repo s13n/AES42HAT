@@ -1,7 +1,7 @@
 # AES42HAT
 
 The AES42HAT is a Raspberry Pi compatible HAT with up to 4 channels of
-AES3/AES42 interface.
+AES3/AES42 interface. At present it is a work in progress.
 
 AES3 is the stereo digital audio interface for professional applications, which
 is compatible to some extent with SPDIF as used on consumer gear.
