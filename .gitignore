@@ -2,3 +2,5 @@ AES42HAT-backups
 old
 temp
 fp-info-cache
+hw/old
+hw/temp
