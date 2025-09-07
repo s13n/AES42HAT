@@ -291,14 +291,15 @@ can also be used for updating the control processor firmware.
 The I2C target of the control processor reacts to a range of I2C 7-bit addresses
 like detailed in the following table:
 
-| Addr | Function               |
-|------|------------------------|
-| 0x70 | U10 passthrough        |
-| 0x71 | U20 passthrough        |
-| 0x72 | U30 passthrough        |
-| 0x73 | U40 passthrough        |
-| 0x74 | board control          |
-| 0x75 | service request status |
+| Addr | Function                        |
+|------|---------------------------------|
+| 0x70 | U10 passthrough                 |
+| 0x71 | U20 passthrough                 |
+| 0x72 | U30 passthrough                 |
+| 0x73 | U40 passthrough                 |
+| 0x74 | board control                   |
+| 0x75 | service request status          |
+| 0x76 | Remote command buffer           |
 
 The passthrough mode allows the host to access the transceiver chips as if they
 were connected directly to the I2C bus. This is intended to help driver software
@@ -534,3 +535,50 @@ and FTM1 in the following way:
 This can be done once during startup, as the phase would be stable as a result
 of setting up the dividers correctly. The timer ressources can be used for their
 normal functions thereafter.
+
+## I2C register maps
+
+### Addresses 0x70 .. 0x73 (SRC4392 passthrough)
+
+### Address 0x74 (Board control)
+
+Board control functions are serviced by the control processor, independently of
+the SRC4392 chips. The host processor will normally only need to access this,
+and leave SRC4392 handling to the control processor.
+
+| Addr | Register description  |
+|------| --------------------- |
+| 0x00 | Reset, Initialization |
+| .... | ....                  |
+| 0x7F | Firmware Version      |
+
+### Address 0x75 (Service request status)
+
+This address needs no register address to be sent. The service request status is
+a bitmap that has a bit for each potential service request. As long as there are
+unmasked bits set to one in this status word, the REQ signal to the host
+processor will be active. The mask is located in the board control register set.
+Bits in the service request status remain set until the function they're
+representing is serviced.
+
+Simple read transfers are used to read the service request word, which contains
+bits to indicate particular service requests, like follows:
+
+TBC
+
+### Address 0x76 (Remote command buffer)
+
+Each channel has a buffer of 64 bytes where commands are stored that are to be
+sent to the microphone via AES42 remote commands. The host can select if the
+buffer content should be sent once, or repeatedly.
+
+Each command occupies 3 bytes, including the gap between successive commands. In
+mode 3, the buffer isn't used, as the remote commands are issued via the UART
+connection. When mode 2 is active, the controller inserts Direct Command 3 in
+the sequence automatically, to maintain synchronization. The commands in the
+buffer are issued in between.
+
+Selecting repeated transmission allows microphone settings to be sent
+repeatedly, so that commands issued to the microphone in a different way (e.g.
+acoustically) are overridden. If that isn't desired, don't select repeated
+transmission.
