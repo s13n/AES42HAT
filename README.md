@@ -379,10 +379,15 @@ on U30 and U40.
 
 ### ESP32-P4 Function Evaluation Board
 
-The Espressif ESP32-P4 is a microcontroller with a dual-core RISC-V CPU and a rich set of peripherals, including I2S and 100 MBit/s Ethernet.
-It appears to have some potential for a very low cost platform for low-end networked audio devices, below the price point of a Linux-based solution.
-Its evaluation board has a set of GPIO signals routed to a Raspberry Pi HAT connector. This opens the possibility to use the AES42HAT as an audio interface.
+The Espressif ESP32-P4 is a microcontroller with a dual-core RISC-V CPU and a
+rich set of peripherals, including I2S and 100 MBit/s Ethernet. It appears to
+have some potential for a very low cost platform for low-end networked audio
+devices, below the price point of a Linux-based solution. Its evaluation board
+has a set of GPIO signals routed to a Raspberry Pi HAT connector. This opens the
+possibility to use the AES42HAT as an audio interface.
 
-The ESP32-P4 has 3 I2S function blocks that can be freely assigned to GPIO pins, and it includes a PLL dedicated for audio. It therefore should be able to
-work with the AES42HAT directly, with no need for a wiring change. At the time of writing, the information available for the ESP32-P4 is sparse, hence
-the suitability is somewhat unclear at this point, but it certainly looks promising.
+The ESP32-P4 has 3 I2S function blocks that can be freely assigned to GPIO pins,
+and it includes a PLL dedicated for audio. It therefore should be able to work
+with the AES42HAT directly, with no need for a wiring change. At the time of
+writing, the information available for the ESP32-P4 is sparse, hence the
+suitability is somewhat unclear at this point, but it certainly looks promising.
