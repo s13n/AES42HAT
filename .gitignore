@@ -4,3 +4,4 @@ temp
 fp-info-cache
 hw/old
 hw/temp
+dts/*.dtbo

@@ -232,6 +232,9 @@ The RCLK signal can be fed from different sources:
   31 of the HAT connector. Both the wordclock input and the receiver RXCKO
   outputs must be disabled before the Raspberry Pi can activate this signal.
 
+The clock syntheizer can be a CS2000 (obsolete), a CS2500 or a THAT7200. Its I²C
+address is 0x4F (0x9E for write, 0x9F for read).
+
 ### AES Receivers/Transmitters
 
 Decoding and encoding of the AES3 signal is done by U10 (on 8-channel variants
