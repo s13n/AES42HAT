@@ -4,47 +4,188 @@
 / {
     compatible = "brcm,bcm2712";
 
-	fragment@0 {
-		target = <&i2s1>;
-		__overlay__ {
-			status = "okay";
-			pinctrl-names = "default";
-			pinctrl-0 = <&i2s1_pins>;
-		};
-	};
+    fragment@0 {
+        target = <&i2s1>;
+        __overlay__ {
+            status = "okay";
+            pinctrl-names = "default";
+            pinctrl-0 = <&rp1_i2s1_8ch>;
+            #sound-dai-cells = <0>;            
+            #address-cells = <1>;
+            #size-cells = <0>;
 
-	fragment@1 {
-		target = <&pinctrl>;
-		__overlay__ {
-			i2s1_pins: i2s1_pins {
-				brcm,pins = <18 19 20 21 22 23 24 25 26 27>;
-				brcm,function = <4>; // ALT4 = I2S1
-			};
-		};
-	};
+            i2s1_port0: port@0 {
+                reg = <0>;
+                i2s1_ep0: endpoint {
+                    remote-endpoint = <&src0_ep>;
+                    dai-format = "i2s";
+                    dai-tdm-slot-num = <2>;
+                    dai-tdm-slot-width = <32>;
+                };
+            };
+
+            i2s1_port1: port@1 {
+                reg = <1>;
+                i2s1_ep1: endpoint {
+                    remote-endpoint = <&src1_ep>;
+                    dai-format = "i2s";
+                    dai-tdm-slot-num = <2>;
+                    dai-tdm-slot-width = <32>;
+                };
+            };
+
+            i2s1_port2: port@2 {
+                reg = <2>;
+                i2s1_ep2: endpoint {
+                    remote-endpoint = <&src2_ep>;
+                    dai-format = "i2s";
+                    dai-tdm-slot-num = <2>;
+                    dai-tdm-slot-width = <32>;
+                };
+            };
+
+            i2s1_port3: port@3 {
+                reg = <3>;
+                i2s1_ep3: endpoint {
+                    remote-endpoint = <&src3_ep>;
+                    dai-format = "i2s";
+                    dai-tdm-slot-num = <2>;
+                    dai-tdm-slot-width = <32>;
+                };
+            };
+        };
+    };
+
+    fragment@1 {
+        target = <&i2c1>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            cs2000: cs2000@4f {
+                #clock-cells = <1>;
+                compatible = "cirrus,cs2000";
+                status = "okay";
+                reg = <0x4f>;
+                clocks = <&oscillator>; // if CS2000 is driven by a crystal
+                clock-output-names = "cs2000-mclk";
+            };
+
+            src0: src4392@70 {
+                #address-cells = <1>;
+                #size-cells = <0>;
+                #sound-dai-cells = <0>;
+                compatible = "ti,src4392";
+                status = "okay";
+                reg = <0x70>;
+                clocks = <&cs2000 0>;
+                clock-names = "mclk";
+
+                src0_port: port@0 {
+                    reg = <0>;
+                    src0_ep: endpoint {
+                        remote-endpoint = <&i2s1_ep0>;
+                        dai-name = "src4xxx-portA";
+                        dai-format = "i2s";
+                        dai-tdm-slot-num = <2>;
+                        dai-tdm-slot-width = <32>;
+                        bitclock-master;
+                        frame-master;
+                    };
+                };
+            };
+
+            src1: src4392@71 {
+                #address-cells = <1>;
+                #size-cells = <0>;
+                #sound-dai-cells = <0>;
+                compatible = "ti,src4392";
+                status = "okay";
+                reg = <0x71>;
+                clocks = <&cs2000 0>;
+                clock-names = "mclk";
+
+                src1_port: port@0 {
+                    reg = <0>;
+                    src1_ep: endpoint {
+                        remote-endpoint = <&i2s1_ep1>;
+                        dai-name = "src4xxx-portA";
+                        dai-format = "i2s";
+                        dai-tdm-slot-num = <2>;
+                        dai-tdm-slot-width = <32>;
+                    };
+                };
+            };
+
+            src2: src4392@72 {
+                #address-cells = <1>;
+                #size-cells = <0>;
+                #sound-dai-cells = <0>;
+                compatible = "ti,src4392";
+                status = "okay";
+                reg = <0x72>;
+                clocks = <&cs2000 0>;
+                clock-names = "mclk";
+
+                src2_port: port@0 {
+                    reg = <0>;
+                    src2_ep: endpoint {
+                        remote-endpoint = <&i2s1_ep2>;
+                        dai-name = "src4xxx-portA";
+                        dai-format = "i2s";
+                        dai-tdm-slot-num = <2>;
+                        dai-tdm-slot-width = <32>;
+                    };
+                };
+            };
+
+            src3: src4392@73 {
+                #address-cells = <1>;
+                #size-cells = <0>;
+                #sound-dai-cells = <0>;
+                compatible = "ti,src4392";
+                status = "okay";
+                reg = <0x73>;
+                clocks = <&cs2000 0>;
+                clock-names = "mclk";
+
+                src3_port: port@0 {
+                    reg = <0>;
+                    src3_ep: endpoint {
+                        remote-endpoint = <&i2s1_ep3>;
+                        dai-name = "src4xxx-portA";
+                        dai-format = "i2s";
+                        dai-tdm-slot-num = <2>;
+                        dai-tdm-slot-width = <32>;
+                    };
+                };
+            };
+        };
+    };
 
     fragment@2 {
         target-path = "/";
         __overlay__ {
+            rp1_i2s1_8ch: rp1_i2s1_8ch {
+                function = "i2s1";
+                // I2S1_SCLK, I2S1_WS, I2S1_SDI[0], I2S1_SDI[1], I2S1_SDI[2], I2S1_SDI[3], I2S1_SDO[0], I2S1_SDO[1], I2S1_SDO[2], I2S1_SDO[3]
+                pins = "gpio18", "gpio19", "gpio20", "gpio22", "gpio24", "gpio26", "gpio21", "gpio23", "gpio25",  "gpio27";
+                bias-disable;
+            };
+
+            oscillator: oscillator {
+                compatible = "fixed-clock";
+                status = "okay";
+                #clock-cells = <0>;
+                clock-frequency = <10000000>; // 10 MHz
+                clock-output-names = "cs2000-ref";
+            };
+
             sound {
-                compatible = "simple-audio-card";
-                simple-audio-card,name = "DummyI2S1";
-                simple-audio-card,format = "i2s";
-                simple-audio-card,bitclock-master = <&dailink0>;
-                simple-audio-card,frame-master = <&dailink0>;
-
-                simple-audio-card,cpu {
-                    sound-dai = <&i2s1>;
-                };
-
-                dailink0: simple-audio-card,codec {
-                    sound-dai = <&dummy_codec>;
-                };
-
-                dummy_codec: dummy_codec {
-                    compatible = "linux,snd-soc-dummy";
-                    #sound-dai-cells = <0>;
-                };
+                compatible = "audio-graph-card";
+                label = "Pi5 Audio Graph";
+                dais = <&i2s1_port0 &i2s1_port1 &i2s1_port2 &i2s1_port3
+                        &src0_port &src1_port &src2_port &src3_port>;
             };
         };
     };
