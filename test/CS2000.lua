@@ -1,0 +1,14 @@
+-- Configure the CS2000 on the AES42HAT
+
+function init_cs2000()
+    os.execute("i2cset -f -y 1 0x4f 0x03 0x01")
+    os.execute("i2cset -f -y 1 0x4f 0x05 0x01")
+    os.execute("i2cset -f -y 1 0x4f 0x16 0x10")
+    os.execute("i2cset -f -y 1 0x4f 0x06 0x00")
+    os.execute("i2cset -f -y 1 0x4f 0x07 0x27")
+    os.execute("i2cset -f -y 1 0x4f 0x08 0x52")
+    os.execute("i2cset -f -y 1 0x4f 0x09 0x54")
+    os.execute("i2cset -f -y 1 0x4f 0x17 0x10")
+end
+
+init_cs2000()
