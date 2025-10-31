@@ -5,3 +5,5 @@ fp-info-cache
 hw/old
 hw/temp
 dts/*.dtbo
+fw/build
+fw/.vscode
