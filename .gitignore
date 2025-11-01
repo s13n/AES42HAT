@@ -2,8 +2,10 @@ AES42HAT-backups
 old
 temp
 fp-info-cache
-hw/old
-hw/temp
+.vscode
+build
 dts/*.dtbo
 fw/build
 fw/.vscode
+hw/old
+hw/temp
