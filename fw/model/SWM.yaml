@@ -1,6 +1,6 @@
 # Created from LPC865.svd
 
-name: SWM0
+name: SWM
 description: LPC86x SWM
 groupName: SWM
 registers:
@@ -1081,3 +1081,4 @@ addressBlocks:
   - offset: 0
     size: 452
     usage: registers
+headerStructName: SWM

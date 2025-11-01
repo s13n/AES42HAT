@@ -1,6 +1,6 @@
 # Created from LPC865.svd
 
-name: I3C0
+name: I3C
 description: I3C
 groupName: I3C
 registers:
@@ -2113,8 +2113,9 @@ registers:
         bitWidth: 32
         access: read-only
 interrupts:
-  - name: I3C0
+  - name: I3C
 addressBlocks:
   - offset: 0
     size: 4096
     usage: registers
+headerStructName: I3C

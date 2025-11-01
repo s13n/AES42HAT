@@ -1,6 +1,6 @@
 # Created from LPC865.svd
 
-name: I2C0
+name: I2C
 description: LPC84x I2C-bus interfaces
 groupName: I2C
 registers:
@@ -1061,8 +1061,9 @@ registers:
               Monitor function was not acknowledged by any receiver.
             value: 1
 interrupts:
-  - name: I2C0
+  - name: I2C
 addressBlocks:
   - offset: 0
     size: 132
     usage: registers
+headerStructName: I2C

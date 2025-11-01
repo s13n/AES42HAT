@@ -1,6 +1,6 @@
 # Created from LPC865.svd
 
-name: DMA0
+name: DMA
 description: LPC84x DMA controller
 groupName: DMA
 registers:
@@ -631,8 +631,9 @@ registers:
             bitWidth: 10
             access: read-write
 interrupts:
-  - name: DMA0
+  - name: DMA
 addressBlocks:
   - offset: 0
     size: 1420
     usage: registers
+headerStructName: DMA

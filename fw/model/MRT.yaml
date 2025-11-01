@@ -1,6 +1,6 @@
 # Created from LPC865.svd
 
-name: MRT0
+name: MRT
 description: LPC84x Multi-Rate Timer (MRT)
 groupName: MRT
 registers:
@@ -198,8 +198,9 @@ registers:
         bitWidth: 1
         access: read-write
 interrupts:
-  - name: MRT0
+  - name: MRT
 addressBlocks:
   - offset: 0
     size: 252
     usage: registers
+headerStructName: MRT

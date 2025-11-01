@@ -1,6 +1,6 @@
 # Created from LPC865.svd
 
-name: ADC0
+name: ADC
 description: LPC84x 12-bit ADC controller (ADC)
 groupName: ADC
 registers:
@@ -928,11 +928,12 @@ registers:
         bitWidth: 1
         access: read-write
 interrupts:
-  - name: ADC0_SEQA
-  - name: ADC0_SEQB
-  - name: ADC0_THCMP
-  - name: ADC0_OVR
+  - name: SEQA
+  - name: SEQB
+  - name: THCMP
+  - name: OVR
 addressBlocks:
   - offset: 0
     size: 112
     usage: registers
+headerStructName: ADC
