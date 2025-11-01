@@ -8,8 +8,8 @@ set(CMAKE_SYSTEM_PROCESSOR cortex-m0plus)
 set(CMAKE_C_COMPILER arm-none-eabi-gcc)
 set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
 
-set(CMAKE_C_FLAGS "-mcpu=cortex-m0plus -mthumb -O2 -ffreestanding")
-set(CMAKE_CXX_FLAGS "-mcpu=cortex-m0plus -mthumb -O2 -ffreestanding")
+set(CMAKE_C_FLAGS "-mcpu=cortex-m0plus -mthumb -O2 -ffreestanding -fno-unwind-tables")
+set(CMAKE_CXX_FLAGS "-mcpu=cortex-m0plus -mthumb -O2 -ffreestanding -fno-unwind-tables -fno-rtti -fno-exceptions")
 
 add_executable(blinky
     src/main.cpp
