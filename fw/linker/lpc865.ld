@@ -1,11 +1,9 @@
-MEMORY
-{
+MEMORY {
     FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 64K
     RAM (rwx)  : ORIGIN = 0x10000000, LENGTH = 8K
 }
 
-SECTIONS
-{
+SECTIONS {
     /* Place vector table at the beginning of flash */
     .isr_vector : {
         KEEP(*(.isr_vector))
@@ -34,3 +32,7 @@ SECTIONS
         *(COMMON)
     } > RAM
 }
+
+/* Stack placement */
+PROVIDE(__stack = ORIGIN(RAM) + LENGTH(RAM));
+PROVIDE(__stacklimit = __stack - 0x800);    /* reserve 2k for stack */
