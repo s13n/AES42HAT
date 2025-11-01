@@ -365,8 +365,8 @@ a firmware image to be provided to UART0 for in-system programming of the flash.
 Pulling the pin high, or leaving it getting pulled up by a resistor, results in
 the user program to be invoked, which is the normal operating case. Pulling it
 low upon reset invokes the ISP handler that sets up UART0 on `PIO0_24` and
-`PIO0_25` for receiving commands from the host computer, using a protocol
-described in the user manual of the LPC865.
+`PIO0_25` for receiving commands from the host computer, using the UART ISP
+protocol described in the user manual of the LPC865.
 
 Of course, this requires external control of the reset pin `PIO0_5`. This fixes
 the function of the four pins mentioned.
@@ -388,12 +388,35 @@ it.
 
 ### Debug
 
-Two signals are required for SWD debugging, using pins `PIO0_2` and `PIO0_3`. 
+Two signals are required for SWD debugging, using pins `PIO0_2` and `PIO0_3`.
+They are 3.3V logic compliant, so if you are using a debug probe that needs a
+sense voltage to determine the logic levels it should use, like many probes by
+Segger, you need to provide a 3.3V voltage.
+
+The debug probe doesn't control the RESET signal. The SWD debug port of the
+LPC865 is disabled while the chip is in reset. If debugging is to work, the
+Raspberry PI first needs to release the RESET signal connected to its `GPIO12`.
+One of the ways to do this is via the `gpioset` utility, as is done in
+`release-reset.sh`. Note that `gpioset` keeps the GPIO signal in the selected
+state until the process is terminated.
+
+One further pitfall to consider is the CRP (Code Read Protection) of the LPC865.
+It relies on a particular bit pattern in location 0x02FC in Flash, which is in
+the first Flash sector. To avoid trouble, the simplest measure is to make sure
+that user code, except the vector table, starts in sector two, and the free
+space in sector one is filled with 0xFF. If this isn't heeded, programming the
+Flash may fail.
+
+Of course, the space in the first sector, after the vector table, could be used
+for some purpose, for example secondary bootloader, provided that the crucial 4
+bytes at 0x02FC are spared, and left at 0xFFFFFFFF.
 
 ### I2C communication
 
 Two pins, `PIO_10` and `PIO_11`, are specially equipped for I2C usage in their
 driving capability, so we use them for that purpose.
+
+The I2C bus is used in target mode, for the Raspberry PI in the controller role.
 
 ### UART communication with the host
 
