@@ -1,4 +1,3 @@
-
 MEMORY
 {
     FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 64K
@@ -7,10 +6,20 @@ MEMORY
 
 SECTIONS
 {
+    /* Place vector table at the beginning of flash */
     .isr_vector : {
         KEEP(*(.isr_vector))
     } > FLASH
 
+    /* Fill gap with 0xFF until 0x00000400 */
+    .gap : {
+        /* Align to 0x400 */
+        . = ALIGN(4);
+        FILL(0xFF)
+        . = 0x00000400;
+    } > FLASH
+
+    /* User code starts at second sector */
     .text : {
         *(.text*)
         *(.rodata*)
@@ -25,6 +34,3 @@ SECTIONS
         *(COMMON)
     } > RAM
 }
-
-PROVIDE(__exidx_start = 0);
-PROVIDE(__exidx_end = 0);
