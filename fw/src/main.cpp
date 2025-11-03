@@ -7,22 +7,19 @@
 #include "LPC865.hpp"
 #include <stdint.h>
 
-extern "C" void delay() {
-    for (volatile int i = 0; i < 300000;) {
-        int x = i;
-        i = x + 1;
-    }
-}
-
 using namespace lpc865;
 
 int main() {
-    auto &gpio = *i_GPIO.registers;         // GPIO register set
+    auto &gpio = *i_GPIO.registers;     // GPIO register set
+    auto &wkt = *i_WKT.registers;       // WKT register set
 
     gpio.DIRSET[1].set(1 << 7);
     while (1) {
         gpio.NOT[1].set(1 << 7); // LED toggle
-        delay();
+
+        wkt.CTRL.set(6);
+        wkt.COUNT.set(5000);
+        while (wkt.CTRL.get().ALARMFLAG == NO_TIME_OUT);
     }
     return 0;
 }

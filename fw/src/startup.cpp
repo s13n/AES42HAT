@@ -21,10 +21,31 @@ using namespace lpc865;
 // The following initialization routine runs before the global data memory has been
 // initialized. It puts the system in its desired running state. This includes
 // pin configuration, clock configuration, and memory interface timing.
-int sysinit() {
+inline int sysinit() {
+    // Use the FRO API ROM routine to set the FRO frequency
+    struct PWRD {
+        void (*set_fro_freq)(unsigned frequency);
+    };
+    struct ROM {
+        const PWRD *pPWRD;
+    };
+    ROM **rom = (ROM **)0x0F001D98;
+    (*rom)->pPWRD->set_fro_freq(60000);     // 60 MHz
+
     auto &syscon = *i_SYSCON.registers;     // SYSCON register set
     syscon.SYSAHBCLKCTRL0.set(0x31FFFEF7);
     syscon.SYSOSCCTRL.set(0x01);
+    syscon.CLKOUTSEL.set(CLKOUTSEL_::MAIN_CLK);
+    syscon.CLKOUTDIV.set(10);               // divide by 10
+    syscon.PDRUNCFG.set(0xEDA0);
+    syscon.LPOSCEN.set(3);                  // enable lp_osc for both WKT and WDT
+    syscon.LPOSCEN.set(3);                  // enable lp_osc for both WKT and WDT
+    syscon.WKTCLKSEL.set(1);                // select lp_osc
+    syscon.FRODIRECTCLKUEN.set(0);
+    auto frooscctrl = syscon.FROOSCCTRL.get();
+    frooscctrl.FRO_DIRECT = 1;              // switch to 60 MHz
+    syscon.FROOSCCTRL.set(frooscctrl);
+    syscon.FRODIRECTCLKUEN.set(1);
 /*
     auto &iocon = *i_IOCON.registers;       // IOCON register set
     iocon.PIO0_0.set(0x0000);   // MOSI
@@ -79,9 +100,9 @@ int sysinit() {
     swm0.PINASSIGN5.set(0xFFFF2122);
     swm0.PINASSIGN6.set(0x0BFFFFFF);
     swm0.PINASSIGN7.set(0xFFFFFF0A);
-    swm0.PINASSIGN8.set(0xFFFF09FF);
+    swm0.PINASSIGN8.set(0xFFFF09FF);        // CLKOUT on TP9
     swm0.FTM_PINASSIGN0.set(0xFFFFFFFF);
-    swm0.PINENABLE0.set(0xFFFF081F);    // enable ADC0..3, CLKIN, XTALIN, RESET and SWD
+    swm0.PINENABLE0.set(0xFFFF081F);        // enable ADC0..3, CLKIN, XTALIN, RESET and SWD
 
     auto &inputmux = *i_INPUTMUX.registers; // INPUTMUX register set
 
