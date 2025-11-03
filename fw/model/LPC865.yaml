@@ -22,9 +22,9 @@ width: 32
 interruptOffset: 16
 interrupts:
   16:
-    - SPI0.SPI0
+    - SPI0.SPI
   17:
-    - SPI1.SPI1
+    - SPI1.SPI
   19:
     - USART0.USART
   20:
@@ -199,8 +199,28 @@ instances:
     model: I2C
     version:
     description: LPC84x I2C-bus interfaces
-  I3C0:
+  SPI0:
     id: 12
+    baseAddress: 1074102272
+    interrupts:
+      - name: SPI
+        value: 0
+    parameters: []
+    model: SPI
+    version:
+    description: LPC84x Serial Peripheral Interfaces (SPI)
+  SPI1:
+    id: 13
+    baseAddress: 1074118656
+    interrupts:
+      - name: SPI
+        value: 1
+    parameters: []
+    model: SPI
+    version:
+    description: LPC84x Serial Peripheral Interfaces (SPI)
+  I3C0:
+    id: 14
     baseAddress: 1074135040
     interrupts:
       - name: I3C
@@ -209,8 +229,38 @@ instances:
     model: I3C
     version:
     description: I3C
+  USART0:
+    id: 15
+    baseAddress: 1074151424
+    interrupts:
+      - name: USART
+        value: 3
+    parameters: []
+    model: USART
+    version:
+    description: LPC84x USARTs
+  USART1:
+    id: 16
+    baseAddress: 1074167808
+    interrupts:
+      - name: USART
+        value: 4
+    parameters: []
+    model: USART
+    version:
+    description: LPC84x USARTs
+  USART2:
+    id: 17
+    baseAddress: 1074184192
+    interrupts:
+      - name: USART
+        value: 5
+    parameters: []
+    model: USART
+    version:
+    description: LPC84x USARTs
   CRC:
-    id: 13
+    id: 18
     baseAddress: 1342193664
     interrupts: []
     parameters: []
@@ -218,7 +268,7 @@ instances:
     version:
     description: LPC5411x CRC engine
   DMA0:
-    id: 14
+    id: 19
     baseAddress: 1342197760
     interrupts:
       - name: DMA
@@ -228,7 +278,7 @@ instances:
     version:
     description: LPC84x DMA controller
   FTM0:
-    id: 15
+    id: 20
     baseAddress: 1342214144
     interrupts:
       - name: FTM0
@@ -238,7 +288,7 @@ instances:
     version:
     description: FTM
   FTM1:
-    id: 16
+    id: 21
     baseAddress: 1342218240
     interrupts:
       - name: FTM1
@@ -248,7 +298,7 @@ instances:
     version:
     description: FTM
   GPIO:
-    id: 17
+    id: 22
     baseAddress: 2684354560
     interrupts: []
     parameters: []
@@ -256,7 +306,7 @@ instances:
     version:
     description: LPC84x General Purpose I/O (GPIO)
   PINT:
-    id: 18
+    id: 23
     baseAddress: 2684370944
     interrupts:
       - name: PIN_INT0

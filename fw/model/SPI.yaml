@@ -768,7 +768,7 @@ registers:
         bitWidth: 1
         access: read-only
 interrupts:
-  - name: SPI0
+  - name: SPI
 addressBlocks:
   - offset: 0
     size: 44

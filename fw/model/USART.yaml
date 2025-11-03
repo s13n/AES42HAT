@@ -859,7 +859,7 @@ registers:
         bitWidth: 8
         access: read-write
 interrupts:
-  - name: USART0
+  - name: USART
 addressBlocks:
   - offset: 0
     size: 48
