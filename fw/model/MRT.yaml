@@ -204,3 +204,5 @@ addressBlocks:
     size: 252
     usage: registers
 headerStructName: MRT
+clocks:
+  - name: pclk

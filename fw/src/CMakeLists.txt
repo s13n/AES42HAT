@@ -5,10 +5,10 @@ add_executable(aes42hat)
 
 macro(generate_peripheral model)
     add_custom_command(OUTPUT ${model}.cpp ${model}.hpp
-        COMMAND python3 ${CMAKE_SOURCE_DIR}/tools/headerPer.py ${CMAKE_SOURCE_DIR}/model/${model}.yaml ${CMAKE_CURRENT_BINARY_DIR}/${model} lpc865
+        COMMAND python3 ${CMAKE_SOURCE_DIR}/tools/generate_peripheral_header.py ${CMAKE_SOURCE_DIR}/model/${model}.yaml ${CMAKE_CURRENT_BINARY_DIR}/${model} lpc865
         MAIN_DEPENDENCY ${CMAKE_SOURCE_DIR}/model/${model}.yaml
-        DEPENDS ${CMAKE_SOURCE_DIR}/tools/headerPer.py
-        COMMENT "Generating ${model}.hpp/.cpp for LPC865"
+        DEPENDS ${CMAKE_SOURCE_DIR}/tools/generate_peripheral_header.py
+        COMMENT "Generating ${model}.hpp for LPC865"
     )
     target_sources(aes42hat PUBLIC
         ${model}.hpp
@@ -38,10 +38,10 @@ generate_peripheral(WKT)
 generate_peripheral(WWDT)
 
 add_custom_command(OUTPUT LPC865.cpp LPC865.hpp
-    COMMAND python3 ${CMAKE_SOURCE_DIR}/tools/headerChip.py ${CMAKE_SOURCE_DIR}/model/LPC865.yaml ${CMAKE_CURRENT_BINARY_DIR}/LPC865 lpc865
+    COMMAND python3 ${CMAKE_SOURCE_DIR}/tools/generate_chip_header.py ${CMAKE_SOURCE_DIR}/model/LPC865.yaml ${CMAKE_CURRENT_BINARY_DIR}/LPC865 lpc865
     MAIN_DEPENDENCY ${CMAKE_SOURCE_DIR}/model/LPC865.yaml
-    DEPENDS ${CMAKE_SOURCE_DIR}/tools/headerChip.py
-    COMMENT "Generating LPC865.cpp/.hpp for LPC865"
+    DEPENDS ${CMAKE_SOURCE_DIR}/tools/generate_chip_header.py
+    COMMENT "Generating LPC865.hpp for LPC865"
 )
 
 target_include_directories(aes42hat PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
@@ -50,7 +50,8 @@ target_sources(aes42hat PUBLIC
     LPC865.hpp
     startup.cpp
     main.cpp
-    registers.cpp
+    dma_drv.cpp
+    spi_drv.cpp
 )
 
 target_link_options(aes42hat PRIVATE

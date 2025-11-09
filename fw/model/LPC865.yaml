@@ -32,9 +32,9 @@ interrupts:
   21:
     - USART2.USART
   22:
-    - FTM0.FTM0
+    - FTM0.FTM
   23:
-    - FTM1.FTM1
+    - FTM1.FTM
   24:
     - I2C0.I2C
   26:
@@ -60,21 +60,21 @@ interrupts:
   37:
     - I3C0.I3C
   40:
-    - PINT.PIN_INT0
+    - PINT.INT0
   41:
-    - PINT.PIN_INT1
+    - PINT.INT1
   42:
-    - PINT.PIN_INT2
+    - PINT.INT2
   43:
-    - PINT.PIN_INT3
+    - PINT.INT3
   44:
-    - PINT.PIN_INT4
+    - PINT.INT4
   45:
-    - PINT.PIN_INT5
+    - PINT.INT5
   46:
-    - PINT.PIN_INT6
+    - PINT.INT6
   47:
-    - PINT.PIN_INT7
+    - PINT.INT7
 buses:
   AHB:
     addr: 1342177280
@@ -195,7 +195,11 @@ instances:
     interrupts:
       - name: I2C
         value: 8
-    parameters: []
+    parameters:
+      - name: rx_req
+        value: 10
+      - name: tx_req
+        value: 11
     model: I2C
     version:
     description: LPC84x I2C-bus interfaces
@@ -205,7 +209,13 @@ instances:
     interrupts:
       - name: SPI
         value: 0
-    parameters: []
+    parameters:
+      - name: rx_req
+        value: 6
+      - name: tx_req
+        value: 7
+      - name: ssel_num
+        value: 4
     model: SPI
     version:
     description: LPC84x Serial Peripheral Interfaces (SPI)
@@ -215,7 +225,13 @@ instances:
     interrupts:
       - name: SPI
         value: 1
-    parameters: []
+    parameters:
+      - name: rx_req
+        value: 8
+      - name: tx_req
+        value: 9
+      - name: ssel_num
+        value: 2
     model: SPI
     version:
     description: LPC84x Serial Peripheral Interfaces (SPI)
@@ -225,7 +241,11 @@ instances:
     interrupts:
       - name: I3C
         value: 21
-    parameters: []
+    parameters:
+      - name: rx_req
+        value: 12
+      - name: tx_req
+        value: 13
     model: I3C
     version:
     description: I3C
@@ -235,7 +255,11 @@ instances:
     interrupts:
       - name: USART
         value: 3
-    parameters: []
+    parameters:
+      - name: rx_req
+        value: 0
+      - name: tx_req
+        value: 1
     model: USART
     version:
     description: LPC84x USARTs
@@ -245,7 +269,11 @@ instances:
     interrupts:
       - name: USART
         value: 4
-    parameters: []
+    parameters:
+      - name: rx_req
+        value: 2
+      - name: tx_req
+        value: 3
     model: USART
     version:
     description: LPC84x USARTs
@@ -255,7 +283,11 @@ instances:
     interrupts:
       - name: USART
         value: 5
-    parameters: []
+    parameters:
+      - name: rx_req
+        value: 4
+      - name: tx_req
+        value: 5
     model: USART
     version:
     description: LPC84x USARTs
@@ -273,7 +305,9 @@ instances:
     interrupts:
       - name: DMA
         value: 20
-    parameters: []
+    parameters:
+      - name: max_channel
+        value: 15
     model: DMA
     version:
     description: LPC84x DMA controller
@@ -281,7 +315,7 @@ instances:
     id: 20
     baseAddress: 1342214144
     interrupts:
-      - name: FTM0
+      - name: FTM
         value: 6
     parameters: []
     model: FTM0
@@ -291,7 +325,7 @@ instances:
     id: 21
     baseAddress: 1342218240
     interrupts:
-      - name: FTM1
+      - name: FTM
         value: 7
     parameters: []
     model: FTM1
@@ -309,21 +343,21 @@ instances:
     id: 23
     baseAddress: 2684370944
     interrupts:
-      - name: PIN_INT0
+      - name: INT0
         value: 24
-      - name: PIN_INT1
+      - name: INT1
         value: 25
-      - name: PIN_INT2
+      - name: INT2
         value: 26
-      - name: PIN_INT3
+      - name: INT3
         value: 27
-      - name: PIN_INT4
+      - name: INT4
         value: 28
-      - name: PIN_INT5
+      - name: INT5
         value: 29
-      - name: PIN_INT6
+      - name: INT6
         value: 30
-      - name: PIN_INT7
+      - name: INT7
         value: 31
     parameters: []
     model: PINT

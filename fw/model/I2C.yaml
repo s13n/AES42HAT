@@ -1067,3 +1067,17 @@ addressBlocks:
     size: 132
     usage: registers
 headerStructName: I2C
+clocks:
+  - name: base_clk
+  - name: busclk
+parameters:
+  - name: rx_req
+    bits: 5
+    min: 0
+    max: 31
+    description: DMA receive channel
+  - name: tx_req
+    bits: 5
+    min: 0
+    max: 31
+    description: DMA receive channel

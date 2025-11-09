@@ -1,14 +1,24 @@
 /**@file
  * Definitions for dealing with hardware registers in C++
  */
+#ifdef REGISTERS_MODULE
+module;
+#define EXPORT export
+#else
 #pragma once
+#define EXPORT
+#endif
 
-#   include <algorithm>
-#   include <bit>
-#   include <cstdint>
-#   include <cstring>
-#   include <type_traits>
-#   include <version>
+#include <algorithm>
+#include <bit>
+#include <cstdint>
+#include <cstring>
+#include <type_traits>
+#include <version>
+
+#ifdef REGISTERS_MODULE
+export module registers;
+#endif
 
 //! Templated unsigned integer type in the spirit of `boost::uint_t`.
 template<size_t N> struct UnsignedInt {};
@@ -21,7 +31,7 @@ template<> struct UnsignedInt<8> { typedef uint64_t type; };
  * This is implemented depending on what's available in the standard library.
  * We can only handle big or little endian, not mixed endian.
  */
-template<typename X> constexpr X byteswap(X x) noexcept {
+EXPORT template<typename X> constexpr X byteswap(X x) noexcept {
     X res{};
     if constexpr (sizeof(x) == 1)
         res = x;
@@ -48,7 +58,7 @@ template<typename X> constexpr X byteswap(X x) noexcept {
 }
 
 //! Concept for checking the bitfield type used with the Reg template.
-template<typename T> concept RegBitfield = requires(T x) {
+EXPORT template<typename T> concept RegBitfield = requires(T x) {
     std::has_unique_object_representations_v<T>;
     std::is_aggregate_v<T>;
     std::is_integral_v<typename UnsignedInt<sizeof(T)>::type>;
@@ -65,7 +75,7 @@ template<typename T> concept RegBitfield = requires(T x) {
  * often and in what order, because reading or writing a hardware register often
  * has side effects.
  */
-template<RegBitfield R, std::endian E = std::endian::native>
+EXPORT template<RegBitfield R, std::endian E = std::endian::native>
 struct HwReg {
     using BitField = R;
     using Native = UnsignedInt<sizeof(R)>::type;
@@ -189,7 +199,7 @@ struct HwReg {
 };
 
 // Bitfield mask for given bitfield
-#define FIELDMASK(t, f) []() constexpr -> ::pelua::Reg<t>::type { ::pelua::Reg<t> r{}; r.f -= 1; return r; }()
+#define FIELDMASK(t, f) []() constexpr { t r{}; r.f -= 1; return std::bit_cast<HwReg<t>::Native>(r); }()
 
 /** Pointer to a hardware register block.
  *
@@ -202,7 +212,7 @@ struct HwReg {
  * isn't. The initialization is done with a plain integer, so no explicit casts
  * need to be done by the user.
  */
-template<typename T>
+EXPORT template<typename T>
 struct HwPtr {
     using element_type = T;
     constexpr HwPtr(std::uintptr_t addr) : addr_{addr} {}
@@ -212,4 +222,5 @@ private:
     std::uintptr_t addr_;
 };
 
-typedef uint16_t Exception;
+//! Type for representing exceptions/interrupts.
+EXPORT typedef uint16_t Exception;

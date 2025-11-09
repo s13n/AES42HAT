@@ -2119,3 +2119,19 @@ addressBlocks:
     size: 4096
     usage: registers
 headerStructName: I3C
+clocks:
+  - name: busclk
+  - name: fclk
+  - name: clk_slow
+  - name: clk_slow_tc
+parameters:
+  - name: rx_req
+    bits: 5
+    min: 0
+    max: 31
+    description: DMA receive channel
+  - name: tx_req
+    bits: 5
+    min: 0
+    max: 31
+    description: DMA receive channel

@@ -100,3 +100,8 @@ addressBlocks:
   - offset: 0
     size: 16
     usage: registers
+clocks:
+  - name: bus_clk
+  - name: default_clk
+  - name: lp_clk
+  - name: ext_clk

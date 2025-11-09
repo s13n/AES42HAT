@@ -7,5 +7,6 @@ build
 dts/*.dtbo
 fw/build
 fw/.vscode
+fw/.cache
 hw/old
 hw/temp

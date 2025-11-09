@@ -937,3 +937,6 @@ addressBlocks:
     size: 112
     usage: registers
 headerStructName: ADC
+clocks:
+  - name: sync_clk
+  - name: async_clk

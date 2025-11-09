@@ -1705,8 +1705,11 @@ registers:
         bitWidth: 16
         access: read-write
 interrupts:
-  - name: FTM1
+  - name: FTM
 addressBlocks:
   - offset: 0
     size: 532
     usage: registers
+clocks:
+  - name: main_clk
+  - name: extclk

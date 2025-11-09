@@ -109,3 +109,5 @@ addressBlocks:
   - offset: 0
     size: 4076
     usage: registers
+clocks:
+  - name: clk

@@ -773,3 +773,22 @@ addressBlocks:
   - offset: 0
     size: 44
     usage: registers
+clocks:
+  - name: base_clk
+  - name: busclk
+parameters:
+  - name: rx_req
+    bits: 5
+    min: 0
+    max: 31
+    description: DMA receive channel
+  - name: tx_req
+    bits: 5
+    min: 0
+    max: 31
+    description: DMA receive channel
+  - name: ssel_num
+    bits: 3
+    min: 0
+    max: 4
+    description: number of SSEL signals

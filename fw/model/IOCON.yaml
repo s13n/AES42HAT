@@ -6110,3 +6110,12 @@ addressBlocks:
   - offset: 0
     size: 224
     usage: registers
+clocks:
+  - name: busclk
+  - name: clk0
+  - name: clk1
+  - name: clk2
+  - name: clk3
+  - name: clk4
+  - name: clk5
+  - name: clk6

@@ -151,3 +151,6 @@ addressBlocks:
   - offset: 0
     size: 28
     usage: registers
+clocks:
+  - name: pclk
+  - name: wdt_clk

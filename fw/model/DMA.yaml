@@ -637,3 +637,11 @@ addressBlocks:
     size: 1420
     usage: registers
 headerStructName: DMA
+clocks:
+  - name: clk
+parameters:
+  - name: max_channel
+    bits: 5
+    min: 0
+    max: 31
+    description: index of last channel

@@ -995,15 +995,17 @@ registers:
               This bit is cleared after one clock cycle.
             value: 7
 interrupts:
-  - name: PIN_INT0
-  - name: PIN_INT1
-  - name: PIN_INT2
-  - name: PIN_INT3
-  - name: PIN_INT4
-  - name: PIN_INT5
-  - name: PIN_INT6
-  - name: PIN_INT7
+  - name: INT0
+  - name: INT1
+  - name: INT2
+  - name: INT3
+  - name: INT4
+  - name: INT5
+  - name: INT6
+  - name: INT7
 addressBlocks:
   - offset: 0
     size: 52
     usage: registers
+clocks:
+  - name: busclk
