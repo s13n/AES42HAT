@@ -46,6 +46,9 @@ inline int sysinit() {
     frooscctrl.FRO_DIRECT = 1;              // switch to 60 MHz
     syscon.FROOSCCTRL.set(frooscctrl);
     syscon.FRODIRECTCLKUEN.set(1);
+    syscon.FCLKSEL2[0].set(FCLKSEL2_::FRO_DIV); // SPI0 clock == 30 MHz
+    syscon.FCLKSEL2[1].set(FCLKSEL2_::FRO_DIV); // SPI1 clock == 30 MHz
+
 /*
     auto &iocon = *i_IOCON.registers;       // IOCON register set
     iocon.PIO0_0.set(0x0000);   // MOSI
@@ -112,15 +115,11 @@ inline int sysinit() {
 extern "C" {
 
 void _exit(int status) {
-//    fprintf(stderr, "\nexiting...\n");
-//    fflush(stderr);
     while(1);   // _exit doesn't return
 }
 
 void _init(void) {}
 void _fini(void) {}
-
-extern int main();
 
 /** Reset entry point.
  * Sets up a simple runtime environment and initializes the C/C++ library.
@@ -185,6 +184,42 @@ unsigned const short nvic_num_exceptions = sizeof(vector_table) / sizeof(vector_
  * We're running on the M0+, which has 2 bits.
  */
 unsigned const short nvic_prio_bits = 2;
+
+///// Newlib dummy stubs
+
+__attribute__((noreturn)) void panic(char const *msg) {
+    // Replace with your MCU-specific panic handler (e.g., LED blink, halt, etc.)
+    while (1) { /* trap */ }
+}
+
+void *_sbrk_r(struct _reent *r, ptrdiff_t incr) {
+    panic("_sbrk_r called: dynamic memory not supported");
+    return (void*)-1; // never reached
+}
+_ssize_t _write_r(struct _reent *r, int fd, const void *ptr, size_t len) {
+    return 0; // can't write anything
+}
+_ssize_t _read_r(struct _reent *r, int fd, void *ptr, size_t len) {
+    return 0; // no input available
+}
+int _close_r(struct _reent *r, int fd) {
+    return -1;  // error    
+}
+_off_t _lseek_r(struct _reent *r, int fd, _off_t off, int whence) {
+    return -1;  // error    
+}
+int _fstat_r(struct _reent *r, int fd, struct stat *st) {
+    return -1;  // error    
+}       
+int _kill_r(struct _reent *r, int pid, int sig) {
+    return -1;  // error    
+}
+int _getpid_r(struct _reent *r) {
+    return 1;   // dummy PID    
+}   
+int _isatty_r(struct _reent *r, int fd) {
+    return 0;   // no TTY    
+}
 
 } // extern "C"
 

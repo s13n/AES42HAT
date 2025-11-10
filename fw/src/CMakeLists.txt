@@ -1,10 +1,12 @@
 
 cmake_minimum_required(VERSION 3.28)
 
+set(CMAKE_CXX_STANDARD 20)
+
 add_executable(aes42hat)
 
 macro(generate_peripheral model)
-    add_custom_command(OUTPUT ${model}.cpp ${model}.hpp
+    add_custom_command(OUTPUT ${model}.hpp
         COMMAND python3 ${CMAKE_SOURCE_DIR}/tools/generate_peripheral_header.py ${CMAKE_SOURCE_DIR}/model/${model}.yaml ${CMAKE_CURRENT_BINARY_DIR}/${model} lpc865
         MAIN_DEPENDENCY ${CMAKE_SOURCE_DIR}/model/${model}.yaml
         DEPENDS ${CMAKE_SOURCE_DIR}/tools/generate_peripheral_header.py
@@ -36,8 +38,9 @@ generate_peripheral(SYSCON)
 generate_peripheral(USART)
 generate_peripheral(WKT)
 generate_peripheral(WWDT)
+generate_peripheral(SRC4392)
 
-add_custom_command(OUTPUT LPC865.cpp LPC865.hpp
+add_custom_command(OUTPUT LPC865.hpp
     COMMAND python3 ${CMAKE_SOURCE_DIR}/tools/generate_chip_header.py ${CMAKE_SOURCE_DIR}/model/LPC865.yaml ${CMAKE_CURRENT_BINARY_DIR}/LPC865 lpc865
     MAIN_DEPENDENCY ${CMAKE_SOURCE_DIR}/model/LPC865.yaml
     DEPENDS ${CMAKE_SOURCE_DIR}/tools/generate_chip_header.py
@@ -52,6 +55,7 @@ target_sources(aes42hat PUBLIC
     main.cpp
     dma_drv.cpp
     spi_drv.cpp
+    src4392_drv.cpp 
 )
 
 target_link_options(aes42hat PRIVATE
