@@ -46,9 +46,9 @@ inline int sysinit() {
     syscon.SYSPLLCLKUEN = SYSPLLCLKUEN{ .ENA=SYSPLLCLKUEN_::NO_CHANGE };
     syscon.SYSPLLCLKSEL = SYSPLLCLKSEL{ .SEL=SYSPLLCLKSEL_::EXT_CLK };
     syscon.SYSPLLCLKUEN = SYSPLLCLKUEN{ .ENA=SYSPLLCLKUEN_::UPDATED };
-    syscon.PDRUNCFG.set(0x8DA0);
-    syscon.SYSPLLCTRL = SYSPLLCTRL{ .MSEL=3, .PSEL=PSEL_3 };
-    syscon.SYSPLLDIV = SYSPLLDIV{ .DIV=4 };
+    syscon.PDRUNCFG.set(0x8DA0);    // power down PLL
+    syscon.SYSPLLCTRL = SYSPLLCTRL{ .MSEL=2, .PSEL=PSEL_3 };    // 10 MHz --> 240 MHz --> 30 MHz
+    syscon.SYSPLLDIV = SYSPLLDIV{ .DIV=1 };
     syscon.CLKOUTSEL = CLKOUTSEL{ .SEL=CLKOUTSEL_::SYS_PLL };
     syscon.CLKOUTDIV = CLKOUTDIV{ .DIV=10 };    // divide by 10
     syscon.PDRUNCFG.set(0x8D20);    // power up PLL
@@ -57,8 +57,8 @@ inline int sysinit() {
     syscon.FRODIRECTCLKUEN = FRODIRECTCLKUEN{ .ENA=FRODIRECTCLKUEN_::NO_CHANGE };
     syscon.FROOSCCTRL = FROOSCCTRL{ .FRO_DIRECT=FRO_DIRECT_::ENABLED };
     syscon.FRODIRECTCLKUEN = FRODIRECTCLKUEN{ .ENA=FRODIRECTCLKUEN_::UPDATED };
-    syscon.FCLKSEL2[0] = FCLKSEL2{ .SEL=FCLKSEL2_::FRO_DIV };   // SPI0 clock == 30 MHz
-    syscon.FCLKSEL2[1] = FCLKSEL2{ .SEL=FCLKSEL2_::FRO_DIV };   // SPI1 clock == 30 MHz
+    syscon.FCLKSEL2[0] = FCLKSEL2{ .SEL=FCLKSEL2_::FRO };   // SPI0 clock == 60 MHz
+    syscon.FCLKSEL2[1] = FCLKSEL2{ .SEL=FCLKSEL2_::FRO };   // SPI1 clock == 60 MHz
 
 /*
     auto &iocon = *i_IOCON.registers;       // IOCON register set
