@@ -1939,3 +1939,20 @@ registers:
           - name: PAGE2
             value: 2
             description: DIT Channel Status and User Data Buffers
+
+parameters:
+  - name: addr
+    bits: 2
+    min: 0
+    max: 3
+    description: Chip addressing (on I2C 0x70..0x73; on SPI 4 select lines)
+  - name: cpm
+    bits: 1
+    min: 0
+    max: 1
+    description: Control port mode (0 = SPI, 1 = I2C)
+  - name: src_present
+    bits: 1
+    min: 0
+    max: 1
+    description: Set if the SRC block is present in the device (SRC4392 or SRC4382)
