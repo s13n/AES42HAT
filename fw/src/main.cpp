@@ -46,7 +46,7 @@ static std::array<std::byte, 52> const srcInitData = {
     0x00_y, // Register 19: Receiver Interrupt Mode Register 2
     0x00_y, // Register 1A: Receiver Interrupt Mode Register 3
     0x01_y, // Register 1B: General-Purpose Output 1 (GPO1) Control Register
-    0x01_y, // Register 1C: General-Purpose Output 2 (GPO2) Control Register
+    0x00_y, // Register 1C: General-Purpose Output 2 (GPO2) Control Register
     0x0E_y, // Register 1D: General-Purpose Output 3 (GPO3) Control Register
     0x09_y, // Register 1E: General-Purpose Output 4 (GPO4) Control Register
     0x00_y, // Register 1F: Q-Channel Sub-Code Data Register 1 (Read-Only), Bits[7:0], Control and Address
@@ -77,8 +77,24 @@ static src4392::Integration const i_src4392B{ .addr = 1, .cpm = 0, .src_present=
 static src4392::Integration const i_src4392C{ .addr = 2, .cpm = 0, .src_present=1 };
 static src4392::Integration const i_src4392D{ .addr = 3, .cpm = 0, .src_present=1 };
 
-static lpc865::Ftm::Parameters const ftm0par{ .ps=0, .clks=3 };
-static lpc865::Ftm::Parameters const ftm1par{ .ps=0, .clks=1 };
+static lpc865::Ftm::Parameters const ftm0par{ .ps=0, .clks=3, .mod=12287
+    , .ch0inv=0
+    , .ch0=::Ftm::pwmNeg
+    , .ch2=::Ftm::captureNeg
+    , .ch3=::Ftm::captureNeg
+    , .ch4=::Ftm::captureNeg
+    , .ch5=::Ftm::captureNeg
+};
+static lpc865::Ftm::Parameters const ftm1par{ .ps=1, .clks=1, .mod=40000
+    , .ch0inv=1
+    , .ch1inv=1
+    , .ch2inv=1
+    , .ch3inv=1
+    , .ch0=::Ftm::pwmNeg
+    , .ch1=::Ftm::pwmNeg
+    , .ch2=::Ftm::pwmNeg
+    , .ch3=::Ftm::pwmNeg
+};
 
 
 int main() {
