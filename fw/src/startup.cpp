@@ -32,22 +32,33 @@ inline int sysinit() {
     ROM **rom = (ROM **)0x0F001D98;
     (*rom)->pPWRD->set_fro_freq(60000);     // 60 MHz
 
+    // set up the clocking structure
     auto &syscon = *i_SYSCON.registers;     // SYSCON register set
     syscon.SYSAHBCLKCTRL0.set(0x31FFFEF7);
-    syscon.SYSOSCCTRL.set(0x01);
-    syscon.CLKOUTSEL.set(CLKOUTSEL_::MAIN_CLK);
-    syscon.CLKOUTDIV.set(10);               // divide by 10
-    syscon.PDRUNCFG.set(0xEDA0);
-    syscon.LPOSCEN.set(3);                  // enable lp_osc for both WKT and WDT
-    syscon.LPOSCEN.set(3);                  // enable lp_osc for both WKT and WDT
-    syscon.WKTCLKSEL.set(1);                // select lp_osc
-    syscon.FRODIRECTCLKUEN.set(0);
-    auto frooscctrl = syscon.FROOSCCTRL.get();
-    frooscctrl.FRO_DIRECT = 1;              // switch to 60 MHz
-    syscon.FROOSCCTRL.set(frooscctrl);
-    syscon.FRODIRECTCLKUEN.set(1);
-    syscon.FCLKSEL2[0].set(FCLKSEL2_::FRO_DIV); // SPI0 clock == 30 MHz
-    syscon.FCLKSEL2[1].set(FCLKSEL2_::FRO_DIV); // SPI1 clock == 30 MHz
+    syscon.SYSOSCCTRL = SYSOSCCTRL{ .BYPASS=1, .FREQRANGE=0 };
+    syscon.EXTCLKSEL = EXTCLKSEL{ .SEL=EXTCLKSEL_::CLK_IN };
+    syscon.MAINCLKUEN = MAINCLKUEN{ .ENA=MAINCLKUEN_::NO_CHANGE };
+    syscon.MAINCLKSEL = MAINCLKSEL{ .SEL=MAINCLKSEL_::FRO };
+    syscon.MAINCLKUEN = MAINCLKUEN{ .ENA=MAINCLKUEN_::UPDATED };
+    syscon.MAINCLKPLLUEN = MAINCLKPLLUEN{ .ENA=MAINCLKPLLUEN_::NO_CHANGE };
+    syscon.MAINCLKPLLSEL = MAINCLKPLLSEL{ .SEL=MAINCLKPLLSEL_::MAIN_CLK_PRE_PLL };
+    syscon.MAINCLKPLLUEN = MAINCLKPLLUEN{ .ENA=MAINCLKPLLUEN_::UPDATED };
+    syscon.SYSPLLCLKUEN = SYSPLLCLKUEN{ .ENA=SYSPLLCLKUEN_::NO_CHANGE };
+    syscon.SYSPLLCLKSEL = SYSPLLCLKSEL{ .SEL=SYSPLLCLKSEL_::EXT_CLK };
+    syscon.SYSPLLCLKUEN = SYSPLLCLKUEN{ .ENA=SYSPLLCLKUEN_::UPDATED };
+    syscon.PDRUNCFG.set(0x8DA0);
+    syscon.SYSPLLCTRL = SYSPLLCTRL{ .MSEL=3, .PSEL=PSEL_3 };
+    syscon.SYSPLLDIV = SYSPLLDIV{ .DIV=4 };
+    syscon.CLKOUTSEL = CLKOUTSEL{ .SEL=CLKOUTSEL_::SYS_PLL };
+    syscon.CLKOUTDIV = CLKOUTDIV{ .DIV=10 };    // divide by 10
+    syscon.PDRUNCFG.set(0x8D20);    // power up PLL
+    syscon.LPOSCEN = LPOSCEN{ .WDT_CLK_EN=WDT_CLK_EN_::ENABLE, .WKT_CLK_EN=WKT_CLK_EN::ENABLE };
+    syscon.WKTCLKSEL = WKTCLKSEL{ .SEL=WKTCLKSEL_::SYS_PLL };
+    syscon.FRODIRECTCLKUEN = FRODIRECTCLKUEN{ .ENA=FRODIRECTCLKUEN_::NO_CHANGE };
+    syscon.FROOSCCTRL = FROOSCCTRL{ .FRO_DIRECT=FRO_DIRECT_::ENABLED };
+    syscon.FRODIRECTCLKUEN = FRODIRECTCLKUEN{ .ENA=FRODIRECTCLKUEN_::UPDATED };
+    syscon.FCLKSEL2[0] = FCLKSEL2{ .SEL=FCLKSEL2_::FRO_DIV };   // SPI0 clock == 30 MHz
+    syscon.FCLKSEL2[1] = FCLKSEL2{ .SEL=FCLKSEL2_::FRO_DIV };   // SPI1 clock == 30 MHz
 
 /*
     auto &iocon = *i_IOCON.registers;       // IOCON register set
@@ -95,16 +106,16 @@ inline int sysinit() {
     iocon.PIO1_9.set(0x0000);   // UBTC
 */
     auto &swm0 = *i_SWM0.registers;         // SWM0 register set
-    swm0.PINASSIGN0.set(0xFFFF1819);
-    swm0.PINASSIGN1.set(0xFFFFFFFF);
-    swm0.PINASSIGN2.set(0xFFFFFFFF);
-    swm0.PINASSIGN3.set(0x0DFFFFFF);
-    swm0.PINASSIGN4.set(0x041C1200);
-    swm0.PINASSIGN5.set(0xFFFF2122);
-    swm0.PINASSIGN6.set(0x0BFFFFFF);
-    swm0.PINASSIGN7.set(0xFFFFFF0A);
-    swm0.PINASSIGN8.set(0xFFFF09FF);        // CLKOUT on TP9
-    swm0.FTM_PINASSIGN0.set(0xFFFFFFFF);
+    swm0.PINASSIGN0.set(0xFFFF1819);        // USART0
+    swm0.PINASSIGN1.set(0xFFFFFFFF);        // USART0/1
+    swm0.PINASSIGN2.set(0xFFFFFFFF);        // USART1/2
+    swm0.PINASSIGN3.set(0x0DFFFFFF);        // USART2 SPI0
+    swm0.PINASSIGN4.set(0x041C1200);        // SPI0
+    swm0.PINASSIGN5.set(0xFFFF2122);        // SPI0/1
+    swm0.PINASSIGN6.set(0x0BFFFFFF);        // SPI1 I2C0
+    swm0.PINASSIGN7.set(0xFFFFFF0A);        // I2C0 I3C0
+    swm0.PINASSIGN8.set(0xFFFF09FF);        // ACMP0 CLKOUT (on TP9) GPIO_INT_BMAT 
+    swm0.FTM_PINASSIGN0.set(0x507FD431);    // FTM0/1
     swm0.PINENABLE0.set(0xFFFF081F);        // enable ADC0..3, CLKIN, XTALIN, RESET and SWD
 
     auto &inputmux = *i_INPUTMUX.registers; // INPUTMUX register set
