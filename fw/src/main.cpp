@@ -104,6 +104,9 @@ int main() {
     Ftm ftm0{ i_FTM0, ftm0par };
     Ftm ftm1{ i_FTM1, ftm1par };
     
+    clocktree::ClockTree<Clocks> clktree;
+    uint32_t f = clktree.getFrequency(Clocks::S::ftm0clk);
+
     for (auto &s : src) {
         s.updateRegs(srcInitData);
         s.writeRegs(spi0);
