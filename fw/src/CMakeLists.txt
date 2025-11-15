@@ -39,6 +39,13 @@ generate_peripheral(lpc865 WKT)
 generate_peripheral(lpc865 WWDT)
 generate_peripheral(src4392 SRC4392)
 
+add_custom_command(OUTPUT LPC865_clocks.hpp
+    COMMAND python3 ${CMAKE_SOURCE_DIR}/tools/generate_clocktree_header.py ${CMAKE_SOURCE_DIR}/model/LPC865_clocks.yaml ${CMAKE_CURRENT_BINARY_DIR}/LPC865 lpc865
+    MAIN_DEPENDENCY ${CMAKE_SOURCE_DIR}/model/LPC865_clocks.yaml
+    DEPENDS ${CMAKE_SOURCE_DIR}/tools/generate_clocktree_header.py
+    COMMENT "Generating LPC865_clocks.hpp in namespace lpc865"
+)
+
 add_custom_command(OUTPUT LPC865.hpp
     COMMAND python3 ${CMAKE_SOURCE_DIR}/tools/generate_chip_header.py ${CMAKE_SOURCE_DIR}/model/LPC865.yaml ${CMAKE_CURRENT_BINARY_DIR}/LPC865 lpc865
     MAIN_DEPENDENCY ${CMAKE_SOURCE_DIR}/model/LPC865.yaml

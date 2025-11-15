@@ -7,6 +7,7 @@
 #include "src4392_drv.hpp"
 #include "WKT.hpp"
 #include "WWDT.hpp"
+#include "LPC865_clocks.hpp"
 #include "LPC865.hpp"
 #include <stdint.h>
 
