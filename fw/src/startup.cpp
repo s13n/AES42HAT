@@ -4,7 +4,7 @@
 
 #include "WKT.hpp"
 #include "WWDT.hpp"
-#include "LPC865.hpp"
+#include "chip.hpp"
 
 extern "C" {
 #   include "newlib_def.h"
