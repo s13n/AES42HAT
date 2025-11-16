@@ -20,8 +20,8 @@ export module clocktree;
 namespace clocktree {
     /** Representation of a register field used to control a functional element. */
     struct RegisterField {
-        uint32_t(*get)(void const *);       //!< Read register field
-        uint32_t(*set)(void *, uint32_t);   //!< Write register field
+        uint32_t(*get)(void const *);   //!< Read register field
+        void(*set)(void *, uint32_t);   //!< Write register field
     };
 
     /** Generator functional element.

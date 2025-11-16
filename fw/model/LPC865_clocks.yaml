@@ -91,7 +91,6 @@ generators:
         struct ROM { const PWRD *pPWRD; };
         ROM **rom = (ROM **)0x0F001D98;
         (*rom)->pPWRD->set_fro_freq(val/1000);
-        return val;
       values: [0, 36000000, 48000000, 60000000]
       default: 48000000
   - name: CLKIN

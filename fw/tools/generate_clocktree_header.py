@@ -164,7 +164,8 @@ def formatFields(field_list, instance):
                 return static_cast<Clocks const*>(ctx)->{state};
             }}'''
             f_set = f'''[](void *ctx, uint32_t val){{
-                {f.get("set", "return 0;")}
+                {f.get("set", "")}
+                static_cast<Clocks*>(ctx)->{state} = val;
             }}'''
         else:
             f_get = f'''[](void const *ctx) -> uint32_t {{
@@ -174,7 +175,6 @@ def formatFields(field_list, instance):
                 auto reg = i_{inst}.registers->{reg}.get();
                 reg.{field} = val;
                 i_{inst}.registers->{reg}.set(reg);
-                return val;
             }}'''
         txt.append(f'        Rf{{ {f_get}, {f_set} }},')
     txt.append("    };")
