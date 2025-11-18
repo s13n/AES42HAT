@@ -53,7 +53,20 @@ add_custom_command(OUTPUT chip.hpp
     COMMENT "Generating chip.hpp in namespace lpc865"
 )
 
-target_include_directories(aes42hat PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
+target_include_directories(aes42hat PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}     # for generated headers
+)
+
+set_target_properties(aes42hat PROPERTIES
+    LINK_DEPENDS "${CMAKE_SOURCE_DIR}/linker/lpc865.ld"
+)
+
+target_link_options(aes42hat PRIVATE
+    -T${CMAKE_SOURCE_DIR}/linker/lpc865.ld
+    -nostartfiles
+    -Wl,--gc-sections
+)
 
 target_sources(aes42hat PUBLIC
     chip.hpp
@@ -64,10 +77,4 @@ target_sources(aes42hat PUBLIC
     ftm_drv.cpp
     spi_drv.cpp
     src4392_drv.cpp 
-)
-
-target_link_options(aes42hat PRIVATE
-    -T${CMAKE_SOURCE_DIR}/linker/lpc865.ld
-    -nostartfiles
-    -Wl,--gc-sections
 )

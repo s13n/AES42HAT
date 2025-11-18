@@ -4,7 +4,7 @@
 
 #include "WKT.hpp"
 #include "WWDT.hpp"
-#include "chip.hpp"
+#include "clocks.hpp"
 
 extern "C" {
 #   include "newlib_def.h"
@@ -22,16 +22,6 @@ using namespace lpc865;
 // initialized. It puts the system in its desired running state. This includes
 // pin configuration, clock configuration, and memory interface timing.
 inline int sysinit() {
-    // Use the FRO API ROM routine to set the FRO frequency
-    struct PWRD {
-        void (*set_fro_freq)(unsigned frequency);
-    };
-    struct ROM {
-        const PWRD *pPWRD;
-    };
-    ROM **rom = (ROM **)0x0F001D98;
-    (*rom)->pPWRD->set_fro_freq(60000);     // 60 MHz
-
     // set up the clocking structure
     auto &syscon = *i_SYSCON.registers;     // SYSCON register set
     syscon.SYSAHBCLKCTRL0.set(0x31FFFEF7);

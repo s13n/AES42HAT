@@ -2,12 +2,12 @@
  * main function for the AES42HAT
  */
 
-#include "ftm_drv.hpp"
-#include "spi_drv.hpp"
-#include "src4392_drv.hpp"
 #include "WKT.hpp"
 #include "WWDT.hpp"
 #include "clocks.hpp"
+#include "ftm_drv.hpp"
+#include "spi_drv.hpp"
+#include "src4392_drv.hpp"
 #include <stdint.h>
 
 
@@ -96,6 +96,7 @@ static lpc865::Ftm::Parameters const ftm1par{ .ps=1, .clks=1, .mod=40000
     , .ch3=::Ftm::pwmNeg
 };
 
+static clocktree::ClockTree<Clocks> clktree;
 
 int main() {
     Spi spi0{ i_SPI0, nullptr };
@@ -103,8 +104,9 @@ int main() {
     Ftm ftm0{ i_FTM0, ftm0par };
     Ftm ftm1{ i_FTM1, ftm1par };
     
-    clocktree::ClockTree<Clocks> clktree;
-    uint32_t f = clktree.getFrequency(Clocks::S::ftm0clk);
+    uint32_t f = clktree.getFrequency(Clocks::S::ftm0fclk);
+    clktree.register_fields[4].set(static_cast<Clocks*>(&clktree), 3072000);
+    f = clktree.getFrequency(Clocks::S::ftm0fclk);
 
     for (auto &s : src) {
         s.updateRegs(srcInitData);
