@@ -71,10 +71,14 @@ target_link_options(aes42hat PRIVATE
 target_sources(aes42hat PUBLIC
     chip.hpp
     clocks.hpp
-    startup.cpp
-    main.cpp
+    channel.cpp
+    handler.cpp
     dma_drv.cpp
     ftm_drv.cpp
+    i2c_tgt_drv.cpp
     spi_drv.cpp
+    usart_drv.cpp
     src4392_drv.cpp 
+    startup.cpp
+    main.cpp
 )

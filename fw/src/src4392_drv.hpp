@@ -54,15 +54,16 @@ public:
 
     void writeRegs(lpc865::Spi &spi);
 
-private:
+//private:
     static uint64_t update(std::span<std::byte const>, std::span<std::byte>);
 
     Integration const &in_;
-    std::array<std::byte, 52> regs_;
-    std::array<std::byte, 48> rxcs_;
-    std::array<std::byte, 48> rxu_;
-    std::array<std::byte, 48> txcs_;
-    std::array<std::byte, 48> txu_;
+    std::byte page_;                    //!< Page register at 0x7F
+    std::array<std::byte, 51> regs_;    //!< Page 0 addresses 0x01..0x33
+    std::array<std::byte, 48> rxcs_;    //!< Page 1 addresses 0x00..0x2F
+    std::array<std::byte, 48> rxu_;     //!< Page 1 addresses 0x40..0x6F
+    std::array<std::byte, 48> txcs_;    //!< Page 2 addresses 0x00..0x2F
+    std::array<std::byte, 48> txu_;     //!< Page 0 addresses 0x40..0x6F
 };
 
 } //!@} namespace
