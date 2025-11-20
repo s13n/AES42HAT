@@ -81,6 +81,7 @@ target_sources(aes42hat PUBLIC
     spi_drv.cpp
     src4392_drv.cpp 
     usart_drv.cpp
+    wkt_drv.cpp
     startup.cpp
     main.cpp
 )
