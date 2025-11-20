@@ -42,6 +42,7 @@ inline int sysinit() {
     syscon.CLKOUTSEL = CLKOUTSEL{ .SEL=CLKOUTSEL_::SYS_PLL };
     syscon.CLKOUTDIV = CLKOUTDIV{ .DIV=10 };    // divide by 10
     syscon.PDRUNCFG.set(0x8D20);    // power up PLL
+    i_PMU.registers->DPDCTRL = DPDCTRL{ .ULPOSCEN = 1 };
     syscon.LPOSCEN = LPOSCEN{ .WDT_CLK_EN=WDT_CLK_EN_::ENABLE, .WKT_CLK_EN=WKT_CLK_EN::ENABLE };
     syscon.WKTCLKSEL = WKTCLKSEL{ .SEL=WKTCLKSEL_::SYS_PLL };
     syscon.FRODIRECTCLKUEN = FRODIRECTCLKUEN{ .ENA=FRODIRECTCLKUEN_::NO_CHANGE };
@@ -113,13 +114,9 @@ inline int sysinit() {
     return 0;
 }
 
-extern "C" {
+void *__dso_handle = nullptr;
 
-extern void I2C0isr();
-extern void USART0isr();
-extern void USART1isr();
-extern void USART2isr();
-extern void WKTisr();
+extern "C" {
 
 void _exit(int status) {
     while(1);   // _exit doesn't return
@@ -137,60 +134,6 @@ void ResetISR(void) {
     __libc_init_array();    // C++ library initialization
     _exit(main());          // _exit() never returns
 }
-
-/** The exception vector table.
- * This relies on the linker script to place at correct location in memory.
- */
-__attribute__((used, section(".isr_vector")))
-void (* const vector_table[])(void) = {
-    &__stack,       // The initial stack pointer
-    ResetISR,       // The reset handler
-    nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, 
-    nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
-
-    nullptr, // 0 040 SPI0_IRQ SPI0 interrupt See Table 282 “SPI Interrupt Enable read and Set register (INTENSET, addresses 0x4005 800C (SPI0), 0x4005 C00C (SPI1)) bit description”.
-    nullptr, // 1 044 SPI1_IRQ SPI1 interrupt Same as SPI0_IRQ
-    nullptr, // 2 048 - Reserved -
-    USART0isr, // 3 04C UART0_IRQ USART0 interrupt See Table 268 “USART Interrupt Enable read and set register (INTENSET, address 0x4006 400C (USART0), 0x4006 800C (USART1), 0x4006C00C (USART2)) bit description”
-    USART1isr, // 4 050 UART1_IRQ USART1 interrupt Same as UART0_IRQ
-    USART2isr, // 5 054 UART2_IRQ USART2 interrupt Same as UART0_IRQ
-    nullptr, // 6 058 FTM0_IRQ FlexTimer0 interrupt -
-    nullptr, // 7 05C FTM1_IRQ FlexTimer1 interrupt -
-    I2C0isr, // 8 060 I2C0_IRQ I2C0 interrupt See Table 298 “Interrupt Enable Clear register (INTENCLR, address 0x4005 000C (I2C0)) bit description”.
-    nullptr, // 9 064 - Reserved -
-    nullptr, // 10 068 MRT_IRQ Multi-rate timer interrupt Global MRT interrupt. GFLAG0 GFLAG1 GFLAG2 GFLAG3
-    nullptr, // 11 06C ACMP_IRQ Analog comparator interrupt COMPEDGE - rising, falling, or both edges can set the bit.
-    nullptr, // 12 070 WDT_IRQ Windowed watchdog timer interrupt WARNINT - watchdog warning interrupt
-    nullptr, // 13 074 BOD_IRQ BOD interrupt BODINTVAL - BOD interrupt level
-    nullptr, // 14 078 FLASH_IRQ Flash interrupt -
-    WKTisr, // 15 07C WKT_IRQ Self-wake-up timer interrupt ALARMFLAG
-    nullptr, // 16 080 ADC_SEQA_IRQ ADC sequence A completion interrupt -
-    nullptr, // 17 084 ADC_SEQB_IRQ ADC sequence B completion interrupt -
-    nullptr, // 18 088 ADC_THCMP_IRQ ADC threshold compare interrupt -
-    nullptr, // 19 08C ADC_OVR_IRQ ADC overrun interrupt -
-    nullptr, // 20 090 DMA_IRQ DMA0 controller interrupt -
-    nullptr, // 21 094 I3C0_IRQ I3C interface 0 interrupt -
-    nullptr, // 22 098 GPIO_HS_IRQ0 GPIO group A interrupt -.
-    nullptr, // 23 09C GPIO_HS_IRQ1 GPIO group B interrupt -
-    nullptr, // 24 0A0 PININT0_IRQ Pin interrupt 0 or pattern match engine slice 0 interrupt PSTAT - pin interrupt status
-    nullptr, // 25 0A4 PININT1_IRQ Pin interrupt 1 or pattern match engine slice 1 interrupt PSTAT - pin interrupt status
-    nullptr, // 26 0A8 PININT2_IRQ Pin interrupt 2 or pattern match engine slice 2 interrupt PSTAT - pin interrupt status
-    nullptr, // 27 0AC PININT3_IRQ Pin interrupt 3 or pattern match engine slice 3 interrupt PSTAT - pin interrupt status
-    nullptr, // 28 0B0 PININT4_IRQ Pin interrupt 4 or pattern match engine slice 4 interrupt PSTAT - pin interrupt status
-    nullptr, // 29 0B4 PININT5_IRQ Pin interrupt 5 or pattern match engine slice 5 interrupt PSTAT - pin interrupt status
-    nullptr, // 30 0B8 PININT6_IRQ Pin interrupt 6 or pattern match engine slice 6 interrupt PSTAT - pin interrupt status
-    nullptr, // 31 0BC PININT7_IRQ Pin interrupt 7 or pattern match engine slice 7 interrupt PSTAT - pin interrupt status
-};
-
-/** Number of entries in exception vector table.
- *
- */
-unsigned const short nvic_num_exceptions = sizeof(vector_table) / sizeof(vector_table[0]);
-
-/** Number of priority bits implemented by NVIC.
- * We're running on the M0+, which has 2 bits.
- */
-unsigned const short nvic_prio_bits = 2;
 
 ///// Newlib dummy stubs
 
@@ -229,7 +172,5 @@ int _isatty_r(struct _reent *r, int fd) {
 }
 
 } // extern "C"
-
-void *__dso_handle = nullptr;
 
 /** @} */

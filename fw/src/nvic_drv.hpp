@@ -36,10 +36,10 @@ public:
     typedef void (VectorTableEntry)();
 
     virtual void isr() =0;
-
-    [[noreturn]] static void run();
-    static size_t poll();
-    static size_t poll_one();
+    
+    void enable(Exception);
+    void disable(Exception);
+    void insert(Exception);
     static void defaultISR();
 
 private:
