@@ -72,8 +72,8 @@ signals:
   - { name: ftm1fclk, description: "Counter clock for FTM1" }
   - { name: ftm0_extclk, description: "External clock for FTM0" }
   - { name: ftm1_extclk, description: "External clock for FTM1" }
-  - { name: wkt_counter_clk }
-  - { name: wkt_int_clk }
+  - { name: wkt_counter_clk, description: "The counter clock in the WKT" }
+  - { name: wkt_int_clk, description: "The WKT internal counter clock alternative" }
   - { name: wktclk }
   - { name: wktclkin, max: 10000000, description: "The clock at the WKTCLKIN input" }
   - { name: wwdtclk }
