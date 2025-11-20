@@ -73,13 +73,14 @@ target_sources(aes42hat PUBLIC
     chip.hpp
     clocks.hpp
     channel.cpp
-    handler.cpp
     dma_drv.cpp
     ftm_drv.cpp
+    handler.cpp
     i2c_tgt_drv.cpp
+    nvic_drv.cpp
     spi_drv.cpp
-    usart_drv.cpp
     src4392_drv.cpp 
+    usart_drv.cpp
     startup.cpp
     main.cpp
 )
