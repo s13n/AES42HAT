@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include "nvic_drv.hpp"
 #include "I2C.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -22,8 +23,7 @@ class DmaBase;
 
 /** I2C Target Driver.
  */
-class I2cTarget {
-    I2cTarget(I2cTarget &&) = delete;
+class I2cTarget : public arm::Interrupt {
 public:
     /** Callback representing one target address.
      *
@@ -56,7 +56,7 @@ public:
         std::initializer_list<Callback*> callbacks;
     };
 
-    void isr();
+    void isr() override;
 
     I2cTarget(I2C::Integration const &in, Parameters const &par);
     ~I2cTarget() =default;

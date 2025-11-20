@@ -7,24 +7,13 @@
  */
 
 #include "handler.hpp"
+#include "nvic_drv.hpp"
 
 static Handler* anchor = nullptr;
 
-__attribute__((always_inline)) inline void enable_irq() {
-    asm volatile ("cpsie i" : : : "memory");
-}
-
-__attribute__((always_inline)) inline void disable_irq() {
-    asm volatile ("cpsid i" : : : "memory");
-}
-
-__attribute__((always_inline)) inline void wfe(void) {
-  asm volatile ("wfe");
-}
-
 bool Handler::post() {
     bool result = false;
-    disable_irq();
+    arm::disable_irq();
     if(!next_) {      // post only if not already posted
         if(anchor) {
             // insert new Handler between anchor and anchor->next_
@@ -36,13 +25,13 @@ bool Handler::post() {
         anchor = this;  // make anchor point to newest Handler
         result = true;
     }
-    enable_irq();
+    arm::enable_irq();
     return result;
 }
 
 inline Handler *Handler::unque() {
     Handler *res = nullptr;
-    disable_irq();
+    arm::disable_irq();
     if(anchor) {
         res = anchor->next_;
         if(res == res->next_)
@@ -50,7 +39,7 @@ inline Handler *Handler::unque() {
         else
             anchor->next_ = res->next_;
     }
-    enable_irq();
+    arm::enable_irq();
     return res;
 }
 
@@ -73,5 +62,5 @@ size_t Handler::poll() {
 void Handler::run() {
     while (true)
         if (poll_one() == 0)
-            wfe();
+            arm::wfe();
 }

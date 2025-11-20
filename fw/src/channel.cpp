@@ -6,6 +6,7 @@
  */
 #include "channel.hpp"
 
+
 constexpr std::byte operator""_y(unsigned long long value) {
     return static_cast<std::byte>(value);
 }

@@ -66,13 +66,15 @@ lpc865::I2cTarget::I2cTarget(I2C::Integration const &in, Parameters const &par)
     if (par.callbacks.size() != n)
         return;
     
+    insert(in_.exI2C);
+
     auto &hw = *in_.registers;
     hw.SLVADR[0] = SLVADR{ .SADISABLE = par.dis0, .SLVADR = par.addr0 };
     hw.SLVADR[1] = SLVADR{ .SADISABLE = par.dis1, .SLVADR = par.addr1 };
     hw.SLVADR[2] = SLVADR{ .SADISABLE = par.dis2, .SLVADR = par.addr2 };
     hw.SLVADR[3] = SLVADR{ .SADISABLE = par.dis3, .SLVADR = par.addr3 };
     hw.SLVQUAL0 = SLVQUAL0{ .QUALMODE0 = par.qmode, .SLVQUAL0 = par.qual0 };
-    hw.INTENSET = INTENSET{ .SLVPENDINGEN = 1, .SLVNOTSTREN = 1, .SLVDESELEN = 1 };
+    hw.INTENSET = INTENSET{ .SLVPENDINGEN = 1, .SLVDESELEN = 1 };
     hw.CFG = CFG{ .SLVEN = 1 };
 }
 
