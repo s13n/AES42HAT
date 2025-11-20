@@ -2,13 +2,12 @@
  * main function for the AES42HAT
  */
 
-#include "WKT.hpp"
-#include "WWDT.hpp"
 #include "clocks.hpp"
 #include "ftm_drv.hpp"
 #include "i2c_tgt_drv.hpp"
 #include "spi_drv.hpp"
 #include "usart_drv.hpp"
+#include "wkt_drv.hpp"
 #include "channel.hpp"
 #include "handler.hpp"
 #include <stdint.h>
@@ -58,54 +57,38 @@ static I2cTarget::Parameters const p_I2C0 = {
 
 static I2cTarget i2c0{ i_I2C0, p_I2C0 };    // Host communication in target mode
 
-extern "C" void I2C0isr() {
-    i2c0.isr();
-}
-
-extern "C" void USART0isr() {
-    usart0.isr();
-}
-
-extern "C" void USART1isr() {
-    usart1.isr();
-}
-
-extern "C" void USART2isr() {
-    usart2.isr();
-}
+static Wkt wkt{i_WKT, {1, 0}};
 
 class Blinky : public Handler {
+    Wkt &wkt_;
     HwPtr<GPIO::GPIO volatile> gpio_;   // GPIO register set
-    HwPtr<WKT::WKT volatile> wkt_;      // WKT register set
+    uint32_t interval_;
 public:
-    Blinky()
-        : gpio_{i_GPIO.registers}
-        , wkt_{i_WKT.registers}
+    explicit Blinky(Wkt &wkt)
+        : wkt_{wkt}
+        , gpio_{i_GPIO.registers}
+        , interval_{}
     {
         gpio_->DIRSET[1].set(1 << 7);
     }
 
-    void act() override {
-        gpio_->NOT[1].set(1 << 7);      // LED toggle
-        wkt_->CTRL.set(6);
-        wkt_->COUNT.set(5000);
+    void set(uint32_t interval) {
+        interval_ = interval;
+        act();
     }
 
-    void isr() {
-        post();
+    void act() override {
+        gpio_->NOT[1].set(1 << 7);      // LED toggle
+        wkt_.start(interval_, *this);
     }
 };
 
-static Blinky blinky;
-
-extern "C" void WKTisr() {
-    blinky.isr();
-}
+static Blinky blinky{wkt};
 
 int main() {
-    uint32_t f = clktree.getFrequency(Clocks::S::system_clk);
     clktree.register_fields[1].set(static_cast<Clocks*>(&clktree), 60000000);
-    f = clktree.getFrequency(Clocks::S::system_clk);
+
+    blinky.set(clktree.getFrequency(Clocks::S::wkt_counter_clk) / 2);
 
     Handler::run();
 
