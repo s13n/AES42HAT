@@ -35,8 +35,8 @@ public:
         ~Callback() =default;
         Callback() =default;
     public:
-        virtual bool select(uint8_t) const =0;
-        virtual void deselect() const =0;
+        virtual bool select(uint8_t) =0;
+        virtual void deselect() =0;
         virtual uint8_t getTxByte() =0;
         virtual void putRxByte(uint8_t) =0;
     };

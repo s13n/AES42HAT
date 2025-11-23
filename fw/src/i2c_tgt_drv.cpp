@@ -16,7 +16,7 @@ void lpc865::I2cTarget::isr() {
             selected_->deselect();
         hw.STAT = STAT{ .SLVDESEL = 1 };
     }
-    if (stat.SLVSEL) {
+    if (stat.SLVPENDING) {
         switch (stat.SLVSTATE) {
         case SLAVE_ADDRESS:
             target_ = hw.SLVDAT.get().DATA;
@@ -28,10 +28,9 @@ void lpc865::I2cTarget::isr() {
                 }
             }
             if (selected_) {
-                if (target_ & 1)    // read --> target needs to send data
-                    hw.SLVDAT.set(selected_->getTxByte());
                 hw.SLVCTL = SLVCTL{ .SLVCONTINUE = 1 };
             } else {
+                hw.SLVCTL = SLVCTL{ .SLVNACK = 1 };
                 target_ = 0xFF;
             }
             break;
@@ -75,6 +74,7 @@ lpc865::I2cTarget::I2cTarget(I2C::Integration const &in, Parameters const &par)
     hw.SLVADR[3] = SLVADR{ .SADISABLE = par.dis3, .SLVADR = par.addr3 };
     hw.SLVQUAL0 = SLVQUAL0{ .QUALMODE0 = par.qmode, .SLVQUAL0 = par.qual0 };
     hw.INTENSET = INTENSET{ .SLVPENDINGEN = 1, .SLVDESELEN = 1 };
+    hw.CLKDIV = CLKDIV{ .DIVVAL = 14 };
     hw.CFG = CFG{ .SLVEN = 1 };
 }
 
