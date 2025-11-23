@@ -63,7 +63,7 @@ public:
     std::array<std::byte, 48> rxcs_;    //!< Page 1 addresses 0x00..0x2F
     std::array<std::byte, 48> rxu_;     //!< Page 1 addresses 0x40..0x6F
     std::array<std::byte, 48> txcs_;    //!< Page 2 addresses 0x00..0x2F
-    std::array<std::byte, 48> txu_;     //!< Page 0 addresses 0x40..0x6F
+    std::array<std::byte, 48> txu_;     //!< Page 2 addresses 0x40..0x6F
 };
 
 } //!@} namespace

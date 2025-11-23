@@ -5,7 +5,9 @@
  * @{
  */
 #include "channel.hpp"
+#include <string_view>
 
+extern void print(std::string_view);
 
 constexpr std::byte operator""_y(unsigned long long value) {
     return static_cast<std::byte>(value);
@@ -103,14 +105,24 @@ static constexpr std::byte *getPtr(src4392::Src4392 &src, uint8_t addr) {
     }
 }
 
-bool Channel::select(uint8_t tgt) const {
-    return tgt == myaddr_;
+bool Channel::select(uint8_t tgt) {
+    print("S");
+    if ((tgt >> 1) != myaddr_)
+        return false;
+    expectReg_ = !(tgt & 0x01);
+    return true;
 }
 
-void Channel::deselect() const {
+void Channel::deselect() {
+    print("D\n");
+    if (updateSrcPage_ & 0x01) {
+        updateSrcCtrl();
+        updateSrcPage_ &= ~0x01;
+    }
 }
 
 uint8_t Channel::getTxByte() {
+    print("T");
     std::byte *ptr = getPtr(src_, addr_ & 0x7F);
     if (bool inc = addr_ & 0x80)
         addr_ = (addr_ + 1) | 0x80;
@@ -118,6 +130,12 @@ uint8_t Channel::getTxByte() {
 }
 
 void Channel::putRxByte(uint8_t val) {
+    print("R");
+    if (expectReg_) {
+        addr_ = val;
+        expectReg_ = false;
+        return;
+    }
     std::byte *ptr = getPtr(src_, addr_ & 0x7F);
     if (bool inc = addr_ & 0x80)
         addr_ = (addr_ + 1) | 0x80;
@@ -129,11 +147,14 @@ void Channel::putRxByte(uint8_t val) {
 
 void Channel::updateSrcCtrl() {
     src_.writeRegs(spi_);
+    char buf[3] = { char(myaddr_ - 0x40), '\n' };
+    print(buf);
 }
 
 Channel::Channel(unsigned ch, lpc865::Spi &spi)
     : myaddr_{uint8_t(0x70 + ch)}
     , addr_{0}
+    , expectReg_{false}
     , updateSrcPage_{0}
     , spi_{spi}
     , src_{i_src4392[ch]}
