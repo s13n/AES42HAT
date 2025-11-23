@@ -11,7 +11,7 @@
 #include "channel.hpp"
 #include "handler.hpp"
 #include <stdint.h>
-
+#include <string_view>
 
 using namespace lpc865;
 
@@ -59,6 +59,11 @@ static I2cTarget i2c0{ i_I2C0, p_I2C0 };    // Host communication in target mode
 
 static Wkt wkt{i_WKT, {1, 0}};
 
+void print(std::string_view buf) {
+    do buf.remove_prefix(usart0.send(buf.data(), buf.size()));
+    while (!buf.empty());
+}
+
 class Blinky : public Handler {
     Wkt &wkt_;
     HwPtr<GPIO::GPIO volatile> gpio_;   // GPIO register set
@@ -89,6 +94,11 @@ int main() {
     clktree.register_fields[1].set(static_cast<Clocks*>(&clktree), 60000000);
 
     blinky.set(clktree.getFrequency(Clocks::S::wkt_counter_clk) / 2);
+
+    print("AES42HAT\n");
+
+    for (size_t i=0; i<4; ++i)
+        chan[i].updateSrcCtrl();
 
     Handler::run();
 
