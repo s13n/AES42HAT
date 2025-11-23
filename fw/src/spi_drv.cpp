@@ -70,7 +70,7 @@ lpc865::Spi::Spi(SPI::Integration const &in, DmaBase *dma)
     , dma_{dma}
 {
     auto &hw = *in_.registers;
-    hw.DIV.set(7);  // divide by 8
+    hw.DIV.set(11);  // divide by 12
     hw.CFG.set(SPI::CFG{ .ENABLE = 1, .MASTER = 1 });
 }
 
