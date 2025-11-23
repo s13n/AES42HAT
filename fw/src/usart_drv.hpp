@@ -9,7 +9,6 @@
 #pragma once
 
 #include "USART.hpp"
-#include <span>
 #include <cstddef>
 #include <cstdint>
 
@@ -22,6 +21,8 @@ struct Event;
 class Usart {
     Usart(Usart &&) = delete;
 public:
+
+    size_t send(void const *buf, size_t size);
 
     void isr();
 
