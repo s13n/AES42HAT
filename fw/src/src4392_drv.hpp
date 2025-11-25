@@ -4,8 +4,8 @@
  * @{
  */
 #pragma once
-#include "SRC4392.hpp"
 #include <array>
+#include <cstdint>
 #include <span>
 
 namespace lpc865 {
@@ -14,12 +14,15 @@ namespace lpc865 {
 
 namespace src4392 { 
 
+inline namespace SRC4392 {
+    struct Integration;
+}
+
 /** SRC4392 driver class.
  */     
 class Src4392 { 
     Src4392(Src4392 &&) = delete;
-public:
-
+public:    
     Src4392(Integration const &in);
 
     /** Update the registers.
@@ -52,10 +55,23 @@ public:
         return update(buf, rxu_);
     }
 
+    void switchPage(lpc865::Spi &spi, uint8_t page);
     void writeRegs(lpc865::Spi &spi);
+    void writeCS(lpc865::Spi &spi);
+    void writeU(lpc865::Spi &spi);
+    uint64_t readRegs(lpc865::Spi &spi);
+    void readTxStatus(lpc865::Spi &spi);
+    void readRxStatus(lpc865::Spi &spi);
+    uint64_t readCS(lpc865::Spi &spi);
+    uint64_t readU(lpc865::Spi &spi);
 
-//private:
+    std::byte *getPtr(uint8_t addr, std::byte &page);
+
+private:
     static uint64_t update(std::span<std::byte const>, std::span<std::byte>);
+
+    void read(lpc865::Spi &spi, std::span<std::byte> buf);
+    void write(lpc865::Spi &spi, std::span<std::byte> buf);
 
     Integration const &in_;
     std::byte page_;                    //!< Page register at 0x7F
