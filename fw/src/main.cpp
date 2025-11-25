@@ -5,9 +5,11 @@
 #include "clocks.hpp"
 #include "ftm_drv.hpp"
 #include "i2c_tgt_drv.hpp"
+#include "pint_drv.hpp"
 #include "spi_drv.hpp"
 #include "usart_drv.hpp"
 #include "wkt_drv.hpp"
+#include "clkmgr.hpp"
 #include "channel.hpp"
 #include "handler.hpp"
 #include <stdint.h>
@@ -15,26 +17,27 @@
 
 using namespace lpc865;
 
-static lpc865::Ftm::Parameters const ftm0par{ .ps=0, .clks=3, .mod=12287
-    , .ch0inv=0
-    , .ch0=::Ftm::pwmNeg
-    , .ch2=::Ftm::captureNeg
-    , .ch3=::Ftm::captureNeg
-    , .ch4=::Ftm::captureNeg
-    , .ch5=::Ftm::captureNeg
+static lpc865::Ftm::Parameters const ftm0par{ .ps=3, .clks=1, .mod=0xFFFF
+    , .ch = {
+        { .mode=::Ftm::capturePos },    // BLS time stamping
+        {},                             // unused    
+        { .mode=::Ftm::captureNeg },    // INTA time stamping
+        { .mode=::Ftm::captureNeg },    // INTB time stamping
+        { .mode=::Ftm::captureNeg },    // INTC time stamping
+        { .mode=::Ftm::captureNeg }     // INTD time stamping
+    }
 };
-static lpc865::Ftm::Parameters const ftm1par{ .ps=1, .clks=1, .mod=40000
-    , .ch0inv=1
-    , .ch1inv=1
-    , .ch2inv=1
-    , .ch3inv=1
-    , .ch0=::Ftm::pwmNeg
-    , .ch1=::Ftm::pwmNeg
-    , .ch2=::Ftm::pwmNeg
-    , .ch3=::Ftm::pwmNeg
+static lpc865::Ftm::Parameters const ftm1par{ .ps=1, .clks=1, .mod=39999
+    , .ch = {
+        { .mode=::Ftm::pwmNeg, .inv=1 },
+        { .mode=::Ftm::pwmNeg, .inv=1 },
+        { .mode=::Ftm::pwmNeg, .inv=1 },
+        { .mode=::Ftm::pwmNeg, .inv=1 },
+    }
 };
 
 static clocktree::ClockTree<Clocks> clktree;
+static Pint pint{ i_PINT };             // Pin interrupt driver
 static Spi spi0{ i_SPI0, nullptr };     // SRC4392 control communication
 static Spi spi1{ i_SPI1, nullptr };     // Wordclock generation
 static Ftm ftm0{ i_FTM0, ftm0par };     // Wordclock phase measurements
@@ -43,7 +46,12 @@ static Usart usart0{ i_USART0 };        // Host communication USART
 static Usart usart1{ i_USART1 };        // Console mode receive USART (RX only)
 static Usart usart2{ i_USART2 };        // Mode 3 remote control USART (TX only)
 
-static Channel chan[4] = { {0, spi0}, {1, spi0}, {2, spi0}, {3, spi0} };
+static Channel chan[4] = {
+    {spi0, ftm0, pint, 0, 0},
+    {spi0, ftm0, pint, 1, 1},
+    {spi0, ftm0, pint, 2, 2},
+    {spi0, ftm0, pint, 3, 3}
+};
 
 static I2cTarget::Parameters const p_I2C0 = {
     .addr0 = 0x70,
@@ -64,6 +72,10 @@ void print(std::string_view buf) {
     while (!buf.empty());
 }
 
+void setActivityLED(bool act) {
+    i_GPIO.registers->B[1].B_[7].set(act);
+}
+/*
 class Blinky : public Handler {
     Wkt &wkt_;
     HwPtr<GPIO::GPIO volatile> gpio_;   // GPIO register set
@@ -89,16 +101,21 @@ public:
 };
 
 static Blinky blinky{wkt};
-
+*/
 int main() {
+    i_GPIO.registers->DIRSET[1].set(1 << 7);
+
     clktree.register_fields[1].set(static_cast<Clocks*>(&clktree), 60000000);
 
-    blinky.set(clktree.getFrequency(Clocks::S::wkt_counter_clk) / 2);
+//    blinky.set(clktree.getFrequency(Clocks::S::wkt_counter_clk) / 2);
 
     print("AES42HAT\n");
 
-    for (size_t i=0; i<4; ++i)
+    Clkmgr clkmgr(ftm0, pint, chan, 0, 4);
+
+    for (size_t i=0; i<4; ++i) {
         chan[i].updateSrcCtrl();
+    }
 
     Handler::run();
 
