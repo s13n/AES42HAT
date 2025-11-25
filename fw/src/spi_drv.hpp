@@ -8,15 +8,19 @@
 
 #pragma once
 
-#include "SPI.hpp"
 #include <span>
 #include <cstddef>
 #include <cstdint>
 
+struct Handler;
+
 namespace lpc865 {
 
-struct Event;
 class DmaBase;
+
+inline namespace SPI {
+    struct Integration;
+}
 
 /** SPI driver.
  * This is a generic interface for the controller of an SPI port. The following
@@ -180,8 +184,8 @@ public:
      * Subsequent transfers are addressed to the selected target. This may only
      * be called while there is no transfer in progress.
      * @param par Transfer parameters to set up interface
-     * @param ev The event to post on transfer completion. May be nullptr, for
-     * no notification.
+     * @param hdl The event handler to post on transfer completion. May be nullptr,
+     *   for no notification.
      * @return true if successful, false if bus busy or setting unsupported.
      *
      * The SPI controller is configured to select the given target and to
@@ -212,7 +216,7 @@ public:
      * support, the software must do the polling, while servicing the event
      * queue in order to not block the application.
      */
-    bool target(Parameters const &par, Event *ev);
+    bool target(Parameters const &par, Handler *hdl);
 
     /** Perform an asynchronous bidirectional transfer.
      *
@@ -268,6 +272,7 @@ public:
 private:
     SPI::Integration const &in_;
     DmaBase *dma_;
+    Handler *hdl_;
 };
 
 } // namespace

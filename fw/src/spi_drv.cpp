@@ -6,9 +6,11 @@
  */
 #include "spi_drv.hpp"
 #include "dma_drv.hpp"
+#include "handler.hpp"
+#include "SPI.hpp"
 
 
-bool lpc865::Spi::target(Parameters const &par, Event *ev) {
+bool lpc865::Spi::target(Parameters const &par, Handler *hdl) {
     if (par.sel & 0xF0)
         return false;
     auto &hw = *in_.registers;
@@ -22,6 +24,7 @@ bool lpc865::Spi::target(Parameters const &par, Event *ev) {
     txctl.RXIGNORE = !par.cmd.read;
     txctl.LEN = 7;  // 8 bit data length
     hw.TXCTL.set(txctl);
+    hdl_ = hdl;
     return true;
 }
 
@@ -57,6 +60,8 @@ ptrdiff_t lpc865::Spi::transfer(void *buf, size_t size, uint32_t speed) {
                 }
             }
         }
+        if (hdl_)
+            hdl_->post();
         return size;
     }
 }
@@ -71,6 +76,7 @@ lpc865::Spi::Spi(SPI::Integration const &in, DmaBase *dma)
 {
     auto &hw = *in_.registers;
     hw.DIV.set(11);  // divide by 12
+    hw.DLY = DLY{ .PRE_DELAY = 1, .POST_DELAY = 1 };
     hw.CFG.set(SPI::CFG{ .ENABLE = 1, .MASTER = 1 });
 }
 
