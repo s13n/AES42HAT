@@ -9,6 +9,8 @@
 #include "handler.hpp"
 #include "nvic_drv.hpp"
 
+extern void setActivityLED(bool act);
+
 static Handler* anchor = nullptr;
 
 bool Handler::post() {
@@ -61,6 +63,8 @@ size_t Handler::poll() {
 
 void Handler::run() {
     while (true)
-        if (poll_one() == 0)
+        if (poll_one() == 0) {
+            setActivityLED(false);
             arm::wfe();
+        }
 }

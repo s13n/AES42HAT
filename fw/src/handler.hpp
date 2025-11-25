@@ -28,5 +28,5 @@ public:
 private:
     static Handler *unque();
 
-    Handler *next_;
+    Handler *next_ = nullptr;
 };
