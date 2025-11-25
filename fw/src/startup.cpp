@@ -24,7 +24,6 @@ using namespace lpc865;
 inline int sysinit() {
     // set up the clocking structure
     auto &syscon = *i_SYSCON.registers;     // SYSCON register set
-    syscon.SYSAHBCLKCTRL0.set(0x31FFFEF7);
     syscon.SYSOSCCTRL = SYSOSCCTRL{ .BYPASS=1, .FREQRANGE=0 };
     syscon.EXTCLKSEL = EXTCLKSEL{ .SEL=EXTCLKSEL_::CLK_IN };
     syscon.MAINCLKUEN = MAINCLKUEN{ .ENA=MAINCLKUEN_::NO_CHANGE };
@@ -33,14 +32,13 @@ inline int sysinit() {
     syscon.MAINCLKPLLUEN = MAINCLKPLLUEN{ .ENA=MAINCLKPLLUEN_::NO_CHANGE };
     syscon.MAINCLKPLLSEL = MAINCLKPLLSEL{ .SEL=MAINCLKPLLSEL_::MAIN_CLK_PRE_PLL };
     syscon.MAINCLKPLLUEN = MAINCLKPLLUEN{ .ENA=MAINCLKPLLUEN_::UPDATED };
+    syscon.SYSAHBCLKDIV = SYSAHBCLKDIV{ .DIV=1 };
     syscon.SYSPLLCLKUEN = SYSPLLCLKUEN{ .ENA=SYSPLLCLKUEN_::NO_CHANGE };
     syscon.SYSPLLCLKSEL = SYSPLLCLKSEL{ .SEL=SYSPLLCLKSEL_::EXT_CLK };
     syscon.SYSPLLCLKUEN = SYSPLLCLKUEN{ .ENA=SYSPLLCLKUEN_::UPDATED };
     syscon.PDRUNCFG.set(0x8DA0);    // power down PLL
     syscon.SYSPLLCTRL = SYSPLLCTRL{ .MSEL=2, .PSEL=PSEL_3 };    // 10 MHz --> 240 MHz --> 30 MHz
     syscon.SYSPLLDIV = SYSPLLDIV{ .DIV=1 };
-    syscon.CLKOUTSEL = CLKOUTSEL{ .SEL=CLKOUTSEL_::SYS_PLL };
-    syscon.CLKOUTDIV = CLKOUTDIV{ .DIV=10 };    // divide by 10
     syscon.PDRUNCFG.set(0x8D20);    // power up PLL
     i_PMU.registers->DPDCTRL = DPDCTRL{ .ULPOSCEN = 1 };
     syscon.LPOSCEN = LPOSCEN{ .WDT_CLK_EN=WDT_CLK_EN_::ENABLE, .WKT_CLK_EN=WKT_CLK_EN::ENABLE };
@@ -48,11 +46,19 @@ inline int sysinit() {
     syscon.FRODIRECTCLKUEN = FRODIRECTCLKUEN{ .ENA=FRODIRECTCLKUEN_::NO_CHANGE };
     syscon.FROOSCCTRL = FROOSCCTRL{ .FRO_DIRECT=FRO_DIRECT_::ENABLED };
     syscon.FRODIRECTCLKUEN = FRODIRECTCLKUEN{ .ENA=FRODIRECTCLKUEN_::UPDATED };
+    syscon.SYSAHBCLKCTRL0.set(0x31FFFEF7);
     syscon.FRG[0].FRGCLKSEL = FRGCLKSEL{ .SEL=FRGCLKSEL_::FRO };
+    syscon.CLKOUTSEL = CLKOUTSEL{ .SEL=CLKOUTSEL_::SYS_PLL };
+    syscon.CLKOUTDIV = CLKOUTDIV{ .DIV=10 };    // divide by 10
     syscon.FCLKSEL[0] = FCLKSEL{ .SEL=FCLKSEL_::FRO_DIV };  // USART0 clock == 30 MHz
     syscon.FCLKSEL[5] = FCLKSEL{ .SEL=FCLKSEL_::FRO };      // I2C0 clock == 60 MHz
     syscon.FCLKSEL2[0] = FCLKSEL2{ .SEL=FCLKSEL2_::FRO };   // SPI0 clock == 60 MHz
     syscon.FCLKSEL2[1] = FCLKSEL2{ .SEL=FCLKSEL2_::FRO };   // SPI1 clock == 60 MHz
+    syscon.PINTSEL[0] = PINTSEL{ .INTPIN = 19 };    // INTA
+    syscon.PINTSEL[1] = PINTSEL{ .INTPIN = 20 };    // INTB
+    syscon.PINTSEL[2] = PINTSEL{ .INTPIN = 37 };    // INTC
+    syscon.PINTSEL[3] = PINTSEL{ .INTPIN = 38 };    // INTD
+    syscon.PINTSEL[4] = PINTSEL{ .INTPIN = 17 };    // BLS
 
 /*
     auto &iocon = *i_IOCON.registers;       // IOCON register set
