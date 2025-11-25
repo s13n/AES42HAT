@@ -45,7 +45,7 @@ public:
 private:
     static Interrupt *get_head(Exception n);
 
-    Interrupt *link_;
+    Interrupt *link_ = nullptr;
 };
 
 }

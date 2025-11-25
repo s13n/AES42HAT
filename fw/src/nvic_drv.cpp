@@ -13,6 +13,8 @@ extern "C" {
 #   include "newlib_def.h"
 }
 
+extern void setActivityLED(bool act);
+
 using namespace lpc865;
 
 constexpr std::array<arm::Interrupt::VectorTableEntry*, 16> specific_handlers = {
@@ -108,6 +110,7 @@ void arm::Interrupt::defaultISR() {
         asm volatile (" mrs %0, MSP " : "=r" (stack));                                  
     asm volatile (" mrs %0, IPSR " : "=r" (exnum));     // get exception number      
     auto head = get_head(exnum);
+    setActivityLED(true);
     if(!head || !head->link_)
         for(;;);    // no ISR, hang here
     // scan through the ring and call isr() of all entries in turn
