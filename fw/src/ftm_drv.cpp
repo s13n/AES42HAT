@@ -5,10 +5,45 @@
  * @{
  */
 #include "ftm_drv.hpp"
+#include "FTM.hpp"
+#include "handler.hpp"
 
+
+uint16_t lpc865::Ftm::getCount() {
+    auto &hw = *in_.registers;
+    return hw.CNT.get().COUNT;
+}
+
+void lpc865::Ftm::setMatch(unsigned ch, uint16_t value) {
+    auto &hw = *in_.registers;
+    hw.CONTROLS[ch].CV = CV{ .VAL = value };
+}
+
+uint16_t lpc865::Ftm::getCapture(unsigned ch) {
+    auto &hw = *in_.registers;
+    return hw.CONTROLS[ch].CV.get().VAL;
+}
+
+void lpc865::Ftm::setHandlers(Handler *overflow, Handler *reload) {
+    auto &hw = *in_.registers;
+    overflow_ = overflow;
+    reload_ = reload;
+    auto sc = hw.SC.get();
+    sc.TOIE = overflow != nullptr;
+    sc.RIE = reload != nullptr;
+    hw.SC = sc;
+}
+
+void lpc865::Ftm::setModulusDelta(int16_t delta) {
+    auto &hw = *in_.registers;
+    hw.MOD = uint16_t(mod_ + delta);
+}
 
 lpc865::Ftm::Ftm(FTM::Integration const &in, Parameters const &par)
-    : in_{in}
+    : mod_{par.mod}
+    , in_{in}
+    , overflow_{nullptr}
+    , reload_{nullptr}
 {
     static constexpr CSC cscTbl[] = {
         { .ELSA = 0, .ELSB = 0, .MSA = 0, .MSB = 0 },   // off
@@ -23,92 +58,53 @@ lpc865::Ftm::Ftm(FTM::Integration const &in, Parameters const &par)
 
     auto &hw = *in_.registers;
     hw.MODE = MODE{ .WPDIS=WPDIS_disabled };
-    hw.MOD = par.mod;
+    hw.MOD = mod_;
+    hw.HCR = par.hcyc;
+    hw.PWMLOAD = PWMLOAD{ .HCSEL = par.hcyc != 0 };
     SC sc{ .PS=par.ps, .CLKS=par.clks, .CPWMS=par.updn };
-    OUTINIT oinit{};
-    COMBINE comb{};
-    POL pol{};
-    for (unsigned i = 0; i <= in_.max_channel; ++i) {
-        switch (i) {
-        case 0:
-            hw.CONTROLS[0].CSC = cscTbl[par.ch0];
-            hw.CONTROLS[0].CV = 0xFFFF;
-            oinit.CH0OI = par.ch0inv;
-            pol.POL0 = par.ch0inv;
-            sc.PWMEN0 = par.ch0 >= pwmCombine;
-            if (par.ch0 == pwmCombine) {
-                comb.COMBINE0 = 1;
-                comb.COMP0 = 1;
-            }
-            break;
-        case 1:
-            hw.CONTROLS[1].CSC = cscTbl[par.ch1];
-            hw.CONTROLS[1].CV = 0xFFFF;
-            oinit.CH1OI = par.ch1inv;
-            pol.POL1 = par.ch1inv;
-            sc.PWMEN1 = par.ch1 >= pwmCombine;
-            break;
-        case 2:
-            hw.CONTROLS[2].CSC = cscTbl[par.ch2];
-            hw.CONTROLS[2].CV = 0xFFFF;
-            oinit.CH2OI = par.ch2inv;
-            pol.POL2 = par.ch2inv;
-            sc.PWMEN2 = par.ch2 >= pwmCombine;
-            if (par.ch2 == pwmCombine) {
-                comb.COMBINE1 = 1;
-                comb.COMP1 = 1;
-            }
-            break;
-        case 3:
-            hw.CONTROLS[3].CSC = cscTbl[par.ch3];
-            hw.CONTROLS[3].CV = 0xFFFF;
-            oinit.CH3OI = par.ch3inv;
-            pol.POL3 = par.ch3inv;
-            sc.PWMEN3 = par.ch3 >= pwmCombine;
-            break;
-        case 4:
-            hw.CONTROLS[4].CSC = cscTbl[par.ch4];
-            hw.CONTROLS[4].CV = 0xFFFF;
-            oinit.CH4OI = par.ch4inv;
-            pol.POL4 = par.ch4inv;
-            sc.PWMEN4 = par.ch4 >= pwmCombine;
-            if (par.ch4 == pwmCombine) {
-                comb.COMBINE2 = 1;
-                comb.COMP2 = 1;
-            }
-            break;
-        case 5:
-            hw.CONTROLS[5].CSC = cscTbl[par.ch5];
-            hw.CONTROLS[5].CV = 0xFFFF;
-            oinit.CH5OI = par.ch5inv;
-            pol.POL5 = par.ch5inv;
-            sc.PWMEN5 = par.ch5 >= pwmCombine;
-            break;
-        case 6:
-            hw.CONTROLS[6].CSC = cscTbl[par.ch6];
-            hw.CONTROLS[6].CV = 0xFFFF;
-            oinit.CH6OI = par.ch6inv;
-            pol.POL6 = par.ch6inv;
-//            sc.PWMEN6 = par.ch6 >= pwmCombine;
-            if (par.ch6 == pwmCombine) {
-                comb.COMBINE3 = 1;
-                comb.COMP3 = 1;
-            }
-            break;
-        case 7:
-            hw.CONTROLS[7].CSC = cscTbl[par.ch7];
-            hw.CONTROLS[7].CV = 0xFFFF;
-            oinit.CH7OI = par.ch7inv;
-            pol.POL7 = par.ch7inv;
-//            sc.PWMEN7 = par.ch7 >= pwmCombine;
-            break;
+    uint32_t oinit{};
+    uint32_t pol{};
+    uint32_t comb{};
+    uint32_t pwmen{};
+    auto oiMask = FIELDMASK(OUTINIT, CH0OI);
+    auto polMask = FIELDMASK(POL, POL0);
+    auto pwmenMask = FIELDMASK(SC, PWMEN0);
+    auto combineMask = FIELDMASK(COMBINE, COMBINE0);
+    auto compMask = FIELDMASK(COMBINE, COMP0);
+    for (unsigned i = 0; i <= in_.max_channel; ++i, oiMask<<=1, polMask<<=1, pwmenMask<<=1, combineMask<<=1, compMask<<=1) {
+        auto ch = par.ch[i];
+        auto csc = cscTbl[ch.mode];
+        csc.TRIGMODE = ch.trig;
+        csc.CHIE = ch.intr;
+        hw.CONTROLS[i].CSC = csc;
+        hw.CONTROLS[i].CV = 0xFFFF;
+        oinit |= ch.inv ? oiMask : 0;
+        pol |= ch.inv ? polMask : 0;
+        pwmen |= ch.mode >= pwmCombine ? pwmenMask : 0;
+        if ((i & 1) == 0 && ch.mode == pwmCombine) {
+            comb |= combineMask;
+            comb |= compMask;
         }
     }
-    hw.SC = sc;
+    hw.SC = std::bit_cast<uint32_t>(sc) | pwmen;
     hw.OUTINIT = oinit;
     hw.POL = pol;
-    hw.MODE = MODE{ .INIT=1, .WPDIS=WPDIS_disabled };
+    hw.MODE = MODE{ .FTMEN = 1, .INIT=1, .WPDIS=WPDIS_disabled };
+    insert(in_.exFTM);
+}
+
+void lpc865::Ftm::isr() {
+    auto &hw = *in_.registers;
+    auto sc = hw.SC.get();
+    if (overflow_ && sc.TOF) {
+        sc.TOF = 0;
+        overflow_->post();
+    }
+    if (reload_ && sc.RF) {
+        sc.RF = 0;
+        reload_->post();
+    }
+    hw.SC = sc;
 }
 
 /** @}*/
- 

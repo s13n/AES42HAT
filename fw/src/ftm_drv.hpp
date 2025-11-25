@@ -8,14 +8,18 @@
 
 #pragma once
 
-#include "FTM.hpp"
+#include "nvic_drv.hpp"
 #include <span>
 #include <cstddef>
 #include <cstdint>
 
+struct Handler;
+
 namespace lpc865 {
 
-struct Event;
+inline namespace FTM {
+    struct Integration;
+}
 
 /** FTM driver.
  * 
@@ -24,10 +28,43 @@ struct Event;
  * - Multiple channels
  * - Quadrature encoder
  */
-class Ftm {
+class Ftm : public arm::Interrupt {
     Ftm(Ftm &&) = delete;
 public:
     ~Ftm() =default;
+
+    /** Get the current count.
+     * @return current count value
+     */
+    uint16_t getCount();
+
+    /** Set the match value that defines the PWM duty cycle.
+     * @param ch Channel number
+     * @param value Match value
+     * 
+     * The exact behavior depends on the channel mode. For example in edge
+     * PWM mode, the match value defines the point in time when the output
+     * gets reset. The counter overflow defines the point whe it gets set.
+     */
+    void setMatch(unsigned ch, uint16_t value);
+
+    /** Get the capture value of the given channel.
+     * @param ch Channel number
+     * @return Last capture value
+     */
+    uint16_t getCapture(unsigned ch);
+
+    /** Set interrupt handlers.
+     * @param overflow Handler for overflow interrupt
+     * @param reload Handler for reload interrupt
+     * 
+     * When a non-null pointer is passed for any of the handlers, the corresponding
+     * interrupt is enabled, and the handler will be called in interrupt context.
+     * When a null pointer is passed, the corresponding interrupt is disabled.
+     */
+    void setHandlers(Handler *overflow, Handler *reload);
+
+    void setModulusDelta(int16_t delta);
 
     /** Operating mode of a capture/compare channel.
      * 
@@ -48,33 +85,31 @@ public:
 
     /** Operating parameters for the FTM. */
     struct Parameters {
-        uint32_t ps:3;      //!< Prescaler factor (power of 2)
-        uint32_t clks:2;    //!< Clock source: 0 = none, 1 = input, 2 = qdec, 3 = external
-        uint32_t updn:1;    //!< Counter counts up and down
-        uint32_t _0:10;     //!< reserved
-        uint32_t mod:16;    //!< Counter modulus (value where it resets)
-        uint32_t ch0inv:1;  //!< Channel 0 inverted output
-        uint32_t ch1inv:1;  //!< Channel 1 inverted output
-        uint32_t ch2inv:1;  //!< Channel 2 inverted output
-        uint32_t ch3inv:1;  //!< Channel 3 inverted output
-        uint32_t ch4inv:1;  //!< Channel 4 inverted output
-        uint32_t ch5inv:1;  //!< Channel 5 inverted output
-        uint32_t ch6inv:1;  //!< Channel 6 inverted output
-        uint32_t ch7inv:1;  //!< Channel 7 inverted output
-        uint32_t ch0:3;     //!< Channel 0 mode (see enum Mode)
-        uint32_t ch1:3;     //!< Channel 1 mode (see enum Mode)
-        uint32_t ch2:3;     //!< Channel 2 mode (see enum Mode)
-        uint32_t ch3:3;     //!< Channel 3 mode (see enum Mode)
-        uint32_t ch4:3;     //!< Channel 4 mode (see enum Mode)
-        uint32_t ch5:3;     //!< Channel 5 mode (see enum Mode)
-        uint32_t ch6:3;     //!< Channel 6 mode (see enum Mode)
-        uint32_t ch7:3;     //!< Channel 7 mode (see enum Mode)
+        uint16_t ps:3;      //!< Prescaler factor (power of 2)
+        uint16_t clks:2;    //!< Clock source: 0 = none, 1 = input, 2 = fixed, 3 = external
+        uint16_t updn:1;    //!< 1: Counter counts up and down (PWM is center-aligned)
+        uint16_t ovint:1;   //!< Counter overflow interrupt enable
+        uint16_t rlint:1;   //!< Counter reload interrupt enable
+        uint16_t init;      //!< Counter initial value
+        uint16_t mod;       //!< Counter modulus (value where it resets)
+        uint16_t hcyc;      //!< Half cycle reload value (= reload opportunity)
+        struct Channel {
+            uint8_t mode:3; //!< Channel mode (see enum Mode)
+            uint8_t inv:1;  //!< Inverted output
+            uint8_t trig:1; //!< Channel outputs trigger pulse
+            uint8_t intr:1; //!< Channel interrupt enable
+        } ch[8];
     };
 
     Ftm(FTM::Integration const &in, Parameters const &par);
 
 private:
+    void isr() override;
+
+    uint16_t mod_;
     FTM::Integration const &in_;
+    Handler *overflow_;
+    Handler *reload_;
 };
 
 } // namespace
