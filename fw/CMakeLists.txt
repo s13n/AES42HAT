@@ -1,17 +1,24 @@
 
 cmake_minimum_required(VERSION 3.28)
 
-project(lpc865_blinky C CXX)
+project(AES42HAT_Firmware CXX)
 
-set(CMAKE_SYSTEM_NAME Generic)
-set(CMAKE_SYSTEM_PROCESSOR cortex-m0plus)
+# Include sodaCat integration
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+include(download_files)
 
-set(CMAKE_C_COMPILER arm-none-eabi-gcc)
-set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+set(SODACAT_COMMIT "main" CACHE STRING "sodaCat commit/branch to fetch from")
+download_files_from_list(
+    "${CMAKE_CURRENT_SOURCE_DIR}/manifest.txt"
+    "https://raw.githubusercontent.com/s13n/sodaCat/${SODACAT_COMMIT}/"
+    "${CMAKE_CURRENT_SOURCE_DIR}/models"
+    FALSE
+)
 
-set(CMAKE_C_FLAGS "-mcpu=cortex-m0plus -mthumb -O2 -ffreestanding -fno-unwind-tables")
-set(CMAKE_CXX_FLAGS "-mcpu=cortex-m0plus -mthumb -O2 -ffreestanding -fno-unwind-tables -fno-rtti -fno-exceptions")
+# Create the update target
+#sodacat_add_update_target()
 
-set(CMAKE_CXX_STANDARD 20)
+# Verify local files exist (comment out during initial setup)
+#sodacat_verify_local_files()
 
 add_subdirectory(src)

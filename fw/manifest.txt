@@ -1,0 +1,31 @@
+# sodaCat manifest for AES42HAT
+# Format: <path/in/sodaCat/repo>
+
+generators/cxx/generate_chip_header.py
+generators/cxx/generate_clocktree_header.py
+generators/cxx/generate_peripheral_header.py
+generators/cxx/clocktree.hpp
+generators/cxx/registers.hpp
+models/ARM/NVIC.yaml
+models/NXP/LPC8/ACOMP.yaml
+models/NXP/LPC8/ADC.yaml
+models/NXP/LPC8/CRC.yaml
+models/NXP/LPC8/DMA.yaml
+models/NXP/LPC8/FLASH_CTRL.yaml
+models/NXP/LPC8/FTM.yaml
+models/NXP/LPC8/GPIO.yaml
+models/NXP/LPC8/I2C.yaml
+models/NXP/LPC8/I3C.yaml
+models/NXP/LPC8/INPUTMUX.yaml
+models/NXP/LPC8/IOCON.yaml
+models/NXP/LPC8/MRT.yaml
+models/NXP/LPC8/PINT.yaml
+models/NXP/LPC8/PMU.yaml
+models/NXP/LPC8/SPI.yaml
+models/NXP/LPC8/SWM.yaml
+models/NXP/LPC8/SYSCON.yaml
+models/NXP/LPC8/USART.yaml
+models/NXP/LPC8/WKT.yaml
+models/NXP/LPC8/WWDT.yaml
+models/NXP/LPC8/LPC865_clocks.yaml
+models/NXP/LPC8/LPC865.yaml
