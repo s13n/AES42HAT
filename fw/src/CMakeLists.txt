@@ -1,68 +1,42 @@
 
 cmake_minimum_required(VERSION 3.28)
 
-# Get sodaCat resources
-#find_package(Python3 REQUIRED COMPONENTS Interpreter)
-#sodacat_get_generator(PERIPHERAL_GEN "generate_peripheral_header.py")
-#sodacat_get_generator(CLOCKTREE_GEN "generate_clocktree_header.py")
-#sodacat_get_generator(CHIP_GEN "generate_chip_header.py")
-
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(aes42hat)
 
-macro(generate_peripheral namespace model)
-    add_custom_command(OUTPUT ${model}.hpp
-        COMMAND ${Python3_EXECUTABLE} ${PERIPHERAL_GEN} ${CMAKE_SOURCE_DIR}/model/${model}.yaml ${CMAKE_CURRENT_BINARY_DIR}/${model} ${namespace}
-        MAIN_DEPENDENCY ${CMAKE_SOURCE_DIR}/model/${model}.yaml
-        DEPENDS ${PERIPHERAL_GEN}
-        COMMENT "Generating ${model}.hpp in namespace ${namespace}"
-    )
-    target_sources(aes42hat PUBLIC
-        ${model}.hpp
-    )
-endmacro()
+generate_header(aes42hat generate_peripheral_header src4392 SRC4392)
 
-generate_peripheral(lpc865 ACOMP)
-generate_peripheral(lpc865 ADC)
-generate_peripheral(lpc865 CRC)
-generate_peripheral(lpc865 DMA)
-generate_peripheral(lpc865 FLASH_CTRL)
-generate_peripheral(lpc865 FTM)
-generate_peripheral(lpc865 GPIO)
-generate_peripheral(lpc865 I2C)
-generate_peripheral(lpc865 I3C)
-generate_peripheral(lpc865 INPUTMUX)
-generate_peripheral(lpc865 IOCON)
-generate_peripheral(lpc865 MRT)
-generate_peripheral(lpc865 NVIC)
-generate_peripheral(lpc865 PINT)
-generate_peripheral(lpc865 PMU)
-generate_peripheral(lpc865 SPI)
-generate_peripheral(lpc865 SWM)
-generate_peripheral(lpc865 SYSCON)
-generate_peripheral(lpc865 USART)
-generate_peripheral(lpc865 WKT)
-generate_peripheral(lpc865 WWDT)
-generate_peripheral(src4392 SRC4392)
+generate_header(aes42hat generate_peripheral_header lpc865 ACOMP)
+generate_header(aes42hat generate_peripheral_header lpc865 ADC)
+generate_header(aes42hat generate_peripheral_header lpc865 CRC)
+generate_header(aes42hat generate_peripheral_header lpc865 DMA)
+generate_header(aes42hat generate_peripheral_header lpc865 FLASH_CTRL)
+generate_header(aes42hat generate_peripheral_header lpc865 FTM)
+generate_header(aes42hat generate_peripheral_header lpc865 GPIO)
+generate_header(aes42hat generate_peripheral_header lpc865 I2C)
+generate_header(aes42hat generate_peripheral_header lpc865 I3C)
+generate_header(aes42hat generate_peripheral_header lpc865 INPUTMUX)
+generate_header(aes42hat generate_peripheral_header lpc865 IOCON)
+generate_header(aes42hat generate_peripheral_header lpc865 MRT)
+generate_header(aes42hat generate_peripheral_header lpc865 NVIC)
+generate_header(aes42hat generate_peripheral_header lpc865 PINT)
+generate_header(aes42hat generate_peripheral_header lpc865 PMU)
+generate_header(aes42hat generate_peripheral_header lpc865 SPI)
+generate_header(aes42hat generate_peripheral_header lpc865 SWM)
+generate_header(aes42hat generate_peripheral_header lpc865 SYSCON)
+generate_header(aes42hat generate_peripheral_header lpc865 USART)
+generate_header(aes42hat generate_peripheral_header lpc865 WKT)
+generate_header(aes42hat generate_peripheral_header lpc865 WWDT)
 
-add_custom_command(OUTPUT clocks.hpp
-    COMMAND ${Python3_EXECUTABLE} ${CLOCKTREE_GEN} ${CMAKE_SOURCE_DIR}/model/LPC865_clocks.yaml ${CMAKE_CURRENT_BINARY_DIR}/clocks lpc865
-    MAIN_DEPENDENCY ${CMAKE_SOURCE_DIR}/model/LPC865_clocks.yaml
-    DEPENDS ${CLOCKTREE_GEN}
-    COMMENT "Generating clocks.hpp in namespace lpc865"
-)
+generate_header(aes42hat generate_clocktree_header lpc865 LPC865_clocks)
 
-add_custom_command(OUTPUT chip.hpp
-    COMMAND ${Python3_EXECUTABLE} ${CHIP_GEN} ${CMAKE_SOURCE_DIR}/model/LPC865.yaml ${CMAKE_CURRENT_BINARY_DIR}/chip lpc865
-    MAIN_DEPENDENCY ${CMAKE_SOURCE_DIR}/model/LPC865.yaml
-    DEPENDS ${CHIP_GEN}
-    COMMENT "Generating chip.hpp in namespace lpc865"
-)
+generate_header(aes42hat generate_chip_header lpc865 LPC865)
 
 target_include_directories(aes42hat PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}     # for generated headers
+    ${CMAKE_SOURCE_DIR}/models      # for headers that come with the generator
 )
 
 set_target_properties(aes42hat PROPERTIES
