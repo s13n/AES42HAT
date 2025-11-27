@@ -6,6 +6,8 @@ fp-info-cache
 build
 dts/*.dtbo
 fw/build
+fw/cmake
+fw/models
 fw/.vscode
 fw/.cache
 hw/old
