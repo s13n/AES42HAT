@@ -4,7 +4,7 @@
 
 #include "WKT.hpp"
 #include "WWDT.hpp"
-#include "clocks.hpp"
+#include "LPC865_clocks.hpp"
 
 extern "C" {
 #   include "newlib_def.h"

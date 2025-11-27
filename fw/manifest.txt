@@ -6,6 +6,7 @@ generators/cxx/generate_clocktree_header.py
 generators/cxx/generate_peripheral_header.py
 generators/cxx/clocktree.hpp
 generators/cxx/registers.hpp
+models/TI/SRC4392.yaml
 models/ARM/NVIC.yaml
 models/NXP/LPC8/ACOMP.yaml
 models/NXP/LPC8/ADC.yaml

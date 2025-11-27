@@ -51,8 +51,8 @@ target_link_options(aes42hat PRIVATE
 
 target_sources(aes42hat PUBLIC
     nvic_drv.cpp
-    chip.hpp
-    clocks.hpp
+    LPC865.hpp
+    LPC865_clocks.hpp
     channel.cpp
     clkmgr.cpp
     dma_drv.cpp
