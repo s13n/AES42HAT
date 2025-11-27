@@ -5,33 +5,33 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(aes42hat)
 
-generate_header(aes42hat generate_peripheral_header src4392 SRC4392)
+generate_header(aes42hat generate_peripheral_header src4392 SRC4392 SRC4392.hpp)
 
-generate_header(aes42hat generate_peripheral_header lpc865 ACOMP)
-generate_header(aes42hat generate_peripheral_header lpc865 ADC)
-generate_header(aes42hat generate_peripheral_header lpc865 CRC)
-generate_header(aes42hat generate_peripheral_header lpc865 DMA)
-generate_header(aes42hat generate_peripheral_header lpc865 FLASH_CTRL)
-generate_header(aes42hat generate_peripheral_header lpc865 FTM)
-generate_header(aes42hat generate_peripheral_header lpc865 GPIO)
-generate_header(aes42hat generate_peripheral_header lpc865 I2C)
-generate_header(aes42hat generate_peripheral_header lpc865 I3C)
-generate_header(aes42hat generate_peripheral_header lpc865 INPUTMUX)
-generate_header(aes42hat generate_peripheral_header lpc865 IOCON)
-generate_header(aes42hat generate_peripheral_header lpc865 MRT)
-generate_header(aes42hat generate_peripheral_header lpc865 NVIC)
-generate_header(aes42hat generate_peripheral_header lpc865 PINT)
-generate_header(aes42hat generate_peripheral_header lpc865 PMU)
-generate_header(aes42hat generate_peripheral_header lpc865 SPI)
-generate_header(aes42hat generate_peripheral_header lpc865 SWM)
-generate_header(aes42hat generate_peripheral_header lpc865 SYSCON)
-generate_header(aes42hat generate_peripheral_header lpc865 USART)
-generate_header(aes42hat generate_peripheral_header lpc865 WKT)
-generate_header(aes42hat generate_peripheral_header lpc865 WWDT)
+generate_header(aes42hat generate_peripheral_header lpc865 ACOMP ACOMP.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 ADC ADC.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 CRC CRC.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 DMA DMA.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 FLASH_CTRL FLASH_CTRL.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 FTM FTM.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 GPIO GPIO.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 I2C I2C.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 I3C I3C.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 INPUTMUX INPUTMUX.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 IOCON IOCON.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 MRT MRT.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 NVIC NVIC.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 PINT PINT.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 PMU PMU.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 SPI SPI.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 SWM SWM.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 SYSCON SYSCON.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 USART USART.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 WKT WKT.hpp)
+generate_header(aes42hat generate_peripheral_header lpc865 WWDT WWDT.hpp)
 
-generate_header(aes42hat generate_clocktree_header lpc865 LPC865_clocks)
+generate_header(aes42hat generate_clocktree_header lpc865 LPC865_clocks lpc865_clocks.hpp)
 
-generate_header(aes42hat generate_chip_header lpc865 LPC865)
+generate_header(aes42hat generate_chip_header lpc865 LPC865 lpc865.hpp)
 
 target_include_directories(aes42hat PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
@@ -51,8 +51,6 @@ target_link_options(aes42hat PRIVATE
 
 target_sources(aes42hat PUBLIC
     nvic_drv.cpp
-    LPC865.hpp
-    LPC865_clocks.hpp
     channel.cpp
     clkmgr.cpp
     dma_drv.cpp

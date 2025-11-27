@@ -7,7 +7,7 @@
  */
 
 #include "nvic_drv.hpp"
-#include "LPC865.hpp"
+#include "lpc865.hpp"
 #include <array>
 extern "C" {
 #   include "newlib_def.h"

@@ -2,7 +2,7 @@
  * main function for the AES42HAT
  */
 
-#include "LPC865_clocks.hpp"
+#include "lpc865_clocks.hpp"
 #include "ftm_drv.hpp"
 #include "i2c_tgt_drv.hpp"
 #include "pint_drv.hpp"
