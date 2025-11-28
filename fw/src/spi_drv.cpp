@@ -77,7 +77,7 @@ lpc865::Spi::Spi(SPI::Integration const &in, DmaBase *dma)
     auto &hw = *in_.registers;
     hw.DIV.set(11);  // divide by 12
     hw.DLY = DLY{ .PRE_DELAY = 1, .POST_DELAY = 1 };
-    hw.CFG.set(SPI::CFG{ .ENABLE = 1, .MASTER = 1 });
+    hw.CFG = SPI::CFG{ .ENABLE = 1, .MASTER = 1 };
 }
 
 /** @}*/
