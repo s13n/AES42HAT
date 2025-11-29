@@ -11,7 +11,7 @@ models/ARM/NVIC.yaml
 models/NXP/LPC8/ACOMP.yaml
 models/NXP/LPC8/ADC.yaml
 models/NXP/LPC8/CRC.yaml
-models/NXP/LPC8/DMA.yaml
+models/NXP/SmartDMA.yaml
 models/NXP/LPC8/FLASH_CTRL.yaml
 models/NXP/LPC8/FTM.yaml
 models/NXP/LPC8/GPIO.yaml

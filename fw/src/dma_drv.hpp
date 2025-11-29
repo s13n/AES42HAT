@@ -6,7 +6,7 @@
  */
 #pragma once
 
-#include "DMA.hpp"
+#include "SmartDMA.hpp"
 #include "utility.hpp"
 #include <cassert>
 #include <span>
@@ -24,14 +24,14 @@ public:
     struct Channel {
         Channel(DmaBase &dma);
 
-        bool init(DMA::CFG cfg, DMA::XFERCFG xfer, intptr_t addr);
+        bool init(SmartDMA::CFG cfg, SmartDMA::XFERCFG xfer, intptr_t addr);
         bool start(BufferList);
         void stop();
         bool busy();
         bool completed();
 
         struct Descriptor {
-            DMA::XFERCFG xfer;  //!< Transfer configuration.
+            SmartDMA::XFERCFG xfer;  //!< Transfer configuration.
             uint32_t src;       //!< Source end address. This points to the address of the last entry of the source address range if the address is incremented. The address to be used in the transfer is calculated from the end address, data width, and transfer size.
             uint32_t dst;       //!< Destination end address. This points to the address of the last entry of the destination address range if the address is incremented. The address to be used in the transfer is calculated from the end address, data width, and transfer size.
             uint32_t link;      //!< Link to next descriptor. If used, this address must be aligned to a multiple of 16 bytes (i.e., the size of a descriptor).
@@ -41,7 +41,7 @@ public:
     };
 
     ~DmaBase();
-    DmaBase(DMA::Integration const &in, void *mem, size_t size);
+    DmaBase(SmartDMA::Integration const &in, void *mem, size_t size);
 
     void isr();
 
@@ -55,12 +55,12 @@ public:
      * @param addr The peripheral's data register address.
      * @return Channel ready to use. nullptr if channel is unavailable or configuration is wrong.
      */
-    Channel *setup(unsigned chan, DMA::CFG cfg, DMA::XFERCFG xfer, intptr_t addr);
+    Channel *setup(unsigned chan, SmartDMA::CFG cfg, SmartDMA::XFERCFG xfer, intptr_t addr);
     
 private:
     friend struct Channel;
 
-    DMA::Integration const &in_;            //!< Integration parameters
+    SmartDMA::Integration const &in_;            //!< Integration parameters
     std::span<Channel::Descriptor> desc_;   //!< Channel descriptor memory
 };
 
@@ -68,7 +68,7 @@ template<size_t Ch> class Dma : public DmaBase {
     std::array<Channel, Ch> channels_;
 
 public:
-    Dma(DMA::Integration const &in)
+    Dma(SmartDMA::Integration const &in)
         : DmaBase(in)
         , channels_{make_array<Ch, Channel>(*this)}
     {

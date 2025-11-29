@@ -19,7 +19,7 @@ lpc865::DmaBase::Channel::Channel(DmaBase &dma)
 {
 }
 
-inline bool lpc865::DmaBase::Channel::init(DMA::CFG cfg, DMA::XFERCFG xfer, intptr_t addr) {
+inline bool lpc865::DmaBase::Channel::init(SmartDMA::CFG cfg, SmartDMA::XFERCFG xfer, intptr_t addr) {
     auto chan = index(this);
     auto &hw = *dma_.in_.registers;
     assert(!(hw.ENABLESET0.val() & 1<<chan));   // channel not enabled
@@ -40,7 +40,7 @@ bool lpc865::DmaBase::Channel::start(BufferList buffers) {
     assert(buffers.size()-1 < dma_.desc_.size() / (dma_.in_.max_channel + 1));
     auto chan = index(this);
     auto &hw = *dma_.in_.registers;
-    DMA::XFERCFG xfer;
+    SmartDMA::XFERCFG xfer;
     for (size_t i = 0; i < buffers.size(); ++i) {
         auto di = i * (dma_.in_.max_channel + 1) + chan;
         if (di >= dma_.desc_.size())
@@ -86,7 +86,7 @@ lpc865::DmaBase::~DmaBase() {
     hw.CTRL.set(0);     // disable
 }
 
-lpc865::DmaBase::DmaBase(DMA::Integration const &in, void *mem, size_t size)
+lpc865::DmaBase::DmaBase(SmartDMA::Integration const &in, void *mem, size_t size)
     : in_{in}
     , desc_{static_cast<Channel::Descriptor *>(mem), size / sizeof(Channel::Descriptor)}
 {
@@ -103,7 +103,7 @@ lpc865::DmaBase::DmaBase(DMA::Integration const &in, void *mem, size_t size)
 void lpc865::DmaBase::isr() {
 }
 
-auto lpc865::DmaBase::setup(unsigned chan, DMA::CFG cfg, DMA::XFERCFG xfer, intptr_t addr) -> Channel* {
+auto lpc865::DmaBase::setup(unsigned chan, SmartDMA::CFG cfg, SmartDMA::XFERCFG xfer, intptr_t addr) -> Channel* {
     Channel *ch = channels(this) + chan;
     if (ch && ch->init(cfg, xfer, addr))
         return ch;
