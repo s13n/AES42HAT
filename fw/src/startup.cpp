@@ -2,8 +2,6 @@
  * startup code for the AES42HAT
  */
 
-#include "WKT.hpp"
-#include "WWDT.hpp"
 #include "LPC865.hpp"
 #include "LPC865_clocks.hpp"
 

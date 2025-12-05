@@ -61,6 +61,7 @@ static Channel chan[4] = {
     {spi0, ftm0, pint, 3, 3}
 };
 
+// Operational parameters for target mode I2C0
 static I2cTarget::Parameters const p_I2C0 = {
     .addr0 = 0x70,
     .dis1 = 1,
