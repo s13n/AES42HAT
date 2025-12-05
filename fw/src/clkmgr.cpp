@@ -18,7 +18,7 @@ void Clkmgr::act() {
     channels_[1].handleTxBlock();
     channels_[2].handleTxBlock();
     channels_[3].handleTxBlock();
-    pint_.enable(irq_);
+    pint_.enable(irq_, 1);
 }
 
 void Clkmgr::isr() {
@@ -33,7 +33,18 @@ Clkmgr::Clkmgr(lpc865::Ftm &ftm, lpc865::Pint &pint, Channel *channels, uint8_t 
     , pint_{pint}
     , channels_{channels}
 {
-    pint_.attach(irq_, *this);
+    pint_.attach(irq_, 1, *this);
+}
+
+
+void ChannelManagement::act() {
+    print("%");
+    CORO_REENTER(coro_) {
+        CORO_YIELD channels_[0].updateSrcCtrl();
+        CORO_YIELD channels_[1].updateSrcCtrl();
+        CORO_YIELD channels_[2].updateSrcCtrl();
+        CORO_YIELD channels_[3].updateSrcCtrl();
+    }
 }
 
 /** @}*/

@@ -23,24 +23,60 @@ constexpr Exception getEx(unsigned num, lpc865::Integration const &in) {
     return Exception{};
 }
 
-void lpc865::Pint::attach(unsigned num, arm::Interrupt &intr) {
+void lpc865::Pint::attach(unsigned num, uint8_t mode, arm::Interrupt &intr) {
     intr.insert(getEx(num, in_));
-    enable(num);
+    enable(num, mode);
 }
 
-void lpc865::Pint::enable(unsigned num) {
-    in_.registers->SIENR.set(1u << num);
+void lpc865::Pint::enable(unsigned num, uint8_t mode) {
+    auto &hw = *in_.registers;
+    uint32_t mask = 1u << num;
+    switch (mode) {
+    case 0:
+        hw.ISEL = hw.ISEL.val() & ~mask;
+        hw.CIENR = mask;
+        hw.CIENF = mask;
+        return;
+    case 1:
+        hw.ISEL = hw.ISEL.val() & ~mask;
+        hw.SIENR = mask;
+        hw.CIENF = mask;
+        return;
+    case 2:
+        hw.ISEL = hw.ISEL.val() & ~mask;
+        hw.CIENR = mask;
+        hw.SIENF = mask;
+        return;
+    case 3:
+        hw.ISEL = hw.ISEL.val() & ~mask;
+        hw.SIENR = mask;
+        hw.SIENF = mask;
+        return;
+    case 4:
+        hw.ISEL = hw.ISEL.val() | mask;
+        hw.SIENR = mask;
+        hw.CIENF = mask;
+        return;
+    case 5:
+        hw.ISEL = hw.ISEL.val() | mask;
+        hw.SIENR = mask;
+        hw.SIENF = mask;
+        return;
+    }
 }
 
 void lpc865::Pint::disable(unsigned num) {
-    in_.registers->CIENR.set(1u << num);
+    enable(num, 0);
 }
 
 lpc865::Pint::Pint(PINT::Integration const &in)
     : in_{in}
 {
     auto &hw = *in_.registers;
-    hw.ISEL.set(0xFF);
+    hw.ISEL.set(0x00);
+    hw.IENR.set(0x00);
+    hw.IENF.set(0x00);
+    hw.IST.set(0xFF);
 }
 
 /** @}*/

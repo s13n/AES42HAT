@@ -192,7 +192,7 @@ void Channel::act() {
     char buf[3] = { char(myaddr_ - 0x40), '\n' };
     print(buf);
 
-    pint_.enable(irq_);
+    pint_.enable(irq_, 4);
 }
 
 void Channel::updateSrcCtrl() {
@@ -219,5 +219,5 @@ Channel::Channel(lpc865::Spi &spi, lpc865::Ftm &ftm, lpc865::Pint &pint, uint8_t
     , src_{i_src4392[ch]}
 {
     src_.updateRegs(ch == 0 ? srcInitData0 : srcInitData);
-    pint_.attach(irq_, *this);
+    pint_.attach(irq_, 4, *this);
 }    

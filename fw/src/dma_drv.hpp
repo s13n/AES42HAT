@@ -6,74 +6,82 @@
  */
 #pragma once
 
-#include "SmartDMA.hpp"
+#include "nvic_drv.hpp"
 #include "utility.hpp"
-#include <cassert>
-#include <span>
+
+struct Handler;
 
 namespace lpc865 {
 
+inline namespace SmartDMA {
+    struct Integration;
+}
+
 //! Driver for the LPC8 DMA controller.
-class DmaBase {
-    DmaBase(DmaBase &&) = delete;
-
+class Dma : public arm::Interrupt {
 public:
-    using Buffer = std::span<std::byte>;
-    using BufferList = std::span<Buffer>;
-
-    struct Channel {
-        Channel(DmaBase &dma);
-
-        bool init(SmartDMA::CFG cfg, SmartDMA::XFERCFG xfer, intptr_t addr);
-        bool start(BufferList);
-        void stop();
-        bool busy();
-        bool completed();
-
-        struct Descriptor {
-            SmartDMA::XFERCFG xfer;  //!< Transfer configuration.
-            uint32_t src;       //!< Source end address. This points to the address of the last entry of the source address range if the address is incremented. The address to be used in the transfer is calculated from the end address, data width, and transfer size.
-            uint32_t dst;       //!< Destination end address. This points to the address of the last entry of the destination address range if the address is incremented. The address to be used in the transfer is calculated from the end address, data width, and transfer size.
-            uint32_t link;      //!< Link to next descriptor. If used, this address must be aligned to a multiple of 16 bytes (i.e., the size of a descriptor).
-        };
-
-        DmaBase &dma_;      //!< Link to parent object
+    /** DMA channel settings pertaining to the peripheral served. */
+    struct Per {
+        uint32_t chan:6;        //!< Channel number (up to 63 to account for future extension)
+        uint32_t width:2;       //!< Data transfer width. 0: 8-bit, 1: 16-bit, 2: 32-bit, 3: reserved
+        uint32_t dest:1;        //!< 0: peripheral is source, 1: peripheral is destination
+        uint32_t hwtrig:1;      //!< Hardware triggering enabled
+        uint32_t trigpol:1;     //!< Hardware trigger is active high 
+        uint32_t trigtype:1;    //!< Hardware trigger is level triggered
+        uint32_t trigburst:1;   //!< Hardware trigger causes a burst transfer
     };
 
-    ~DmaBase();
-    DmaBase(SmartDMA::Integration const &in, void *mem, size_t size);
+    /** DMA channel settings pertaining to the memory buffer served. */
+    struct Mem {
+        uint32_t chan:6;        //!< Channel number (up to 63 to account for future extension)
+        uint32_t inc:2;         //!< Memory address increment. 0: none, 1: 1*width, 2: 2*width, 3: 4*width
+        uint32_t burstpower:4;  //!< Burst power. Burst size is 2 raised to this number
+        uint32_t burstwrap:1;   //!< Memory address is wrapped
+        uint32_t prio:3;        //!< Channel priority
+        uint32_t setintA:1;     //!< Set interrupt flag A upon exhaustion of descriptor
+        uint32_t setintB:1;     //!< Set interrupt flag B upon exhaustion of descriptor
+    };
 
-    void isr();
+    struct Descriptor {
+        uint32_t xfer;          //!< Transfer configuration.
+        uint32_t src;           //!< Source end address. This points to the address of the last entry of the source address range if the address is incremented. The address to be used in the transfer is calculated from the end address, data width, and transfer size.
+        uint32_t dst;           //!< Destination end address. This points to the address of the last entry of the destination address range if the address is incremented. The address to be used in the transfer is calculated from the end address, data width, and transfer size.
+        uint32_t link;          //!< Link to next descriptor. If used, this address must be aligned to a multiple of 16 bytes (i.e., the size of a descriptor).
+    };
 
-    //! set up a transfer on the given channel
-    /** The transfer details are given in the descriptor chain pointed to by parameter desc.
+    struct Parameters {
+        Descriptor *descs;      //!< Pointer to array of descriptors
+    };
+
+    /** Set up a peripheral transfer on the given channel.
+     * The transfer details are given in the descriptor chain pointed to by parameter desc.
      * The transfer starts immediately, controlled by the selected handshaking method.
      * Note that the DMA request multiplexing must have been set up before.
-     * @param chan channel number
-     * @param cfg this gets written to the channel configuration register
-     * @param xfer this gets written to the channel transfer configuration register
+     * @param per peripheral transfer properties
      * @param addr The peripheral's data register address.
-     * @return Channel ready to use. nullptr if channel is unavailable or configuration is wrong.
+     * @param hdl Optional handler to call on transfer termination
+     * @return true if channel is ready to use. false if channel is unavailable or configuration is wrong.
      */
-    Channel *setup(unsigned chan, SmartDMA::CFG cfg, SmartDMA::XFERCFG xfer, intptr_t addr);
+    bool setup(Per per, uintptr_t addr, Handler *hdl);
+
+    /** Start a peripheral transfer on the given channel.
+     * The transfer details are given in the descriptor chain pointed to by parameter desc.
+     * The transfer starts immediately, controlled by the selected handshaking method.
+     * Note that the DMA request multiplexing must have been set up before.
+     * @param per peripheral transfer properties
+     * @param addr The peripheral's data register address.
+     * @return true if channel is ready to use. false if channel is unavailable or configuration is wrong.
+     */
+    bool start(Mem mem, void *buf, size_t size);
+
+    ~Dma();
+    Dma(SmartDMA::Integration const &in, Parameters const &par);
+
+    void isr() override;
     
 private:
-    friend struct Channel;
-
-    SmartDMA::Integration const &in_;            //!< Integration parameters
-    std::span<Channel::Descriptor> desc_;   //!< Channel descriptor memory
-};
-
-template<size_t Ch> class Dma : public DmaBase {
-    std::array<Channel, Ch> channels_;
-
-public:
-    Dma(SmartDMA::Integration const &in)
-        : DmaBase(in)
-        , channels_{make_array<Ch, Channel>(*this)}
-    {
-        assert(Ch == in.max_channel+1);
-    }
+    SmartDMA::Integration const &in_;   //!< Integration parameters
+    Parameters const &par_;
 };
 
 } //!@} namespace

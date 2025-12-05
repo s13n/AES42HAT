@@ -59,19 +59,19 @@ public:
     void writeRegs(lpc865::Spi &spi);
     void writeCS(lpc865::Spi &spi);
     void writeU(lpc865::Spi &spi);
-    uint64_t readRegs(lpc865::Spi &spi);
+    void readRegs(lpc865::Spi &spi);
     void readTxStatus(lpc865::Spi &spi);
     void readRxStatus(lpc865::Spi &spi);
-    uint64_t readCS(lpc865::Spi &spi);
-    uint64_t readU(lpc865::Spi &spi);
+    void readCS(lpc865::Spi &spi);
+    void readU(lpc865::Spi &spi);
 
     std::byte *getPtr(uint8_t addr, std::byte &page);
 
 private:
     static uint64_t update(std::span<std::byte const>, std::span<std::byte>);
 
-    void read(lpc865::Spi &spi, std::span<std::byte> buf);
-    void write(lpc865::Spi &spi, std::span<std::byte> buf);
+    void read(lpc865::Spi &spi, uint8_t reg, std::span<std::byte> buf);
+    void write(lpc865::Spi &spi, uint8_t reg, std::span<std::byte> buf);
 
     Integration const &in_;
     std::byte page_;                    //!< Page register at 0x7F

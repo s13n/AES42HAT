@@ -8,6 +8,8 @@
 
 #pragma once
 
+#include <cstdint>
+
 namespace arm {
     class Interrupt;
 }
@@ -22,8 +24,11 @@ inline namespace PINT {
  */
 class Pint {
 public:
-    void attach(unsigned num, arm::Interrupt &intr);
-    void enable(unsigned num);
+    /** Attach and enable pin interrupt.
+     * @param mode 0: none, 1: rising edge, 2: falling edge, 3: both edges, 4: low level, 5: high level
+     */
+    void attach(unsigned num, uint8_t mode, arm::Interrupt &intr);
+    void enable(unsigned num, uint8_t mode);
     void disable(unsigned num);
 
     Pint(PINT::Integration const &in);

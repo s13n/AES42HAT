@@ -8,15 +8,14 @@
 
 #pragma once
 
-#include <span>
+#include "handler.hpp"
+#include "nvic_drv.hpp"
 #include <cstddef>
 #include <cstdint>
 
-struct Handler;
-
 namespace lpc865 {
 
-class DmaBase;
+class Dma;
 
 inline namespace SPI {
     struct Integration;
@@ -27,8 +26,7 @@ inline namespace SPI {
  * features can be supported:
  * - Multiple target selects.
  */
-class Spi {
-    Spi(Spi &&) = delete;
+class Spi : public arm::Interrupt, public Handler {
 public:
     /** Bus type. Starting with SPI in the 1980s, additional variants for higher
      * bandwidth have been devised over and above what basic SPI offers. SPI
@@ -266,12 +264,15 @@ public:
      */
     Status status() const;
 
-    Spi(SPI::Integration const &in, DmaBase *dma);
+    Spi(SPI::Integration const &in, Dma *dma);
     ~Spi() =default;
+
+    void act() override;
+    void isr() override;
 
 private:
     SPI::Integration const &in_;
-    DmaBase *dma_;
+    Dma *dma_;
     Handler *hdl_;
 };
 

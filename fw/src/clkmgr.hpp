@@ -10,6 +10,7 @@
 
 #include "handler.hpp"
 #include "nvic_drv.hpp"
+#include "coroutine.hpp"
 #include <array>
 #include <cstddef>
 #include <cstdint>
@@ -70,5 +71,20 @@ private:
     lpc865::Pint &pint_;
     Channel *channels_;
 };
+
+
+class ChannelManagement : public Handler {
+public:
+    explicit ChannelManagement(Channel *channels)
+        : channels_{channels}
+    {}
+
+    void act() override;
+
+private:
+    Coroutine<int8_t> coro_;
+    Channel *channels_;
+};
+
 
 //!@}
