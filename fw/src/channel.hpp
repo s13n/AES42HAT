@@ -16,7 +16,7 @@
 namespace lpc865 {
     class Ftm;
     class Pint;
-    class Spi;
+    class SpiQueue;
 }
 
 /** Object representing an AES42 channel.
@@ -53,21 +53,21 @@ public:
     /** Handles the transmit side block event. */
     void handleTxBlock();
 
-    Channel(lpc865::Spi &spi, lpc865::Ftm &ftm, lpc865::Pint &pint, uint8_t ch, uint8_t irq);
+    Channel(lpc865::SpiQueue &spiq, lpc865::Ftm &ftm, lpc865::Pint &pint, uint8_t ch, uint8_t irq);
 
 private:
-    uint8_t myaddr_;        //!< I2C target address of this channel
-    uint8_t addr_;          //!< Current register address byte (MSB = INC bit)
-    bool expectReg_;        //!< True when expecting register address byte
-    std::byte page_;        //!< Page in access from the I2C side
-    uint8_t updateSrcPage_; //!< Pages in SRC chip that needs updating (1 bit for each page)
+    uint8_t myaddr_;            //!< I2C target address of this channel
+    uint8_t addr_;              //!< Current register address byte (MSB = INC bit)
+    bool expectReg_;            //!< True when expecting register address byte
+    std::byte page_;            //!< Page in access from the I2C side
+    uint8_t updateSrcPage_;     //!< Pages in SRC chip that needs updating (1 bit for each page)
     uint8_t irq_;
     int16_t delta_;
     uint64_t updatesRegs_;
     uint64_t updatesCS_;
     uint64_t updatesU_;
-    lpc865::Spi &spi_;      //!< SPI port driver to use for controlling the channel
-    lpc865::Ftm &ftm_;      //!< Timer responsible for phase management
+    lpc865::SpiQueue &spiq_;    //!< SPI port driver to use for controlling the channel
+    lpc865::Ftm &ftm_;          //!< Timer responsible for phase management
     lpc865::Pint &pint_;
-    src4392::Src4392 src_;  //!< SRC4392 register set cache
+    src4392::Src4392 src_;      //!< SRC4392 register set cache
 };

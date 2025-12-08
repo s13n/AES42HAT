@@ -4,13 +4,11 @@
  * @{
  */
 #pragma once
+
+#include "spi_queue.hpp"
 #include <array>
 #include <cstdint>
 #include <span>
-
-namespace lpc865 {
-    class Spi;
-}
 
 namespace src4392 { 
 
@@ -20,8 +18,7 @@ inline namespace SRC4392 {
 
 /** SRC4392 driver class.
  */     
-class Src4392 { 
-    Src4392(Src4392 &&) = delete;
+class Src4392 : public Handler {
 public:    
     Src4392(Integration const &in);
 
@@ -55,25 +52,28 @@ public:
         return update(buf, rxu_);
     }
 
-    void switchPage(lpc865::Spi &spi, uint8_t page);
-    void writeRegs(lpc865::Spi &spi);
-    void writeCS(lpc865::Spi &spi);
-    void writeU(lpc865::Spi &spi);
-    void readRegs(lpc865::Spi &spi);
-    void readTxStatus(lpc865::Spi &spi);
-    void readRxStatus(lpc865::Spi &spi);
-    void readCS(lpc865::Spi &spi);
-    void readU(lpc865::Spi &spi);
+    void switchPage(lpc865::SpiQueue &spi, uint8_t page);
+    void writeRegs(lpc865::SpiQueue &spi);
+    void writeCS(lpc865::SpiQueue &spi);
+    void writeU(lpc865::SpiQueue &spi);
+    void readRegs(lpc865::SpiQueue &spi);
+    void readTxStatus(lpc865::SpiQueue &spi);
+    void readRxStatus(lpc865::SpiQueue &spi);
+    void readCS(lpc865::SpiQueue &spi);
+    void readU(lpc865::SpiQueue &spi);
 
     std::byte *getPtr(uint8_t addr, std::byte &page);
+
+    void act() override;
 
 private:
     static uint64_t update(std::span<std::byte const>, std::span<std::byte>);
 
-    void read(lpc865::Spi &spi, uint8_t reg, std::span<std::byte> buf);
-    void write(lpc865::Spi &spi, uint8_t reg, std::span<std::byte> buf);
+    void read(lpc865::SpiQueue &spi, uint8_t reg, std::span<std::byte> buf);
+    void write(lpc865::SpiQueue &spi, uint8_t reg, std::span<std::byte> buf);
 
     Integration const &in_;
+    lpc865::SpiQueue::Entry entry_;
     std::byte page_;                    //!< Page register at 0x7F
     std::array<std::byte, 51> regs_;    //!< Page 0 addresses 0x01..0x33
     std::array<std::byte, 48> rxcs_;    //!< Page 1 addresses 0x00..0x2F

@@ -6,7 +6,7 @@
 #include "ftm_drv.hpp"
 #include "i2c_tgt_drv.hpp"
 #include "pint_drv.hpp"
-#include "spi_drv.hpp"
+#include "spi_queue.hpp"
 #include "usart_drv.hpp"
 #include "wkt_drv.hpp"
 #include "clkmgr.hpp"
@@ -54,11 +54,13 @@ static Usart usart0{ i_USART0 };        // Host communication USART
 static Usart usart1{ i_USART1 };        // Console mode receive USART (RX only)
 static Usart usart2{ i_USART2 };        // Mode 3 remote control USART (TX only)
 
+static SpiQueue spique{ spi0 };
+
 static Channel chan[4] = {
-    {spi0, ftm0, pint, 0, 0},
-    {spi0, ftm0, pint, 1, 1},
-    {spi0, ftm0, pint, 2, 2},
-    {spi0, ftm0, pint, 3, 3}
+    {spique, ftm0, pint, 0, 0},
+    {spique, ftm0, pint, 1, 1},
+    {spique, ftm0, pint, 2, 2},
+    {spique, ftm0, pint, 3, 3}
 };
 
 // Operational parameters for target mode I2C0

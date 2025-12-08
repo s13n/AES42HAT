@@ -59,6 +59,7 @@ target_sources(aes42hat PUBLIC
     i2c_tgt_drv.cpp
     pint_drv.cpp
     spi_drv.cpp
+    spi_queue.cpp
     src4392_drv.cpp 
     usart_drv.cpp
     wkt_drv.cpp

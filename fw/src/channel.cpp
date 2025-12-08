@@ -182,7 +182,7 @@ void Channel::isr() {
 }
 
 void Channel::act() {
-    src_.readRxStatus(spi_);
+    src_.readRxStatus(spiq_);
 /*
     src_.switchPage(spi_, 0x01);
     updatesCS_ |= src_.readCS(spi_);
@@ -196,14 +196,14 @@ void Channel::act() {
 }
 
 void Channel::updateSrcCtrl() {
-    src_.writeRegs(spi_);
+    src_.writeRegs(spiq_);
 }
 
 void Channel::handleTxBlock() {
-    src_.readTxStatus(spi_);
+    src_.readTxStatus(spiq_);
 }
 
-Channel::Channel(lpc865::Spi &spi, lpc865::Ftm &ftm, lpc865::Pint &pint, uint8_t ch, uint8_t irq)
+Channel::Channel(lpc865::SpiQueue &spiq, lpc865::Ftm &ftm, lpc865::Pint &pint, uint8_t ch, uint8_t irq)
     : myaddr_{uint8_t(0x70 + ch)}
     , addr_{0}
     , expectReg_{false}
@@ -213,11 +213,11 @@ Channel::Channel(lpc865::Spi &spi, lpc865::Ftm &ftm, lpc865::Pint &pint, uint8_t
     , updatesRegs_{}
     , updatesCS_{}
     , updatesU_{}
-    , spi_{spi}
+    , spiq_{spiq}
     , ftm_{ftm}
     , pint_{pint}
     , src_{i_src4392[ch]}
 {
     src_.updateRegs(ch == 0 ? srcInitData0 : srcInitData);
     pint_.attach(irq_, 4, *this);
-}    
+}
