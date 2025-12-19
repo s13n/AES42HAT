@@ -14,11 +14,13 @@
 extern void print(std::string_view);
 
 void Clkmgr::act() {
-    channels_[0].handleTxBlock();
-    channels_[1].handleTxBlock();
-    channels_[2].handleTxBlock();
-    channels_[3].handleTxBlock();
-    pint_.enable(irq_, 1);
+    CORO_REENTER(coro_) {
+        CORO_YIELD channels_[0].handleTxBlock();
+        CORO_YIELD channels_[1].handleTxBlock();
+        CORO_YIELD channels_[2].handleTxBlock();
+        CORO_YIELD channels_[3].handleTxBlock();
+        pint_.enable(irq_, 1);
+    }
 }
 
 void Clkmgr::isr() {
@@ -26,10 +28,8 @@ void Clkmgr::isr() {
     post();
 }
 
-Clkmgr::Clkmgr(lpc865::Ftm &ftm, lpc865::Pint &pint, Channel *channels, uint8_t tch, uint8_t irq)
-    : tch_{tch}
-    , irq_{irq}
-    , ftm_{ftm}
+Clkmgr::Clkmgr(lpc865::Pint &pint, Channel *channels, uint8_t irq)
+    : irq_{irq}
     , pint_{pint}
     , channels_{channels}
 {

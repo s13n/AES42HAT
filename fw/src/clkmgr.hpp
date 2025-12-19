@@ -57,17 +57,16 @@ class Channel;
  * nominal value and left there.
  */
 class Clkmgr : public Handler, public arm::Interrupt {
-public:
+public:    
     void act() override;
 
     void isr() override;
 
-    Clkmgr(lpc865::Ftm &ftm, lpc865::Pint &pint, Channel *channels, uint8_t tch, uint8_t irq);
+    Clkmgr(lpc865::Pint &pint, Channel *channels, uint8_t irq);
 
 private:
-    uint8_t tch_;
+    Coroutine<int8_t> coro_;
     uint8_t irq_;
-    lpc865::Ftm &ftm_;
     lpc865::Pint &pint_;
     Channel *channels_;
 };

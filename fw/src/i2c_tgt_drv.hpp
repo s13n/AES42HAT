@@ -9,7 +9,6 @@
 #pragma once
 
 #include "nvic_drv.hpp"
-#include "I2C.hpp"
 #include <cstddef>
 #include <cstdint>
 #include <initializer_list>
@@ -17,9 +16,9 @@
 
 
 namespace lpc865 {
-
-struct Event;
-class DmaBase;
+    namespace integration{
+        struct I2C;
+    }
 
 /** I2C Target Driver.
  */
@@ -58,13 +57,13 @@ public:
 
     void isr() override;
 
-    I2cTarget(I2C::Integration const &in, Parameters const &par);
+    I2cTarget(integration::I2C const &in, Parameters const &par);
     ~I2cTarget() =default;
 
 private:
     uint8_t target_;                        //!< Currently active target address / RW
     Callback *selected_;                    //!< The callback of the currently selected target
-    I2C::Integration const &in_;            //!< Integration values
+    integration::I2C const &in_;            //!< Integration values
     Parameters const &par_;
 };
 

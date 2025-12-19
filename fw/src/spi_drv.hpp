@@ -17,8 +17,8 @@ namespace lpc865 {
 
 class Dma;
 
-inline namespace SPI {
-    struct Integration;
+namespace integration {
+    struct SPI;
 }
 
 /** SPI driver.
@@ -264,14 +264,14 @@ public:
      */
     Status status() const;
 
-    Spi(SPI::Integration const &in, Dma *dma);
+    Spi(integration::SPI const &in, Dma *dma);
     ~Spi() =default;
 
     void act() override;
     void isr() override;
 
 private:
-    SPI::Integration const &in_;
+    integration::SPI const &in_;
     Dma *dma_;
     Handler *hdl_;
 };

@@ -39,7 +39,7 @@ void lpc865::Ftm::setModulusDelta(int16_t delta) {
     hw.MOD = uint16_t(mod_ + delta);
 }
 
-lpc865::Ftm::Ftm(FTM::Integration const &in, Parameters const &par)
+lpc865::Ftm::Ftm(integration::FTM const &in, Parameters const &par)
     : mod_{par.mod}
     , in_{in}
     , overflow_{nullptr}

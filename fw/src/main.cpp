@@ -22,31 +22,6 @@ constexpr std::byte operator""_y(unsigned long long value) {
     return static_cast<std::byte>(value);
 }
 
-alignas(512) static std::array<Dma::Descriptor, i_DMA0.max_channel+1> dma_descs;
-
-static lpc865::Dma::Parameters const p_dma = {
-    .descs = dma_descs.data()
-};
-
-static lpc865::Ftm::Parameters const ftm0par{ .ps=3, .clks=1, .mod=0xFFFF
-    , .ch = {
-        { .mode=::Ftm::capturePos },    // BLS time stamping
-        {},                             // unused    
-        { .mode=::Ftm::captureNeg },    // INTA time stamping
-        { .mode=::Ftm::captureNeg },    // INTB time stamping
-        { .mode=::Ftm::captureNeg },    // INTC time stamping
-        { .mode=::Ftm::captureNeg }     // INTD time stamping
-    }
-};
-static lpc865::Ftm::Parameters const ftm1par{ .ps=1, .clks=1, .mod=39999
-    , .ch = {
-        { .mode=::Ftm::pwmNeg, .inv=1 },
-        { .mode=::Ftm::pwmNeg, .inv=1 },
-        { .mode=::Ftm::pwmNeg, .inv=1 },
-        { .mode=::Ftm::pwmNeg, .inv=1 },
-    }
-};
-
 static std::initializer_list<std::byte> const srcInitData0 = {
     0x3F_y, // Register 01: Power-Down and Reset
     0x00_y, // Register 02: Global Interrupt Status (Read-Only)
@@ -155,32 +130,57 @@ static std::initializer_list<std::byte> const srcInitData = {
     0x00_y, // Register 33: SRC Ratio Readback Register (Read-Only)
 };
 
+static lpc865::Ftm::Parameters const ftm0par{ .ps=3, .clks=1, .mod=0xFFFF
+    , .ch = {
+        { .mode=::Ftm::capturePos },    // BLS time stamping
+        {},                             // unused    
+        { .mode=::Ftm::captureNeg },    // INTA time stamping
+        { .mode=::Ftm::captureNeg },    // INTB time stamping
+        { .mode=::Ftm::captureNeg },    // INTC time stamping
+        { .mode=::Ftm::captureNeg }     // INTD time stamping
+    }
+};
+static lpc865::Ftm::Parameters const ftm1par{ .ps=1, .clks=1, .mod=39999
+    , .ch = {
+        { .mode=::Ftm::pwmNeg, .inv=1 },
+        { .mode=::Ftm::pwmNeg, .inv=1 },
+        { .mode=::Ftm::pwmNeg, .inv=1 },
+        { .mode=::Ftm::pwmNeg, .inv=1 },
+    }
+};
+
 static Channel::Integration const i_channel[] = {
-    { .in={ .addr = 0, .cpm = 0, .src_present=1 }, .irq=0, .i2cAddr=0x70, .init=srcInitData0 },
-    { .in={ .addr = 1, .cpm = 0, .src_present=1 }, .irq=1, .i2cAddr=0x71, .init=srcInitData },
-    { .in={ .addr = 2, .cpm = 0, .src_present=1 }, .irq=2, .i2cAddr=0x72, .init=srcInitData },
-    { .in={ .addr = 3, .cpm = 0, .src_present=1 }, .irq=3, .i2cAddr=0x73, .init=srcInitData }
+    { .in={ .addr = 0, .cpm = 0, .src_present=1 }, .irq=0, .tch=2, .rch=0, .init=srcInitData0 },
+    { .in={ .addr = 1, .cpm = 0, .src_present=1 }, .irq=1, .tch=3, .rch=0, .init=srcInitData },
+    { .in={ .addr = 2, .cpm = 0, .src_present=1 }, .irq=2, .tch=4, .rch=0, .init=srcInitData },
+    { .in={ .addr = 3, .cpm = 0, .src_present=1 }, .irq=3, .tch=5, .rch=0, .init=srcInitData }
+};
+
+alignas(512) static std::array<Dma::Descriptor, i_DMA0.max_channel+1> dma_descs;
+
+static lpc865::Dma::Parameters const p_dma = {
+    .descs = dma_descs.data()
 };
 
 static clocktree::ClockTree<Clocks> clktree;
-static Dma dma{ i_DMA0, p_dma };        // DMA controller driver
-static Pint pint{ i_PINT };             // Pin interrupt driver
-static Spi spi0{ i_SPI0, &dma };        // SRC4392 control communication
-static Spi spi1{ i_SPI1, nullptr };     // Wordclock generation
-static Ftm ftm0{ i_FTM0, ftm0par };     // Wordclock phase measurements
-static Ftm ftm1{ i_FTM1, ftm1par };     // Mode 2 remote control pulse generation
-static Usart usart0{ i_USART0 };        // Host communication USART
-static Usart usart1{ i_USART1 };        // Console mode receive USART (RX only)
-static Usart usart2{ i_USART2 };        // Mode 3 remote control USART (TX only)
-
-static SpiQueue spique{ spi0 };
-
+static Dma dma{ i_DMA0, p_dma };            // DMA controller driver
+static Usart usart0{ i_USART0 };            // Host communication USART
+static Usart usart1{ i_USART1 };            // Console mode receive USART (RX only)
+static Usart usart2{ i_USART2 };            // Mode 3 remote control USART (TX only)
+static Pint pint{ i_PINT };                 // Pin interrupt driver
+static Ftm ftm0{ i_FTM0, ftm0par };         // Wordclock phase measurements
+static Ftm ftm1{ i_FTM1, ftm1par };         // Mode 2 remote control pulse generation
+static Wkt wkt{ i_WKT, {1, 0} };
+static Spi spi0{ i_SPI0, &dma };            // SRC4392 control communication
+static SpiQueue spique{ spi0 };             // Handler queue for SPI0
+static Spi spi1{ i_SPI1, nullptr };         // Wordclock generation
 static Channel chan[4] = {
     { i_channel[0], spique, ftm0, pint },
     { i_channel[1], spique, ftm0, pint },
     { i_channel[2], spique, ftm0, pint },
     { i_channel[3], spique, ftm0, pint }
 };
+static Clkmgr clkmgr{pint, chan, 4};
 
 // Operational parameters for target mode I2C0
 static I2cTarget::Parameters const p_I2C0 = {
@@ -194,10 +194,6 @@ static I2cTarget::Parameters const p_I2C0 = {
 };
 
 static I2cTarget i2c0{ i_I2C0, p_I2C0 };    // Host communication in target mode
-
-static Wkt wkt{i_WKT, {1, 0}};
-
-static Clkmgr clkmgr{ftm0, pint, chan, 0, 4};
 
 void print(std::string_view buf) {
     do buf.remove_prefix(usart0.send(buf.data(), buf.size()));

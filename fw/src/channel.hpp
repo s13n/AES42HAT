@@ -44,10 +44,11 @@ namespace lpc865 {
 class Channel : public lpc865::I2cTarget::Callback, public arm::Interrupt, public Handler {
 public:
     struct Integration {
-        src4392::Integration in;
-        uint8_t irq;                //!< PINT channel for this channel
-        uint8_t i2cAddr;            //!< I2C target address of this channel
-        std::initializer_list<std::byte> init;
+        src4392::integration::SRC4392 in;
+        uint16_t irq:3;     //!< PINT channel for this channel
+        uint16_t tch:3;     //!< Timer channel associated with this channel
+        uint16_t rch:3;     //!< Reference channel in timer to compare timestamps with
+        std::initializer_list<std::byte> init;  //!< Initialization data for SRC registers
     };
 
     bool select(uint8_t) override;
@@ -60,20 +61,30 @@ public:
     /** Handles the receive side block event. */
     void act() override;
 
-    void updateSrcCtrl();
+    /** Write the cached register data to the SRC chip */
+    void updateSrcCtrl() {
+        pg0wb_ = true;
+        post();
+    }
 
     /** Handles the transmit side block event. */
-    void handleTxBlock();
+    void handleTxBlock() {
+        pg2wb_ = true;
+        post();
+    }
 
     Channel(Integration const &in, lpc865::SpiQueue &spiq, lpc865::Ftm &ftm, lpc865::Pint &pint);
 
 private:
-    uint8_t addr_;              //!< Current register address byte (MSB = INC bit)
-    bool expectReg_;            //!< True when expecting register address byte
+    uint8_t addr_;              //!< Current register address byte (MSB = INC bit) in I2C access
+    bool expectReg_;            //!< True when expecting register address byte from I2C
     std::byte page_;            //!< Page in access from the I2C side
-    uint8_t updateSrcPage_;     //!< Pages in SRC chip that needs updating (1 bit for each page)
     Coroutine<int8_t> coro_;    //!< Coroutine to read the RX status, CS and U data
-    int16_t delta_;
+    bool volatile pg0wb_;       //!< Page 0 (Control registers) needs writing back to chip
+    bool volatile pg2wb_;       //!< Page 2 (DIT CS&U data) needs writing back to chip
+    bool volatile rstat_;       //!< Page 0 receive status registers need reading from chip
+    bool volatile pg1rd_;       //!< Page 1 (DIR CS&U data) needs reading from the chip
+    int16_t delta_;             //!< Timestamp difference relative to BLS pulse
     Integration const &in_;     //!< Channel integration data
     lpc865::SpiQueue &spiq_;    //!< SPI port driver to use for controlling the channel
     lpc865::Ftm &ftm_;          //!< Timer responsible for phase management

@@ -17,8 +17,8 @@ struct Handler;
 
 namespace lpc865 {
 
-inline namespace FTM {
-    struct Integration;
+namespace integration {
+    struct FTM;
 }
 
 /** FTM driver.
@@ -101,13 +101,13 @@ public:
         } ch[8];
     };
 
-    Ftm(FTM::Integration const &in, Parameters const &par);
+    Ftm(integration::FTM const &in, Parameters const &par);
 
 private:
     void isr() override;
 
     uint16_t mod_;
-    FTM::Integration const &in_;
+    integration::FTM const &in_;
     Handler *overflow_;
     Handler *reload_;
 };

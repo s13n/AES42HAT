@@ -5,6 +5,7 @@
  * @{
  */
 #include "i2c_tgt_drv.hpp"
+#include "I2C.hpp"
 #include <bit>
 
 
@@ -53,7 +54,7 @@ void lpc865::I2cTarget::isr() {
     }
 }
 
-lpc865::I2cTarget::I2cTarget(I2C::Integration const &in, Parameters const &par)
+lpc865::I2cTarget::I2cTarget(integration::I2C const &in, Parameters const &par)
     : target_{0xFF}
     , selected_{nullptr}
     , in_{in}

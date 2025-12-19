@@ -6,6 +6,7 @@
  */
 #include "wkt_drv.hpp"
 #include "handler.hpp"
+#include "WKT.hpp"
 #include <bit>
 
 
@@ -21,7 +22,7 @@ void lpc865::Wkt::start(uint32_t count, Handler &hdl) {
     in_.registers->COUNT.set(count);
 }
 
-lpc865::Wkt::Wkt(WKT::Integration const &in, Parameters const &par)
+lpc865::Wkt::Wkt(integration::WKT const &in, Parameters const &par)
     : in_{in}
     , hdl_{nullptr}
 {

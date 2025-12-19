@@ -5,6 +5,7 @@
  * @{
  */
 #include "usart_drv.hpp"
+#include "USART.hpp"
 #include <span>
 
 size_t lpc865::Usart::send(void const *buf, size_t size) {
@@ -19,7 +20,7 @@ size_t lpc865::Usart::send(void const *buf, size_t size) {
 void lpc865::Usart::isr() {
 }
 
-lpc865::Usart::Usart(USART::Integration const &in)
+lpc865::Usart::Usart(integration::USART const &in)
     : in_{in}
 {
     auto &hw = *in_.registers;

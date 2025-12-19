@@ -14,7 +14,7 @@ extern void print(std::string_view);
 
 bool Channel::select(uint8_t tgt) {
     print("S");
-    if ((tgt >> 1) != in_.i2cAddr)
+    if ((tgt >> 1) != (0x70 + in_.in.addr))
         return false;
     expectReg_ = !(tgt & 0x01);
     return true;
@@ -22,10 +22,6 @@ bool Channel::select(uint8_t tgt) {
 
 void Channel::deselect() {
     print("D\n");
-    if (updateSrcPage_ & 0x01) {
-        updateSrcCtrl();
-        updateSrcPage_ &= ~0x01;
-    }
 }
 
 uint8_t Channel::getTxByte() {
@@ -48,44 +44,62 @@ void Channel::putRxByte(uint8_t val) {
         addr_ = (addr_ + 1) | 0x80;
     if (ptr) {
         *ptr = std::byte(val);
-        updateSrcPage_ |= 1U << uint8_t(page_);
+        if (uint8_t(page_) == 0x00)
+            pg0wb_ = true;
+        if (uint8_t(page_) == 0x02)
+            pg2wb_ = true;
     }
 }
 
 void Channel::isr() {
     uint16_t ts1 = ftm_.getCount();
-    uint16_t capt = ftm_.getCapture(2 + (in_.i2cAddr & 0x03));
-    uint16_t ref = ftm_.getCapture(0);
+    uint16_t capt = ftm_.getCapture(in_.tch);
+    uint16_t ref = ftm_.getCapture(in_.rch);
     uint16_t ts2 = ftm_.getCount();
     delta_ = capt - ref;
     pint_.disable(in_.irq);
+    pg1rd_ = true;
     post();
 }
 
 void Channel::act() {
     CORO_REENTER(coro_) {
-        CORO_YIELD src_.readRxStatus(spiq_);
-        CORO_YIELD src_.switchPage(spiq_, 0x01);
-        CORO_YIELD src_.readCS(spiq_);
-        CORO_YIELD src_.readU(spiq_);
-        CORO_YIELD src_.switchPage(spiq_, 0x00);
+        if (rstat_) {
+            rstat_ = false;
+            CORO_YIELD src_.readRxStatus(spiq_);
+            print("S");
+        } else if (pg1rd_) {
+            pg1rd_ = false;
+            CORO_YIELD src_.switchPage(spiq_, 0x01);
+            CORO_YIELD src_.readCS(spiq_);
+            CORO_YIELD src_.readU(spiq_);
+            CORO_YIELD src_.switchPage(spiq_, 0x00);
+            print("R");
+        } else if (pg0wb_) {
+            pg0wb_ = false;
+            CORO_YIELD src_.writeRegs(spiq_);
+            print("C");
+        } else if (pg2wb_) {
+            pg2wb_ = false;
+            CORO_YIELD src_.readTxStatus(spiq_);
+            CORO_YIELD src_.switchPage(spiq_, 0x02);
+            CORO_YIELD src_.writeCS(spiq_);
+            CORO_YIELD src_.writeU(spiq_);
+            CORO_YIELD src_.switchPage(spiq_, 0x00);
+            print("T");
+        }
         pint_.enable(in_.irq, 4);
     }
-}
-
-void Channel::updateSrcCtrl() {
-    src_.writeRegs(spiq_);
-}
-
-void Channel::handleTxBlock() {
-    src_.readTxStatus(spiq_);
 }
 
 Channel::Channel(Integration const &in, lpc865::SpiQueue &spiq, lpc865::Ftm &ftm, lpc865::Pint &pint)
     : addr_{0}
     , expectReg_{false}
     , page_{0}
-    , updateSrcPage_{0}
+    , pg0wb_{false}
+    , pg2wb_{false}
+    , rstat_{false}
+    , pg1rd_{false}
     , in_{in}
     , spiq_{spiq}
     , ftm_{ftm}

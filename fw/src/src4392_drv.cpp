@@ -11,9 +11,9 @@
 #include <alloca.h>
 
 
-namespace src4392 { 
-    
-Src4392::Src4392(SRC4392::Integration const &in, Handler *hdl)
+namespace src4392 {
+
+Src4392::Src4392(integration::SRC4392 const &in, Handler *hdl)
     : entry_{
         .par = {
             .cmd = {
@@ -73,11 +73,11 @@ uint64_t Src4392::update(std::span<std::byte const> buf, std::span<std::byte> in
     return res;
 }
 
-void Src4392::rdwr(lpc865::SpiQueue &spiq, uint8_t reg, std::span<std::byte> buf) {
-    entry_.par.cmd.read = reg >> 7;
-    entry_.par.cmd.ins = reg;
+void Src4392::rdwr(lpc865::SpiQueue &spiq, std::span<std::byte> buf, uint8_t reg) {
     entry_.buf = buf.data();
     entry_.size = buf.size();
+    entry_.par.cmd.read = reg >> 7;
+    entry_.par.cmd.ins = reg;
     spiq.enqueue(entry_);
 }
 

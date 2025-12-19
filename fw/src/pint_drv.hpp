@@ -16,8 +16,8 @@ namespace arm {
 
 namespace lpc865 {
 
-inline namespace PINT {
-    struct Integration;
+namespace integration {
+    struct PINT;
 }
 
 /** Pin interrupt driver.
@@ -28,14 +28,17 @@ public:
      * @param mode 0: none, 1: rising edge, 2: falling edge, 3: both edges, 4: low level, 5: high level
      */
     void attach(unsigned num, uint8_t mode, arm::Interrupt &intr);
-    void enable(unsigned num, uint8_t mode);
-    void disable(unsigned num);
 
-    Pint(PINT::Integration const &in);
-    ~Pint() =default;
+    void enable(unsigned num, uint8_t mode);
+
+    void disable(unsigned num) {
+        enable(num, 0);
+    }
+
+    Pint(integration::PINT const &in);
 
 private:
-    PINT::Integration const &in_;
+    integration::PINT const &in_;
 };
 
 } //!@}

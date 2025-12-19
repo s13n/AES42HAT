@@ -9,7 +9,7 @@
 #include "PINT.hpp"
 
 
-constexpr Exception getEx(unsigned num, lpc865::Integration const &in) {
+constexpr Exception getEx(unsigned num, lpc865::integration::PINT const &in) {
     switch (num) {
     case 0: return in.exINT0;
     case 1: return in.exINT1;
@@ -65,11 +65,7 @@ void lpc865::Pint::enable(unsigned num, uint8_t mode) {
     }
 }
 
-void lpc865::Pint::disable(unsigned num) {
-    enable(num, 0);
-}
-
-lpc865::Pint::Pint(PINT::Integration const &in)
+lpc865::Pint::Pint(integration::PINT const &in)
     : in_{in}
 {
     auto &hw = *in_.registers;

@@ -14,15 +14,15 @@ class Handler;
 
 namespace src4392 { 
 
-inline namespace SRC4392 {
-    struct Integration;
+namespace integration {
+    struct SRC4392;
 }
 
 /** SRC4392 driver class.
  */     
 class Src4392 {
 public:    
-    Src4392(Integration const &in, Handler *hdl);
+    Src4392(integration::SRC4392 const &in, Handler *hdl);
 
     /** Update the registers.
      * @param buf Buffer containing new register data.
@@ -54,49 +54,49 @@ public:
         return update(buf, rxu_);
     }
 
-    void switchPage(lpc865::SpiQueue &spi, uint8_t page) {
+    void switchPage(lpc865::SpiQueue &spiq, uint8_t page) {
         page_ = std::byte(page);
-        rdwr(spi, 0x7F, { &page_, 1 });
+        rdwr(spiq, { &page_, 1 }, 0x7F);
     }
 
-    void writeRegs(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0x01, regs_);
+    void writeRegs(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, regs_, 0x01);
     }
 
-    void writeCS(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0x00, txcs_);
+    void writeCS(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, txcs_, 0x00);
     }
 
-    void writeU(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0x40, txu_);
+    void writeU(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, txu_, 0x40);
     }
 
-    void readRegs(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0x81, regs_);
+    void readRegs(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, regs_, 0x81);
     }
 
-    void readTxStatus(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0x8A, std::span(regs_).subspan(9,1));
+    void readTxStatus(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, std::span(regs_).subspan(9,1), 0x8A);
     }
 
-    void readRatio(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0xB2, std::span(regs_).subspan(49,2));
+    void readRatio(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, std::span(regs_).subspan(49,2), 0xB2);
     }
 
-    void readRxStatus(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0x92, std::span(regs_).subspan(17,4));
+    void readRxStatus(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, std::span(regs_).subspan(17,4), 0x92);
     }
 
-    void readSubchannel(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0x9F, std::span(regs_).subspan(30,14));
+    void readSubchannel(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, std::span(regs_).subspan(30,14), 0x9F);
     }
 
-    void readCS(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0x80, rxcs_);
+    void readCS(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, rxcs_, 0x80);
     }
 
-    void readU(lpc865::SpiQueue &spi) {
-        rdwr(spi, 0xC0, rxu_);
+    void readU(lpc865::SpiQueue &spiq) {
+        rdwr(spiq, rxu_, 0xC0);
     }
 
     std::byte *getPtr(uint8_t addr, std::byte &page);
@@ -104,7 +104,7 @@ public:
 private:
     static uint64_t update(std::span<std::byte const>, std::span<std::byte>);
 
-    void rdwr(lpc865::SpiQueue &spi, uint8_t reg, std::span<std::byte> buf);
+    void rdwr(lpc865::SpiQueue &, std::span<std::byte>, uint8_t);
 
     lpc865::SpiQueue::Entry entry_;
     std::byte page_;                    //!< Page register at 0x7F

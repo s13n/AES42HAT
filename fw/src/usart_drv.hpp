@@ -8,13 +8,13 @@
 
 #pragma once
 
-#include "USART.hpp"
 #include <cstddef>
 #include <cstdint>
 
 namespace lpc865 {
-
-struct Event;
+    namespace integration {
+        struct USART;
+    }
 
 /** USART Driver.
  */
@@ -26,11 +26,11 @@ public:
 
     void isr();
 
-    Usart(USART::Integration const &in);
+    Usart(integration::USART const &in);
     ~Usart() =default;
 
 private:
-    USART::Integration const &in_;
+    integration::USART const &in_;
 };
 
 } // namespace

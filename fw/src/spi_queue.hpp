@@ -35,10 +35,13 @@ public:
 
     void act() override;
 
-    explicit SpiQueue(Spi &spi);
+    explicit SpiQueue(Spi &spi)
+        : spi_{spi}
+    {
+    }
 
 private:
-    void handle_next();
+    void handle(Entry &e);
 
     Spi &spi_;
     QueueRing<Entry> queue_;

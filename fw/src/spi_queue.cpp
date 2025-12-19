@@ -5,14 +5,13 @@
  * @{
  */
 #include "spi_queue.hpp"
-#include <bit>
 
 
 void lpc865::SpiQueue::enqueue(Entry &e) {
     bool empty = queue_.empty();
     queue_.push_back(e);
     if (empty)
-        handle_next();
+        handle(e);
 }
 
 void lpc865::SpiQueue::act() {
@@ -21,16 +20,10 @@ void lpc865::SpiQueue::act() {
         e.hdl->act();
     queue_.pop_front();
     if (!queue_.empty())
-        handle_next();
+        handle(queue_.front());
 }
 
-lpc865::SpiQueue::SpiQueue(Spi &spi)
-    : spi_{spi}
-{
-}
-
-void lpc865::SpiQueue::handle_next() {
-    auto &e = queue_.front();
+void lpc865::SpiQueue::handle(Entry &e) {
     spi_.target(e.par, this);
     spi_.transfer(e.buf, e.size, e.speed);
 }

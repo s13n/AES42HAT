@@ -9,7 +9,6 @@
 #pragma once
 
 #include "nvic_drv.hpp"
-#include "WKT.hpp"
 #include <cstddef>
 #include <cstdint>
 #include <initializer_list>
@@ -18,6 +17,9 @@
 class Handler;
 
 namespace lpc865 {
+    namespace integration {
+        struct WKT;
+    }
 
 /** WKT Driver.
  */
@@ -32,11 +34,11 @@ public:
 
     void start(uint32_t count, Handler &hdl);
 
-    Wkt(WKT::Integration const &in, Parameters const &par);
+    Wkt(integration::WKT const &in, Parameters const &par);
     ~Wkt() =default;
 
 private:
-    WKT::Integration const &in_;            //!< Integration values
+    integration::WKT const &in_;            //!< Integration values
     Handler *hdl_;
 };
 
