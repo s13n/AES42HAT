@@ -8,8 +8,9 @@
 #include "nvic_drv.hpp"
 #include "PINT.hpp"
 
+using namespace lpc865::PINT;
 
-constexpr Exception getEx(unsigned num, lpc865::integration::PINT const &in) {
+constexpr Exception getEx(unsigned num, Intgr const &in) {
     switch (num) {
     case 0: return in.exINT0;
     case 1: return in.exINT1;
@@ -65,7 +66,7 @@ void lpc865::Pint::enable(unsigned num, uint8_t mode) {
     }
 }
 
-lpc865::Pint::Pint(integration::PINT const &in)
+lpc865::Pint::Pint(Intgr const &in)
     : in_{in}
 {
     auto &hw = *in_.registers;

@@ -15,10 +15,9 @@ namespace arm {
 }
 
 namespace lpc865 {
-
-namespace integration {
-    struct PINT;
-}
+    namespace PINT {
+        struct Intgr;
+    }
 
 /** Pin interrupt driver.
  */
@@ -35,10 +34,10 @@ public:
         enable(num, 0);
     }
 
-    Pint(integration::PINT const &in);
+    Pint(PINT::Intgr const &in);
 
 private:
-    integration::PINT const &in_;
+    PINT::Intgr const &in_;
 };
 
 } //!@}

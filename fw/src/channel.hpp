@@ -44,7 +44,7 @@ namespace lpc865 {
 class Channel : public lpc865::I2cTarget::Callback, public arm::Interrupt, public Handler {
 public:
     struct Integration {
-        src4392::integration::SRC4392 in;
+        src4392::SRC4392::Intgr in;
         uint16_t irq:3;     //!< PINT channel for this channel
         uint16_t tch:3;     //!< Timer channel associated with this channel
         uint16_t rch:3;     //!< Reference channel in timer to compare timestamps with

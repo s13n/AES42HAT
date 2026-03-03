@@ -89,7 +89,7 @@ auto lpc865::Spi::status() const -> Status {
     return idle;
 }
 
-lpc865::Spi::Spi(integration::SPI const &in, Dma *dma)
+lpc865::Spi::Spi(Intgr const &in, Dma *dma)
     : in_{in}
     , dma_{dma}
 {

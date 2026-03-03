@@ -17,8 +17,8 @@
 class Handler;
 
 namespace lpc865 {
-    namespace integration {
-        struct WKT;
+    namespace WKT {
+        struct Intgr;
     }
 
 /** WKT Driver.
@@ -34,11 +34,11 @@ public:
 
     void start(uint32_t count, Handler &hdl);
 
-    Wkt(integration::WKT const &in, Parameters const &par);
+    Wkt(WKT::Intgr const &in, Parameters const &par);
     ~Wkt() =default;
 
 private:
-    integration::WKT const &in_;            //!< Integration values
+    WKT::Intgr const &in_;  //!< Integration values
     Handler *hdl_;
 };
 

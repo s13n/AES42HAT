@@ -22,7 +22,7 @@ size_t lpc865::Usart::send(void const *buf, size_t size) {
 void lpc865::Usart::isr() {
 }
 
-lpc865::Usart::Usart(integration::USART const &in)
+lpc865::Usart::Usart(Intgr const &in)
     : in_{in}
 {
     auto &hw = *in_.registers;

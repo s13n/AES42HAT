@@ -13,7 +13,7 @@
 
 namespace src4392 {
 
-Src4392::Src4392(integration::SRC4392 const &in, Handler *hdl)
+Src4392::Src4392(SRC4392::Intgr const &in, Handler *hdl)
     : entry_{
         .par = {
             .cmd = {

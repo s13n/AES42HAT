@@ -12,10 +12,9 @@
 struct Handler;
 
 namespace lpc865 {
-
-namespace integration {
-    struct SmartDMA;
-}
+    namespace SmartDMA {
+        struct Intgr;
+    }
 
 //! Driver for the LPC8 DMA controller.
 class Dma : public arm::Interrupt {
@@ -75,12 +74,12 @@ public:
     bool start(Mem mem, void *buf, size_t size);
 
     ~Dma();
-    Dma(integration::SmartDMA const &in, Parameters const &par);
+    Dma(SmartDMA::Intgr const &in, Parameters const &par);
 
     void isr() override;
     
 private:
-    integration::SmartDMA const &in_;   //!< Integration parameters
+    SmartDMA::Intgr const &in_;     //!< Integration parameters
     Parameters const &par_;
 };
 

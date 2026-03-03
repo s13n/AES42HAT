@@ -16,8 +16,8 @@
 
 
 namespace lpc865 {
-    namespace integration{
-        struct I2C;
+    namespace I2C {
+        struct Intgr;
     }
 
 /** I2C Target Driver.
@@ -57,13 +57,13 @@ public:
 
     void isr() override;
 
-    I2cTarget(integration::I2C const &in, Parameters const &par);
+    I2cTarget(I2C::Intgr const &in, Parameters const &par);
     ~I2cTarget() =default;
 
 private:
-    uint8_t target_;                        //!< Currently active target address / RW
-    Callback *selected_;                    //!< The callback of the currently selected target
-    integration::I2C const &in_;            //!< Integration values
+    uint8_t target_;            //!< Currently active target address / RW
+    Callback *selected_;        //!< The callback of the currently selected target
+    I2C::Intgr const &in_;      //!< Integration values
     Parameters const &par_;
 };
 

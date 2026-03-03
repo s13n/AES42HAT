@@ -12,8 +12,8 @@
 #include <cstdint>
 
 namespace lpc865 {
-    namespace integration {
-        struct USART;
+    namespace USART {
+        struct Intgr;
     }
 
 /** USART Driver.
@@ -26,11 +26,11 @@ public:
 
     void isr();
 
-    Usart(integration::USART const &in);
+    Usart(USART::Intgr const &in);
     ~Usart() =default;
 
 private:
-    integration::USART const &in_;
+    USART::Intgr const &in_;
 };
 
 } // namespace

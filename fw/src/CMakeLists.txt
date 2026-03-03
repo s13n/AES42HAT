@@ -7,6 +7,8 @@ add_executable(aes42hat)
 
 generate_header(aes42hat generate_peripheral_header src4392 SRC4392 .hpp)
 
+generate_header(aes42hat generate_peripheral_header arm NVIC .hpp)
+
 generate_header(aes42hat generate_peripheral_header lpc865 ACOMP .hpp)
 generate_header(aes42hat generate_peripheral_header lpc865 ADC .hpp)
 generate_header(aes42hat generate_peripheral_header lpc865 CRC .hpp)
@@ -19,7 +21,6 @@ generate_header(aes42hat generate_peripheral_header lpc865 I3C .hpp)
 generate_header(aes42hat generate_peripheral_header lpc865 INPUTMUX .hpp)
 generate_header(aes42hat generate_peripheral_header lpc865 IOCON .hpp)
 generate_header(aes42hat generate_peripheral_header lpc865 MRT .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 NVIC .hpp)
 generate_header(aes42hat generate_peripheral_header lpc865 PINT .hpp)
 generate_header(aes42hat generate_peripheral_header lpc865 PMU .hpp)
 generate_header(aes42hat generate_peripheral_header lpc865 SPI .hpp)

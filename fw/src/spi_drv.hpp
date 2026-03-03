@@ -14,12 +14,12 @@
 #include <cstdint>
 
 namespace lpc865 {
+    namespace SPI {
+        struct Intgr;
+    }
 
 class Dma;
 
-namespace integration {
-    struct SPI;
-}
 
 /** SPI driver.
  * This is a generic interface for the controller of an SPI port. The following
@@ -264,14 +264,14 @@ public:
      */
     Status status() const;
 
-    Spi(integration::SPI const &in, Dma *dma);
+    Spi(SPI::Intgr const &in, Dma *dma);
     ~Spi() =default;
 
     void act() override;
     void isr() override;
 
 private:
-    integration::SPI const &in_;
+    SPI::Intgr const &in_;
     Dma *dma_;
     Handler *hdl_;
 };

@@ -55,7 +55,7 @@ void lpc865::I2cTarget::isr() {
     }
 }
 
-lpc865::I2cTarget::I2cTarget(integration::I2C const &in, Parameters const &par)
+lpc865::I2cTarget::I2cTarget(Intgr const &in, Parameters const &par)
     : target_{0xFF}
     , selected_{nullptr}
     , in_{in}

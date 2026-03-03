@@ -13,16 +13,15 @@
 class Handler;
 
 namespace src4392 { 
-
-namespace integration {
-    struct SRC4392;
-}
+    namespace SRC4392 {
+        struct Intgr;
+    }
 
 /** SRC4392 driver class.
  */     
 class Src4392 {
 public:    
-    Src4392(integration::SRC4392 const &in, Handler *hdl);
+    Src4392(SRC4392::Intgr const &in, Handler *hdl);
 
     /** Update the registers.
      * @param buf Buffer containing new register data.

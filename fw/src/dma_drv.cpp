@@ -65,7 +65,7 @@ lpc865::Dma::~Dma() {
     hw.CTRL.set(0);     // disable
 }
 
-lpc865::Dma::Dma(integration::SmartDMA const &in, Parameters const &par)
+lpc865::Dma::Dma(Intgr const &in, Parameters const &par)
     : in_{in}
     , par_{par}
 {

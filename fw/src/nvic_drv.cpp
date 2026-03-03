@@ -8,12 +8,15 @@
 
 #include "nvic_drv.hpp"
 #include "LPC865.hpp"
+#include "NVIC.hpp"
 #include <array>
 extern "C" {
 #   include "newlib_def.h"
 }
 
 extern void setActivityLED(bool act);
+
+static hwreg::HwPtr<volatile arm::NVIC::NVIC> const nvic = 0xE000E100;
 
 using namespace lpc865;
 
@@ -43,7 +46,7 @@ constexpr std::array<arm::Interrupt::VectorTableEntry*, 16> specific_handlers = 
  * function members of all objects are called in sequence. Each object needs
  * to check if it has any work to do.
  */
-static std::array<arm::Interrupt *, i_NVIC.interrupts + 16> interrupt_table = {};
+static std::array<arm::Interrupt *, interruptCount> interrupt_table = {};
 
 /** get a pointer to the ring head for the given exception number
  * @param n Exception number
@@ -82,7 +85,7 @@ void arm::Interrupt::enable(Exception n) {
     if(n >= interruptOffset) {
         unsigned index = (n-interruptOffset) >> 5;
         uint32_t mask = 1 << ((n-interruptOffset) & 0x1F);
-        i_NVIC.registers->ISER[index] = mask;
+        nvic->ISER[index] = mask;
     }
 }
 
@@ -90,7 +93,7 @@ void arm::Interrupt::disable(Exception n) {
     if(n >= interruptOffset) {
         unsigned index = (n-interruptOffset) >> 5;
         uint32_t mask = 1 << ((n-interruptOffset) & 0x1F);
-        i_NVIC.registers->ICER[index] = mask;
+        nvic->ICER[index] = mask;
     }
 }
 
@@ -143,5 +146,5 @@ make_vector_table(std::array<arm::Interrupt::VectorTableEntry*, M> initial_entri
  * placed.
  */
 __attribute__((used, section(".isr_vector")))
-std::array<arm::Interrupt::VectorTableEntry *, i_NVIC.interrupts + 16> const vector_table
+std::array<arm::Interrupt::VectorTableEntry *, lpc865::interruptCount> const vector_table
     = make_vector_table<interrupt_table.size(), specific_handlers.size()>(specific_handlers);
