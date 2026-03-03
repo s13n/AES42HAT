@@ -8,6 +8,8 @@
 #include "USART.hpp"
 #include <span>
 
+using namespace lpc865::USART;
+
 size_t lpc865::Usart::send(void const *buf, size_t size) {
     auto &hw = *in_.registers;
     size_t res = 0;

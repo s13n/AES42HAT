@@ -12,6 +12,8 @@ extern "C" {
 }
 
 using namespace lpc865;
+using namespace lpc865::SYSCON;
+using namespace lpc865::PMU;
 
 /** @addtogroup AES42HAT
  * @{

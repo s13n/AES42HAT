@@ -10,6 +10,7 @@
 #include <bit>
 #include <cassert>
 
+using namespace lpc865::SmartDMA;
 
 bool lpc865::Dma::setup(Per per, uintptr_t addr, Handler *hdl) {
     if (per.chan > in_.max_channel)
@@ -37,16 +38,16 @@ bool lpc865::Dma::start(Mem mem, void *buf, size_t size) {
         desc.dst = reinterpret_cast<uintptr_t>(buf) + size;
     uint32_t mask = 1u << mem.chan;
     hw.ENABLECLR0 = mask;
-    chan.CFG = CFG{
+    chan.CFG = {
         .PERIPHREQEN=1, .HWTRIGEN=per.hwtrig, .TRIGPOL=per.trigpol,
         .TRIGTYPE=per.trigtype, .TRIGBURST=per.trigburst, .BURSTPOWER=mem.burstpower,
         .SRCBURSTWRAP=per.dest?mem.burstwrap:0u, .DSTBURSTWRAP=per.dest?0u:mem.burstwrap,
         .CHPRIORITY=mem.prio
     };
-    chan.XFERCFG = XFERCFG{
+    chan.XFERCFG = {
         .CFGVALID=1, .RELOAD=0, .SWTRIG=1, .CLRTRIG=1, .SETINTA=mem.setintA, .SETINTB=mem.setintB,
         .WIDTH=per.width, .SRCINC=per.dest?mem.inc:0u, .DSTINC=per.dest?0u:mem.inc,
-        .XFERCOUNT=(size << per.width) - 1
+        .XFERCOUNT=uint32_t(size << per.width) - 1U
     };
     if (mem.setintA || mem.setintB)
         hw.INTENSET0 = mask;
@@ -72,7 +73,7 @@ lpc865::Dma::Dma(integration::SmartDMA const &in, Parameters const &par)
     hw.CTRL.set(0);
     hw.ENABLECLR0.set(hw.ENABLESET0.val());
     hw.INTENCLR0.set(hw.INTENSET0.val());
-    auto srambase = reinterpret_cast<uint32_t>(par_.descs);
+    auto srambase = reinterpret_cast<uintptr_t>(par_.descs);
     assert(srambase % 512 == 0);
     hw.SRAMBASE.set(srambase);
     hw.CTRL = CTRL{ .ENABLE=1 };

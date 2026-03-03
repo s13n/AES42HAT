@@ -9,6 +9,7 @@
 #include "WKT.hpp"
 #include <bit>
 
+using namespace lpc865::WKT;
 
 void lpc865::Wkt::isr() {
     auto &hw = *in_.registers;

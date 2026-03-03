@@ -8,6 +8,7 @@
 #include "I2C.hpp"
 #include <bit>
 
+using namespace lpc865::I2C;
 
 void lpc865::I2cTarget::isr() {
     auto &hw = *in_.registers;

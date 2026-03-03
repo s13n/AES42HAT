@@ -8,6 +8,7 @@
 #include "FTM.hpp"
 #include "handler.hpp"
 
+using namespace lpc865::FTM;
 
 uint16_t lpc865::Ftm::getCount() {
     auto &hw = *in_.registers;
@@ -16,12 +17,12 @@ uint16_t lpc865::Ftm::getCount() {
 
 void lpc865::Ftm::setMatch(unsigned ch, uint16_t value) {
     auto &hw = *in_.registers;
-    hw.CONTROLS[ch].CV = CV{ .VAL = value };
+    hw.C[ch].V = { .VAL = value };
 }
 
 uint16_t lpc865::Ftm::getCapture(unsigned ch) {
     auto &hw = *in_.registers;
-    return hw.CONTROLS[ch].CV.get().VAL;
+    return hw.C[ch].V.get().VAL;
 }
 
 void lpc865::Ftm::setHandlers(Handler *overflow, Handler *reload) {
@@ -45,7 +46,7 @@ lpc865::Ftm::Ftm(integration::FTM const &in, Parameters const &par)
     , overflow_{nullptr}
     , reload_{nullptr}
 {
-    static constexpr CSC cscTbl[] = {
+    static constexpr C_SC cscTbl[] = {
         { .ELSA = 0, .ELSB = 0, .MSA = 0, .MSB = 0 },   // off
         { .ELSA = 1, .ELSB = 0, .MSA = 0, .MSB = 0 },   // capturePos
         { .ELSA = 0, .ELSB = 1, .MSA = 0, .MSB = 0 },   // captureNeg
@@ -76,8 +77,8 @@ lpc865::Ftm::Ftm(integration::FTM const &in, Parameters const &par)
         auto csc = cscTbl[ch.mode];
         csc.TRIGMODE = ch.trig;
         csc.CHIE = ch.intr;
-        hw.CONTROLS[i].CSC = csc;
-        hw.CONTROLS[i].CV = 0xFFFF;
+        hw.C[i].SC = csc;
+        hw.C[i].V = 0xFFFF;
         oinit |= ch.inv ? oiMask : 0;
         pol |= ch.inv ? polMask : 0;
         pwmen |= ch.mode >= pwmCombine ? pwmenMask : 0;

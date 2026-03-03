@@ -8,6 +8,7 @@
 #include "dma_drv.hpp"
 #include "SPI.hpp"
 
+using namespace lpc865::SPI;
 
 bool lpc865::Spi::target(Parameters const &par, Handler *hdl) {
     if (par.sel & 0xF0)
