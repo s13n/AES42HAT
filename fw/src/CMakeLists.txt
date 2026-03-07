@@ -5,34 +5,10 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(aes42hat)
 
-generate_header(aes42hat generate_peripheral_header src4392 SRC4392 .hpp)
-
-generate_header(aes42hat generate_peripheral_header arm NVIC .hpp)
-
-generate_header(aes42hat generate_peripheral_header lpc865 ACOMP .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 ADC .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 CRC .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 SmartDMA .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 FLASH_CTRL .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 FTM .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 GPIO .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 I2C .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 I3C .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 INPUTMUX .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 IOCON .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 MRT .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 PINT .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 PMU .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 SPI .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 SWM .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 SYSCON .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 USART .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 WKT .hpp)
-generate_header(aes42hat generate_peripheral_header lpc865 WWDT .hpp)
-
-generate_header(aes42hat generate_clocktree_header lpc865 LPC865_clocks .hpp)
-
-generate_header(aes42hat generate_chip_header lpc865 LPC865 .hpp)
+generate_header(aes42hat cxx src4392 TI/SRC4392 .hpp)
+generate_header(aes42hat cxx arm ARM/NVIC .hpp)
+generate_header(aes42hat cxx lpc865 NXP/LPC8/LPC86x/LPC865 .hpp)
+generate_header(aes42hat cxx lpc865 NXP/LPC8/LPC86x/LPC86x_clocks .hpp)
 
 target_include_directories(aes42hat PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}

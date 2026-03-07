@@ -1,0 +1,12 @@
+CompileFlags:
+  Add:
+    - -isystem/usr/lib/gcc/arm-none-eabi/14.2.1/include
+    - -isystem/usr/lib/gcc/arm-none-eabi/14.2.1/include-fixed
+    - -isystem/usr/lib/arm-none-eabi/include/c++/14.2.1
+    - -isystem/usr/lib/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp
+    - -isystem/usr/lib/arm-none-eabi/include/c++/14.2.1/backward
+    - -isystem/usr/lib/arm-none-eabi/include
+  Remove:
+    - -fmodules-ts
+    - -fmodule-mapper=*
+    - -fdeps-format=*

@@ -3,12 +3,10 @@
  */
 
 #include "LPC865.hpp"
-#include "LPC865_clocks.hpp"
 
 extern "C" {
 #   include "newlib_def.h"
 #   include <stdint.h>
-#   include <stdio.h>
 }
 
 using namespace lpc865;

@@ -2,6 +2,7 @@ AES42HAT-backups
 old
 temp
 fp-info-cache
+.cache
 .vscode
 build
 dts/*.dtbo

@@ -13,7 +13,7 @@
 #include "channel.hpp"
 #include "handler.hpp"
 #include "LPC865.hpp"
-#include "LPC865_clocks.hpp"
+#include "LPC86x_clocks.hpp"
 #include <string_view>
 
 using namespace lpc865;

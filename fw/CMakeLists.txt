@@ -26,7 +26,6 @@ endif()
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(sodaCat)
-
-download_models(FALSE manifest.txt)
+sodacat_fetch_generator(cxx)
 
 add_subdirectory(src)
