@@ -13,7 +13,6 @@
 #include "coroutine.hpp"
 #include "handler.hpp"
 #include "src4392_drv.hpp"
-#include "SRC4392.hpp"
 
 namespace lpc865 {
     class Ftm;

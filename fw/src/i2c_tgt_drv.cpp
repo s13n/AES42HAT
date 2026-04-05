@@ -5,7 +5,7 @@
  * @{
  */
 #include "i2c_tgt_drv.hpp"
-#include "I2C.hpp"
+import I2C;
 #include <bit>
 
 using namespace lpc865::I2C;

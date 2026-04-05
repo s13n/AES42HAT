@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "hwreg.hpp"
+import hwreg;
 #include <cstddef>
 #include <cstdint>
 

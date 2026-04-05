@@ -2,11 +2,16 @@
  * startup code for the AES42HAT
  */
 
-#include "LPC865.hpp"
+import LPC865;
+import SYSCON;
+import PMU;
 
 extern "C" {
 #   include "newlib_def.h"
 #   include <stdint.h>
+#   include <stddef.h>
+#   include <sys/types.h>
+#   include <sys/stat.h>
 }
 
 using namespace lpc865;

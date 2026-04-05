@@ -12,7 +12,7 @@
 #include "clkmgr.hpp"
 #include "channel.hpp"
 #include "handler.hpp"
-#include "LPC865.hpp"
+import LPC865;
 #include "LPC86x_clocks.hpp"
 #include <string_view>
 

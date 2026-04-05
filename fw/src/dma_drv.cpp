@@ -5,7 +5,7 @@
  * @{
  */
 #include "dma_drv.hpp"
-#include "SmartDMA.hpp"
+import SmartDMA;
 #include "handler.hpp"
 #include <bit>
 #include <cassert>

@@ -12,10 +12,9 @@
 
 class Handler;
 
-namespace src4392 { 
-    namespace SRC4392 {
-        struct Intgr;
-    }
+import SRC4392;
+
+namespace src4392 {
 
 /** SRC4392 driver class.
  */     

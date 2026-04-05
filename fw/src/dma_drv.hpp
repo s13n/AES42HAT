@@ -11,10 +11,9 @@
 
 struct Handler;
 
+import SmartDMA;
+
 namespace lpc865 {
-    namespace SmartDMA {
-        struct Intgr;
-    }
 
 //! Driver for the LPC8 DMA controller.
 class Dma : public arm::Interrupt {

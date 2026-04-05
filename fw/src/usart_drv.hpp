@@ -11,10 +11,9 @@
 #include <cstddef>
 #include <cstdint>
 
+import USART;
+
 namespace lpc865 {
-    namespace USART {
-        struct Intgr;
-    }
 
 /** USART Driver.
  */

@@ -15,10 +15,9 @@
 #include <span>
 
 
+import I2C;
+
 namespace lpc865 {
-    namespace I2C {
-        struct Intgr;
-    }
 
 /** I2C Target Driver.
  */

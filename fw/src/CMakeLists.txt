@@ -10,6 +10,22 @@ generate_header(aes42hat cxx arm ARM/NVIC .hpp)
 generate_header(aes42hat cxx lpc865 NXP/LPC8/LPC86x/LPC865 .hpp)
 generate_header(aes42hat cxx lpc865 NXP/LPC8/LPC86x/LPC86x_clocks .hpp)
 
+# Build sodaCat-generated register headers as C++20 modules.
+# The hwreg support header is the foundation module; peripheral and chip
+# headers import it.  LPC86x_clocks is excluded (clock tree generator
+# does not yet support module mode).
+target_compile_options(aes42hat PRIVATE -fmodules-ts)
+build_system_header_units(aes42hat
+    algorithm array bit cassert cstddef cstdint cstring
+    initializer_list iterator span string_view
+    type_traits utility variant version)
+generate_support_module(aes42hat cxx hwreg.hpp)
+foreach(_mod ACOMP ADC CRC SmartDMA FLASH_CTRL FTM GPIO I2C I3C
+             INPUTMUX IOCON MRT NVIC PINT PMU SPI SWM SYSCON
+             USART WKT WWDT LPC865 SRC4392)
+    generate_module(aes42hat ${CMAKE_CURRENT_BINARY_DIR}/${_mod}.hpp)
+endforeach()
+
 target_include_directories(aes42hat PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}     # for generated headers

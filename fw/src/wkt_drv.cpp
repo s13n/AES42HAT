@@ -6,7 +6,7 @@
  */
 #include "wkt_drv.hpp"
 #include "handler.hpp"
-#include "WKT.hpp"
+import WKT;
 #include <bit>
 
 using namespace lpc865::WKT;

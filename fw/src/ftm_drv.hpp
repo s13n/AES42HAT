@@ -15,10 +15,9 @@
 
 struct Handler;
 
+import FTM;
+
 namespace lpc865 {
-    namespace FTM {
-        struct Intgr;
-    }
 
 /** FTM driver.
  * 

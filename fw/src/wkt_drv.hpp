@@ -16,10 +16,9 @@
 
 class Handler;
 
+import WKT;
+
 namespace lpc865 {
-    namespace WKT {
-        struct Intgr;
-    }
 
 /** WKT Driver.
  */

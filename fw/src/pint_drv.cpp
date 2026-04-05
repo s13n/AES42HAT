@@ -6,7 +6,7 @@
  */
 #include "pint_drv.hpp"
 #include "nvic_drv.hpp"
-#include "PINT.hpp"
+import PINT;
 
 using namespace lpc865::PINT;
 

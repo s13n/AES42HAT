@@ -6,7 +6,7 @@
 
 #include "src4392_drv.hpp"
 #include "spi_drv.hpp"
-#include "SRC4392.hpp"
+import SRC4392;
 #include <algorithm>
 #include <alloca.h>
 

@@ -13,10 +13,9 @@
 #include <cstddef>
 #include <cstdint>
 
+import SPI;
+
 namespace lpc865 {
-    namespace SPI {
-        struct Intgr;
-    }
 
 class Dma;
 

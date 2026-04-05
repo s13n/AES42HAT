@@ -6,7 +6,7 @@
  */
 #include "spi_drv.hpp"
 #include "dma_drv.hpp"
-#include "SPI.hpp"
+import SPI;
 
 using namespace lpc865::SPI;
 

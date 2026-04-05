@@ -5,7 +5,7 @@
  * @{
  */
 #include "usart_drv.hpp"
-#include "USART.hpp"
+import USART;
 #include <span>
 
 using namespace lpc865::USART;

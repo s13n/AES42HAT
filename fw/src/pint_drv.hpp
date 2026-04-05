@@ -14,10 +14,9 @@ namespace arm {
     class Interrupt;
 }
 
+import PINT;
+
 namespace lpc865 {
-    namespace PINT {
-        struct Intgr;
-    }
 
 /** Pin interrupt driver.
  */
