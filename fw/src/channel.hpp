@@ -8,17 +8,19 @@
 
 #pragma once
 
-#include "i2c_tgt_drv.hpp"
+#include <cstddef>
+#include <cstdint>
+#include <initializer_list>
+
+import i2c_tgt_drv;
 import nvic_drv;
 #include "coroutine.hpp"
 import handler;
-#include "src4392_drv.hpp"
-
-namespace lpc865 {
-    class Ftm;
-    class Pint;
-    class SpiQueue;
-}
+import src4392_drv;
+import SRC4392;
+import ftm_drv;
+import pint_drv;
+import spi_queue;
 
 /** Object representing an AES42 channel.
  * 

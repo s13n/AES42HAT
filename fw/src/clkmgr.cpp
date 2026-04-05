@@ -6,8 +6,6 @@
  */
 #include "clkmgr.hpp"
 #include "channel.hpp"
-#include "ftm_drv.hpp"
-#include "pint_drv.hpp"
 #include <string_view>
 
 

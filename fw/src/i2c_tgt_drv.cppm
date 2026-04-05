@@ -1,23 +1,21 @@
 /** @file
  * driver for the LPC8 I2C block in target mode.
- * 
+ *
  * @addtogroup LPC865_i2c
  * @ingroup LPC865
  * @{
  */
 
-#pragma once
-
-import nvic_drv;
+module;
 #include <cstddef>
 #include <cstdint>
 #include <initializer_list>
 #include <span>
-
-
+export module i2c_tgt_drv;
+import nvic_drv;
 import I2C;
 
-namespace lpc865 {
+export namespace lpc865 {
 
 /** I2C Target Driver.
  */

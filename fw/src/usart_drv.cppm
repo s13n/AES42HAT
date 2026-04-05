@@ -1,19 +1,18 @@
 /** @file
  * driver for the LPC8 USART block.
- * 
+ *
  * @addtogroup LPC865_usart
  * @ingroup LPC865
  * @{
  */
 
-#pragma once
-
+module;
 #include <cstddef>
 #include <cstdint>
-
+export module usart_drv;
 import USART;
 
-namespace lpc865 {
+export namespace lpc865 {
 
 /** USART Driver.
  */

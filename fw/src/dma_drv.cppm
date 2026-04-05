@@ -4,18 +4,17 @@
  * @ingroup LPC865
  * @{
  */
-#pragma once
 
+module;
 #include <cstddef>
 #include <cstdint>
-
+export module dma_drv;
 import nvic_drv;
 import utility;
-
 import handler;
 import SmartDMA;
 
-namespace lpc865 {
+export namespace lpc865 {
 
 //! Driver for the LPC8 DMA controller.
 class Dma : public arm::Interrupt {
@@ -26,7 +25,7 @@ public:
         uint32_t width:2;       //!< Data transfer width. 0: 8-bit, 1: 16-bit, 2: 32-bit, 3: reserved
         uint32_t dest:1;        //!< 0: peripheral is source, 1: peripheral is destination
         uint32_t hwtrig:1;      //!< Hardware triggering enabled
-        uint32_t trigpol:1;     //!< Hardware trigger is active high 
+        uint32_t trigpol:1;     //!< Hardware trigger is active high
         uint32_t trigtype:1;    //!< Hardware trigger is level triggered
         uint32_t trigburst:1;   //!< Hardware trigger causes a burst transfer
     };
@@ -78,7 +77,7 @@ public:
     Dma(SmartDMA::Intgr const &in, Parameters const &par);
 
     void isr() override;
-    
+
 private:
     SmartDMA::Intgr const &in_;     //!< Integration parameters
     Parameters const &par_;

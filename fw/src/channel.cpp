@@ -5,8 +5,6 @@
  * @{
  */
 #include "channel.hpp"
-#include "pint_drv.hpp"
-#include "ftm_drv.hpp"
 #include <string_view>
 
 extern void print(std::string_view);

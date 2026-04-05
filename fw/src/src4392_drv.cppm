@@ -3,27 +3,27 @@
  * @addtogroup SRC4392
  * @{
  */
-#pragma once
 
-#include "spi_queue.hpp"
+module;
 #include <array>
 #include <cstdint>
 #include <span>
-
+export module src4392_drv;
+import spi_queue;
 import handler;
 import SRC4392;
 
-namespace src4392 {
+export namespace src4392 {
 
 /** SRC4392 driver class.
- */     
+ */
 class Src4392 {
-public:    
+public:
     Src4392(SRC4392::Intgr const &in, Handler *hdl);
 
     /** Update the registers.
      * @param buf Buffer containing new register data.
-     * 
+     *
      * The new data is compared with the old data to determine the change mask.
      * The new data then replaces the old. Finally the change mask is returned.
      */
@@ -33,7 +33,7 @@ public:
 
     /** Update the control/status data.
      * @param buf Buffer containing new data.
-     * 
+     *
      * The new data is compared with the old data to determine the change mask.
      * The new data then replaces the old. Finally the change mask is returned.
      */
@@ -43,7 +43,7 @@ public:
 
     /** Update the user data.
      * @param buf Buffer containing new data.
-     * 
+     *
      * The new data is compared with the old data to determine the change mask.
      * The new data then replaces the old. Finally the change mask is returned.
      */

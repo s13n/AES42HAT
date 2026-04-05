@@ -4,9 +4,12 @@
  * @ingroup LPC865
  * @{
  */
-#include "i2c_tgt_drv.hpp"
-import I2C;
+module;
 #include <bit>
+#include <cstddef>
+#include <cstdint>
+module i2c_tgt_drv;
+import I2C;
 
 using namespace lpc865::I2C;
 
@@ -66,7 +69,7 @@ lpc865::I2cTarget::I2cTarget(Intgr const &in, Parameters const &par)
     n = (par.dis0 ? 0 : n) + !par.dis1 + !par.dis1 + !par.dis1;
     if (par.callbacks.size() != n)
         return;
-    
+
     insert(in_.exI2C);
 
     auto &hw = *in_.registers;

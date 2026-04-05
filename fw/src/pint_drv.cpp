@@ -4,9 +4,10 @@
  * @ingroup LPC865
  * @{
  */
-#include "pint_drv.hpp"
+module;
+#include <cstdint>
+module pint_drv;
 import hwreg;
-import nvic_drv;
 import PINT;
 
 using namespace lpc865::PINT;

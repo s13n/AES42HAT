@@ -4,9 +4,10 @@
  * @ingroup LPC865
  * @{
  */
-#include "wkt_drv.hpp"
+module;
+#include <cstdint>
+module wkt_drv;
 import WKT;
-#include <bit>
 
 using namespace lpc865::WKT;
 

@@ -4,8 +4,10 @@
  * @ingroup LPC865
  * @{
  */
-#include "spi_drv.hpp"
-#include "dma_drv.hpp"
+module;
+#include <cstddef>
+#include <cstdint>
+module spi_drv;
 import SPI;
 
 using namespace lpc865::SPI;

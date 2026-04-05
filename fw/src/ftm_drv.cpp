@@ -4,7 +4,10 @@
  * @ingroup LPC865
  * @{
  */
-#include "ftm_drv.hpp"
+module;
+#include <bit>
+#include <cstdint>
+module ftm_drv;
 import hwreg;
 import FTM;
 

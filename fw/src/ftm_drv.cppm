@@ -1,25 +1,24 @@
 /** @file
  * FTM driver.
- * 
+ *
  * @addtogroup LPC865_ftm
  * @ingroup LPC865
  * @{
  */
 
-#pragma once
-
-import nvic_drv;
+module;
 #include <span>
 #include <cstddef>
 #include <cstdint>
-
+export module ftm_drv;
+import nvic_drv;
 import handler;
 import FTM;
 
-namespace lpc865 {
+export namespace lpc865 {
 
 /** FTM driver.
- * 
+ *
  * This is a generic interface for the FTM timer. The following
  * features can be supported:
  * - Multiple channels
@@ -38,7 +37,7 @@ public:
     /** Set the match value that defines the PWM duty cycle.
      * @param ch Channel number
      * @param value Match value
-     * 
+     *
      * The exact behavior depends on the channel mode. For example in edge
      * PWM mode, the match value defines the point in time when the output
      * gets reset. The counter overflow defines the point whe it gets set.
@@ -54,7 +53,7 @@ public:
     /** Set interrupt handlers.
      * @param overflow Handler for overflow interrupt
      * @param reload Handler for reload interrupt
-     * 
+     *
      * When a non-null pointer is passed for any of the handlers, the corresponding
      * interrupt is enabled, and the handler will be called in interrupt context.
      * When a null pointer is passed, the corresponding interrupt is disabled.
@@ -64,7 +63,7 @@ public:
     void setModulusDelta(int16_t delta);
 
     /** Operating mode of a capture/compare channel.
-     * 
+     *
      * Note that combine mode can only selected on an even numbered channel. It uses the
      * next channel in combination, for separate control of rising and falling edge position,
      * generating a complementary output on the two output pins.

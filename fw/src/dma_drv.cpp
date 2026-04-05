@@ -4,10 +4,13 @@
  * @ingroup LPC865
  * @{
  */
-#include "dma_drv.hpp"
-import SmartDMA;
+module;
 #include <bit>
 #include <cassert>
+#include <cstddef>
+#include <cstdint>
+module dma_drv;
+import SmartDMA;
 
 using namespace lpc865::SmartDMA;
 

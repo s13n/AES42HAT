@@ -1,18 +1,20 @@
 /** @file
  * work queue for the SPI.
- * 
+ *
  * @addtogroup LPC865_spi
  * @ingroup LPC865
  * @{
  */
 
-#pragma once
-
-#include "spi_drv.hpp"
+module;
+#include <cstddef>
+#include <cstdint>
+export module spi_queue;
+import spi_drv;
 import queuering;
+import handler;
 
-
-namespace lpc865 {
+export namespace lpc865 {
 
 /** WKT Driver.
  */

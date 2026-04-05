@@ -4,7 +4,7 @@
  * @ingroup LPC865
  * @{
  */
-#include "spi_queue.hpp"
+module spi_queue;
 
 
 void lpc865::SpiQueue::enqueue(Entry &e) {

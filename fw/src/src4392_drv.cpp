@@ -4,11 +4,14 @@
  * @{
  */
 
-#include "src4392_drv.hpp"
-#include "spi_drv.hpp"
-import SRC4392;
+module;
 #include <algorithm>
-#include <alloca.h>
+#include <cstddef>
+#include <cstdint>
+#include <span>
+module src4392_drv;
+import spi_drv;
+import SRC4392;
 
 
 namespace src4392 {

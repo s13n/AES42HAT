@@ -4,9 +4,11 @@
  * @ingroup LPC865
  * @{
  */
-#include "usart_drv.hpp"
-import USART;
+module;
+#include <cstdint>
 #include <span>
+module usart_drv;
+import USART;
 
 using namespace lpc865::USART;
 

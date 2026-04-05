@@ -10,15 +10,11 @@
 
 import handler;
 import nvic_drv;
+import pint_drv;
 #include "coroutine.hpp"
 #include <array>
 #include <cstddef>
 #include <cstdint>
-
-namespace lpc865 {
-    class Ftm;
-    class Pint;
-}
 
 class Channel;
 

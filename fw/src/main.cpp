@@ -2,16 +2,17 @@
  * main function for the AES42HAT
  */
 
-#include "dma_drv.hpp"
-#include "ftm_drv.hpp"
-#include "i2c_tgt_drv.hpp"
-#include "pint_drv.hpp"
-#include "spi_queue.hpp"
-#include "usart_drv.hpp"
-#include "wkt_drv.hpp"
+import dma_drv;
+import ftm_drv;
+import i2c_tgt_drv;
+import pint_drv;
+import spi_queue;
+import usart_drv;
+import wkt_drv;
+import spi_drv;
+import handler;
 #include "clkmgr.hpp"
 #include "channel.hpp"
-import handler;
 import LPC865;
 #include "LPC86x_clocks.hpp"
 #include <string_view>

@@ -51,6 +51,15 @@ target_sources(aes42hat PUBLIC
         utility.cppm
         stackring.cppm
         queuering.cppm
+        usart_drv.cppm
+        pint_drv.cppm
+        dma_drv.cppm
+        ftm_drv.cppm
+        i2c_tgt_drv.cppm
+        wkt_drv.cppm
+        spi_drv.cppm
+        spi_queue.cppm
+        src4392_drv.cppm
 )
 
 target_sources(aes42hat PUBLIC

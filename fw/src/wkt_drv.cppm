@@ -1,23 +1,20 @@
 /** @file
  * driver for the LPC8 WKT.
- * 
+ *
  * @addtogroup LPC865_wkt
  * @ingroup LPC865
  * @{
  */
 
-#pragma once
-
-import nvic_drv;
+module;
 #include <cstddef>
 #include <cstdint>
-#include <initializer_list>
-#include <span>
-
+export module wkt_drv;
+import nvic_drv;
 import handler;
 import WKT;
 
-namespace lpc865 {
+export namespace lpc865 {
 
 /** WKT Driver.
  */

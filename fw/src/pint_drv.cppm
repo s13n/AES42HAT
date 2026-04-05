@@ -1,19 +1,18 @@
 /** @file
  * LPC865 PINT driver
- * 
+ *
  * @addtogroup LPC865_pint
  * @ingroup LPC865
  * @{
  */
 
-#pragma once
-
+module;
 #include <cstdint>
-
+export module pint_drv;
 import nvic_drv;
 import PINT;
 
-namespace lpc865 {
+export namespace lpc865 {
 
 /** Pin interrupt driver.
  */
