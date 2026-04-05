@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "nvic_drv.hpp"
+import nvic_drv;
 #include <cstddef>
 #include <cstdint>
 #include <initializer_list>

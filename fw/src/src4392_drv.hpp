@@ -10,8 +10,7 @@
 #include <cstdint>
 #include <span>
 
-class Handler;
-
+import handler;
 import SRC4392;
 
 namespace src4392 {

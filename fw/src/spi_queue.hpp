@@ -9,7 +9,7 @@
 #pragma once
 
 #include "spi_drv.hpp"
-#include "queuering.hpp"
+import queuering;
 
 
 namespace lpc865 {

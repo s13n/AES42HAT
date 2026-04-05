@@ -6,8 +6,9 @@ import LPC865;
 import SYSCON;
 import PMU;
 
+#include "newlib_def.h"
+
 extern "C" {
-#   include "newlib_def.h"
 #   include <stdint.h>
 #   include <stddef.h>
 #   include <sys/types.h>
@@ -45,7 +46,7 @@ inline int sysinit() {
     syscon.SYSPLLDIV = SYSPLLDIV{ .DIV=1 };
     syscon.PDRUNCFG.set(0x8D20);    // power up PLL
     i_PMU.registers->DPDCTRL = DPDCTRL{ .ULPOSCEN = 1 };
-    syscon.LPOSCEN = LPOSCEN{ .WDT_CLK_EN=WDT_CLK_EN_::ENABLE, .WKT_CLK_EN=WKT_CLK_EN::ENABLE };
+    syscon.LPOSCEN = LPOSCEN{ .WDT_CLK_EN=1, .WKT_CLK_EN=1 };
     syscon.WKTCLKSEL = WKTCLKSEL{ .SEL=WKTCLKSEL_::SYS_PLL };
     syscon.FRODIRECTCLKUEN = FRODIRECTCLKUEN{ .ENA=FRODIRECTCLKUEN_::NO_CHANGE };
     syscon.FROOSCCTRL = FROOSCCTRL{ .FRO_DIRECT=FRO_DIRECT_::ENABLED };

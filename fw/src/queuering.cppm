@@ -1,14 +1,15 @@
 /** @file
  * Ring-based queue
  */
-#pragma once
 
+module;
 #include <iterator>
 #include <type_traits>
 #include <utility>
 #include <cstddef>
 #include <cstdint>
 #include <cassert>
+export module queuering;
 
 
 /** Singly linked ring, usable as a queue as well as a stack.
@@ -41,7 +42,7 @@
  * - No backwards traversal
  * - An iterator needs to hold two pointers to be able to detect end of list
  */
-template<typename T> struct QueueRing {
+export template<typename T> struct QueueRing {
     using value_type      = T;
     using size_type       = std::size_t;
     using difference_type = ptrdiff_t;

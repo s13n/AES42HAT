@@ -5,8 +5,8 @@
  * @{
  */
 #include "ftm_drv.hpp"
+import hwreg;
 import FTM;
-#include "handler.hpp"
 
 #define FIELDMASK(t, f) []() constexpr { t r{}; r.f -= 1; return std::bit_cast<hwreg::HwReg<t>::Native>(r); }()
 

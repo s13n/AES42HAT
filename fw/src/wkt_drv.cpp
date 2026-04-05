@@ -5,7 +5,6 @@
  * @{
  */
 #include "wkt_drv.hpp"
-#include "handler.hpp"
 import WKT;
 #include <bit>
 

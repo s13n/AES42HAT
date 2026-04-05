@@ -1,18 +1,18 @@
 /** @file
  * ARM NVIC driver
- * 
+ *
  * @addtogroup ARM_NVIC
  * @ingroup ARM
  * @{
  */
 
-#pragma once
-
-import hwreg;
+module;
 #include <cstddef>
 #include <cstdint>
+export module nvic_drv;
+import hwreg;
 
-namespace arm {
+export namespace arm {
 
 __attribute__((always_inline)) inline void enable_irq() {
     asm volatile ("cpsie i" : : : "memory");
@@ -36,7 +36,7 @@ public:
     typedef void (VectorTableEntry)();
 
     virtual void isr() =0;
-    
+
     void enable(Exception);
     void disable(Exception);
     void insert(Exception);

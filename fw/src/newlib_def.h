@@ -5,6 +5,10 @@
  */
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** Application entry point.
  * Must be called by the startup routine after initialization.
  */
@@ -186,5 +190,9 @@ extern __attribute__ ((noreturn, naked, section(".after_vectors"))) void ResetIS
  * See the description of ResetISR for the rationale behind section placement.
  */
 extern __attribute__ ((section(".after_vectors"))) int sysinit(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 //!@}

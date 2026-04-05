@@ -8,13 +8,12 @@
 
 #pragma once
 
-#include "nvic_drv.hpp"
+import nvic_drv;
 #include <span>
 #include <cstddef>
 #include <cstdint>
 
-struct Handler;
-
+import handler;
 import FTM;
 
 namespace lpc865 {

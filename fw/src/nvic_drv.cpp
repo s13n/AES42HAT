@@ -1,20 +1,20 @@
 /** @file
  * ARM NVIC driver
- * 
+ *
  * @addtogroup ARM_NVIC
  * @ingroup ARM
  * @{
  */
 
-#include "nvic_drv.hpp"
+module;
+#include "newlib_def.h"
+#include "externs.h"
+#include <array>
+#include <cstddef>
+#include <cstdint>
+module nvic_drv;
 import LPC865;
 import NVIC;
-#include <array>
-extern "C" {
-#   include "newlib_def.h"
-}
-
-extern void setActivityLED(bool act);
 
 static hwreg::HwPtr<volatile arm::NVIC::NVIC> const nvic = 0xE000E100;
 
@@ -40,7 +40,7 @@ constexpr std::array<arm::Interrupt::VectorTableEntry*, 16> specific_handlers = 
 };
 
 /** Table of objects that handle the respective exception.
- * 
+ *
  * Each table entry serves as the head of a ring of linked objects. This allows
  * several objects to share an interrupt. When an interrupt occurs, the `isr()`
  * function members of all objects are called in sequence. Each object needs
@@ -98,20 +98,20 @@ void arm::Interrupt::disable(Exception n) {
 }
 
 /** Default interrupt service routine.
- * 
+ *
  * This routine dispatches the interrupt call to the object(s) registered in the
  * `interrupt_table`. It is the routine that is used in the vector table, unless
  * a different routine is specified in the `specific_handlers` array.
  */
 void arm::Interrupt::defaultISR() {
-    unsigned exnum;                                                                     
-    void *stack;                                                                        
-    asm volatile (" mov %0, LR " : "=r" (exnum));       // get exception return address  
-    if(exnum & 4)                                                                       
-        asm volatile (" mrs %0, PSP " : "=r" (stack));                                  
-    else                                                                                
-        asm volatile (" mrs %0, MSP " : "=r" (stack));                                  
-    asm volatile (" mrs %0, IPSR " : "=r" (exnum));     // get exception number      
+    unsigned exnum;
+    void *stack;
+    asm volatile (" mov %0, LR " : "=r" (exnum));       // get exception return address
+    if(exnum & 4)
+        asm volatile (" mrs %0, PSP " : "=r" (stack));
+    else
+        asm volatile (" mrs %0, MSP " : "=r" (stack));
+    asm volatile (" mrs %0, IPSR " : "=r" (exnum));     // get exception number
     auto head = get_head(exnum);
     setActivityLED(true);
     if(!head || !head->link_)
@@ -123,10 +123,10 @@ void arm::Interrupt::defaultISR() {
 
 /** Vector table initialization function.
  * @tparam N Number of entries in the vector table
- * @tparam M Number of special entries at the beginning 
+ * @tparam M Number of special entries at the beginning
  * @param initial_entries The array with the special entries at the start of the vector table.
  * @return The initialization data for the actual vector table.
- * 
+ *
  * This is a compile-time function template that is used to initialize the vector table
  * in a generic way, taking into account a table of specific entries at the beginning,
  * and a default handler for all the other entries.
@@ -140,7 +140,7 @@ make_vector_table(std::array<arm::Interrupt::VectorTableEntry*, M> initial_entri
 }
 
 /** The interrupt vector table.
- * 
+ *
  * The table needs to be placed at the right address in memory, which is achieved by
  * putting it into a special linker section. See the linker script for where it is
  * placed.

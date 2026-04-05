@@ -1,14 +1,15 @@
 /** @file
  * Ring-based stack
  */
-#pragma once
 
+module;
 #include <iterator>
 #include <type_traits>
 #include <utility>
 #include <cstddef>
 #include <cstdint>
 #include <cassert>
+export module stackring;
 
 
 //! Singly linked ring, usable as a stack.
@@ -41,7 +42,7 @@
  * - No backwards traversal
  * - No swap, because list traversal would be needed to implement it
  */
-template<typename T> struct StackRing {
+export template<typename T> struct StackRing {
     using value_type      = T;
     using size_type       = std::size_t;
     using difference_type = std::ptrdiff_t;

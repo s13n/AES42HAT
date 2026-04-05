@@ -11,7 +11,7 @@
 #include "wkt_drv.hpp"
 #include "clkmgr.hpp"
 #include "channel.hpp"
-#include "handler.hpp"
+import handler;
 import LPC865;
 #include "LPC86x_clocks.hpp"
 #include <string_view>

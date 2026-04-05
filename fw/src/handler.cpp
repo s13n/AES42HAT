@@ -1,15 +1,16 @@
 /** @file
  * Generic handler interface
- * 
+ *
  * @addtogroup Channel
  * @ingroup AES42HAT
  * @{
  */
 
-#include "handler.hpp"
-#include "nvic_drv.hpp"
-
-extern void setActivityLED(bool act);
+module;
+#include <cstddef>
+#include "externs.h"
+module handler;
+import nvic_drv;
 
 static Handler* anchor = nullptr;
 

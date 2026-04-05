@@ -6,7 +6,6 @@
  */
 #include "dma_drv.hpp"
 import SmartDMA;
-#include "handler.hpp"
 #include <bit>
 #include <cassert>
 

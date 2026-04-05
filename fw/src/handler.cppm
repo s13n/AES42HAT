@@ -1,17 +1,17 @@
 /** @file
  * Generic handler interface
- * 
+ *
  * @addtogroup Channel
  * @ingroup AES42HAT
  * @{
  */
 
-#pragma once
-
+module;
 #include <cstddef>
 #include <cstdint>
+export module handler;
 
-class Handler {
+export class Handler {
     Handler(Handler &&) =delete;
 protected:
     ~Handler() =default;

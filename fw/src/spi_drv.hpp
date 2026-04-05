@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include "handler.hpp"
-#include "nvic_drv.hpp"
+import handler;
+import nvic_drv;
 #include <cstddef>
 #include <cstdint>
 

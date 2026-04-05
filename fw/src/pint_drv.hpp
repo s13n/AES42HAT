@@ -10,10 +10,7 @@
 
 #include <cstdint>
 
-namespace arm {
-    class Interrupt;
-}
-
+import nvic_drv;
 import PINT;
 
 namespace lpc865 {

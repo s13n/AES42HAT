@@ -9,9 +9,9 @@
 #pragma once
 
 #include "i2c_tgt_drv.hpp"
-#include "nvic_drv.hpp"
+import nvic_drv;
 #include "coroutine.hpp"
-#include "handler.hpp"
+import handler;
 #include "src4392_drv.hpp"
 
 namespace lpc865 {

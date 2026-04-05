@@ -43,6 +43,17 @@ target_link_options(aes42hat PRIVATE
 )
 
 target_sources(aes42hat PUBLIC
+    FILE_SET CXX_MODULES
+    BASE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}"
+    FILES
+        handler.cppm
+        nvic_drv.cppm
+        utility.cppm
+        stackring.cppm
+        queuering.cppm
+)
+
+target_sources(aes42hat PUBLIC
     nvic_drv.cpp
     channel.cpp
     clkmgr.cpp

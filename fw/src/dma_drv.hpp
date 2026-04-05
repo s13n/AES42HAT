@@ -6,11 +6,13 @@
  */
 #pragma once
 
-#include "nvic_drv.hpp"
-#include "utility.hpp"
+#include <cstddef>
+#include <cstdint>
 
-struct Handler;
+import nvic_drv;
+import utility;
 
+import handler;
 import SmartDMA;
 
 namespace lpc865 {
