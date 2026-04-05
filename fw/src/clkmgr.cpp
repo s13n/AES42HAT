@@ -4,12 +4,12 @@
  * @ingroup AES42HAT
  * @{
  */
-#include "clkmgr.hpp"
-#include "channel.hpp"
-#include <string_view>
+module;
+#include <cstdint>
+#include "externs.h"
+#include "coroutine.hpp"
+module clkmgr;
 
-
-extern void print(std::string_view);
 
 void Clkmgr::act() {
     CORO_REENTER(coro_) {

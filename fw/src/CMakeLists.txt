@@ -60,6 +60,8 @@ target_sources(aes42hat PUBLIC
         spi_drv.cppm
         spi_queue.cppm
         src4392_drv.cppm
+        channel.cppm
+        clkmgr.cppm
 )
 
 target_sources(aes42hat PUBLIC

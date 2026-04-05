@@ -4,10 +4,12 @@
  * @ingroup AES42HAT
  * @{
  */
-#include "channel.hpp"
-#include <string_view>
-
-extern void print(std::string_view);
+module;
+#include <cstddef>
+#include <cstdint>
+#include "externs.h"
+#include "coroutine.hpp"
+module channel;
 
 
 bool Channel::select(uint8_t tgt) {

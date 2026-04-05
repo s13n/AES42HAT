@@ -1,22 +1,19 @@
 /** @file
  * AES42HAT clock management.
- * 
+ *
  * @addtogroup AES42HAT_clk
  * @ingroup AES42HAT
  * @{
  */
 
-#pragma once
-
+module;
+#include <cstdint>
+#include "coroutine.hpp"
+export module clkmgr;
 import handler;
 import nvic_drv;
 import pint_drv;
-#include "coroutine.hpp"
-#include <array>
-#include <cstddef>
-#include <cstdint>
-
-class Channel;
+import channel;
 
 /** Clock Manager.
  *
@@ -52,8 +49,8 @@ class Channel;
  * decreased. Once the right position is obtained, the modulus is set to its
  * nominal value and left there.
  */
-class Clkmgr : public Handler, public arm::Interrupt {
-public:    
+export class Clkmgr : public Handler, public arm::Interrupt {
+public:
     void act() override;
 
     void isr() override;
@@ -68,7 +65,7 @@ private:
 };
 
 
-class ChannelManagement : public Handler {
+export class ChannelManagement : public Handler {
 public:
     explicit ChannelManagement(Channel *channels)
         : channels_{channels}

@@ -11,8 +11,8 @@ import usart_drv;
 import wkt_drv;
 import spi_drv;
 import handler;
-#include "clkmgr.hpp"
-#include "channel.hpp"
+import clkmgr;
+import channel;
 import LPC865;
 #include "LPC86x_clocks.hpp"
 #include <string_view>

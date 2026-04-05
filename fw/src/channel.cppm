@@ -1,20 +1,19 @@
 /** @file
  * object representing a channel with one SRC4392
- * 
+ *
  * @addtogroup Channel
  * @ingroup AES42HAT
  * @{
  */
 
-#pragma once
-
+module;
 #include <cstddef>
 #include <cstdint>
 #include <initializer_list>
-
+#include "coroutine.hpp"
+export module channel;
 import i2c_tgt_drv;
 import nvic_drv;
-#include "coroutine.hpp"
 import handler;
 import src4392_drv;
 import SRC4392;
@@ -23,26 +22,26 @@ import pint_drv;
 import spi_queue;
 
 /** Object representing an AES42 channel.
- * 
+ *
  * The channel object represents an SRC4392 with its associated circuitry.
  * It processes the interrupt coming from the interrupt pin of the SRC4392,
  * which is received as a pin interrupt, but also triggers a capture event
  * on FTM0. The capture event doesn't cause an interrupt, even though it
  * could, because pin interrupts are more direct and efficient.
- * 
+ *
  * In normal operation, the interrupt is set up to fire once for each block
  * received on the DIR of the channel. This signals that
  * - A phase measurement was taken by FTM0
  * - A new block of channel status and user data has been received
- * 
+ *
  * This interrupt triggers a sequence of SPI read transfers to copy the
  * receive status, the CS data and the U-bit data to the buffers in src_
- * 
+ *
  * The channel is also attached to the I2C target interface, so that the
  * host can set and get register settings of the SRC4392. The host has
  * the impression of talking directly to an SRC4392 in this way.
  */
-class Channel : public lpc865::I2cTarget::Callback, public arm::Interrupt, public Handler {
+export class Channel : public lpc865::I2cTarget::Callback, public arm::Interrupt, public Handler {
 public:
     struct Integration {
         src4392::SRC4392::Intgr in;
